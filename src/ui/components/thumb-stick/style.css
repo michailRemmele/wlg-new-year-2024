@@ -1,0 +1,61 @@
+.thumb-stick-observer {
+    --thumm-stick-color: #fff;
+
+    touch-action: none;
+}
+
+.thumb-stick {
+    position: absolute;
+    bottom: 0;
+
+    width: 15vw;
+    height: 15vw;
+
+    max-width: 150px;
+    max-height: 150px;
+
+    min-width: 120px;
+    min-height: 120px;
+
+    box-sizing: border-box;
+    border: 4px solid var(--thumm-stick-color);
+    border-radius: 50%;
+
+    will-change: transform;
+
+    pointer-events: none;
+}
+
+.thumb-stick_left {
+    left: 0;
+}
+
+.thumb-stick_right {
+    right: 0;
+}
+
+.thumb-stick__control {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+
+    width: 40%;
+    height: 40%;
+
+    background-color: var(--thumm-stick-color);
+    border-radius: 50%;
+
+    will-change: transform;
+
+    pointer-events: none;
+}
+
+@media screen and (max-height: 350px) {
+    .thumb-stick {
+        width: 110px;
+        height: 110px;
+
+        min-width: unset;
+        min-height: unset;
+    }
+}

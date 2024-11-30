@@ -1,0 +1,6 @@
+{
+  "components.movement.title": "Movement",
+  "components.movement.speed.title": "Speed",
+
+  "systems.movementSystem.title": "Movement System"
+}

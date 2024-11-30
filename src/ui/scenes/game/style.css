@@ -1,0 +1,29 @@
+.game {
+  color: white;
+  padding: max(15px, env(safe-area-inset-top)) max(15px, env(safe-area-inset-right)) max(15px, env(safe-area-inset-bottom)) max(15px, env(safe-area-inset-left));
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.game__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.game__move-control {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+}

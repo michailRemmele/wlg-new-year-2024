@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+      "baseUrl": ".",
+      "outDir": "./dist/",
+
+      "noEmit": true,
+
+      "allowJs": true,
+
+      "module": "nodenext",
+      "moduleResolution": "nodenext",
+      "allowImportingTsExtensions": true,
+
+      "strict": true,
+
+      "target": "es6",
+      "esModuleInterop": true,
+
+      "resolveJsonModule": true,
+
+      "jsx": "react-jsx",
+
+      "typeRoots": [
+        "src/types",
+        "node_modules/@types"
+      ]
+  },
+  "include": [
+      "src",
+      "editor"
+  ]
+}

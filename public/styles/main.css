@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  user-select: none;
+
+  background-color: black;
+}
+
+#root, #ui-root {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  position: fixed;
+
+  z-index: 1;
+}
+
+#ui-root {
+  position: fixed;
+
+  z-index: 2;
+}
