@@ -4,7 +4,8 @@ import type {
 } from 'remiz';
 import { Script, Camera } from 'remiz';
 
-const VIEWPORT_SIZE = 120;
+const VIEWPORT_SIZE_X = 240;
+const VIEWPORT_SIZE_Y = 120;
 
 export class CameraScript extends Script {
   private actor: Actor;
@@ -17,7 +18,10 @@ export class CameraScript extends Script {
 
   private updateZoom(): void {
     const camera = this.actor.getComponent(Camera);
-    camera.zoom = camera.windowSizeY / VIEWPORT_SIZE;
+    camera.zoom = Math.min(
+      camera.windowSizeX / VIEWPORT_SIZE_X,
+      camera.windowSizeY / VIEWPORT_SIZE_Y,
+    );
   }
 
   update(): void {

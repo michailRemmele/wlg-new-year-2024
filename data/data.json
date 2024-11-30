@@ -793,6 +793,31 @@
             "ghost": false,
             "drag": 0
           }
+        },
+        {
+          "name": "MouseControl",
+          "config": {
+            "inputEventBindings": [
+              {
+                "id": "fd22c229-250a-462c-8508-f71b0ba61bc1",
+                "event": "click",
+                "eventType": "ClickAction",
+                "attrs": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "33ff57aa-3b62-467d-bf3e-0026c4f79b72",
+                "name": "PointAndClickScript",
+                "options": {}
+              }
+            ]
+          }
         }
       ],
       "children": []
