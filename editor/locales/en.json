@@ -2,5 +2,12 @@
   "components.movement.title": "Movement",
   "components.movement.speed.title": "Speed",
 
+  "components.interactable.title": "Interactable",
+  "components.interactable.action.title": "Action",
+  "components.interactable.actions.take.title": "take",
+  "components.interactable.actions.enter.title": "enter",
+
+  "components.cursor.title": "Cursor",
+
   "systems.movementSystem.title": "Movement System"
 }

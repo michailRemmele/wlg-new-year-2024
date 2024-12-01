@@ -3,6 +3,8 @@
   padding: max(15px, env(safe-area-inset-top)) max(15px, env(safe-area-inset-right)) max(15px, env(safe-area-inset-bottom)) max(15px, env(safe-area-inset-left));
   height: 100%;
   box-sizing: border-box;
+
+  cursor: none;
 }
 
 .game__header {
