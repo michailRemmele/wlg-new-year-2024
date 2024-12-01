@@ -56,7 +56,6 @@ export class MovementSystem extends System {
       const movement = actor.getComponent(Movement);
 
       if (!movement.isMoving) {
-        movement.direction = 0;
         return;
       }
 
@@ -64,6 +63,17 @@ export class MovementSystem extends System {
 
       const transform = actor.getComponent(Transform);
       transform.offsetX += movementDelta;
+    });
+  }
+
+  update(): void {
+    this.actorCollection.forEach((actor) => {
+      const movement = actor.getComponent(Movement);
+
+      if (!movement.isMoving) {
+        movement.direction = 0;
+        return;
+      }
 
       movement.viewDirection = movement.direction;
       movement.isMoving = false;

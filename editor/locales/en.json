@@ -9,5 +9,7 @@
 
   "components.cursor.title": "Cursor",
 
+  "components.inventory.title": "Inventory",
+
   "systems.movementSystem.title": "Movement System"
 }

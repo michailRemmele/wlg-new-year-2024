@@ -10,7 +10,7 @@ import type {
   CollisionLeaveEvent,
 } from 'remiz/events';
 
-import { Interactable } from '../../components';
+import { Interactable, Inventory } from '../../components';
 import { WALL_PATH_BLOCK_ID } from '../../../consts/templates';
 import * as EventType from '../../events';
 import type {
@@ -121,7 +121,14 @@ export class PointAndClickScript extends Script {
 
     const interactable = target.getComponent(Interactable);
 
-    console.log(`interact with ${target.id}. Action: ${interactable.action}`);
+    if (interactable.action === 'take') {
+      const inventory = this.actor.getComponent(Inventory);
+      inventory.items.push(target.templateId as string);
+
+      this.actor.dispatchEvent(EventType.TakeItem, { item: target.id });
+
+      target.remove();
+    }
   }
 
   update(): void {

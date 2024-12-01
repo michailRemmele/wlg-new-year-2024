@@ -3,7 +3,7 @@ import type {
   Scene,
   ScriptOptions,
 } from 'remiz';
-import { Script, Transform } from 'remiz';
+import { Script, Transform, Sprite } from 'remiz';
 import { CollisionEnter, CollisionLeave } from 'remiz/events';
 import type {
   CollisionEnterEvent,
@@ -30,6 +30,7 @@ export class CursorScript extends Script {
     this.actor.addEventListener(CollisionEnter, this.handleCollisionEnter);
     this.actor.addEventListener(CollisionLeave, this.handleCollisionLeave);
     this.actor.addEventListener(EventType.CursorClick, this.handleCursorClick);
+    this.actor.addEventListener(EventType.CursorLeave, this.handleCursorLeave);
 
     const transform = this.actor.getComponent(Transform);
     transform.offsetX = 0;
@@ -41,6 +42,7 @@ export class CursorScript extends Script {
     this.actor.removeEventListener(CollisionEnter, this.handleCollisionEnter);
     this.actor.removeEventListener(CollisionLeave, this.handleCollisionLeave);
     this.actor.removeEventListener(EventType.CursorClick, this.handleCursorClick);
+    this.actor.removeEventListener(EventType.CursorLeave, this.handleCursorLeave);
   }
 
   private handleCursorMove = (event: CursorMoveEvent): void => {
@@ -50,6 +52,14 @@ export class CursorScript extends Script {
 
     transform.offsetX = x;
     transform.offsetY = y;
+
+    const sprite = this.actor.getComponent(Sprite);
+    sprite.material.options.opacity = 1;
+  };
+
+  private handleCursorLeave = (): void => {
+    const sprite = this.actor.getComponent(Sprite);
+    sprite.material.options.opacity = 0;
   };
 
   private handleCollisionEnter = (event: CollisionEnterEvent): void => {

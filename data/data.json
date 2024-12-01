@@ -48,7 +48,8 @@
         {
           "name": "MouseInputSystem",
           "options": {
-            "useWindow": true
+            "useWindow": false,
+            "windowNodeId": "root"
           }
         },
         {
@@ -286,7 +287,7 @@
           "id": "c0309b51-1d81-44e3-9ac2-5eb831e37773",
           "templateId": "c9491264-a219-480b-b5f3-baf9434a04ba",
           "fromTemplate": true,
-          "name": "Example Item",
+          "name": "Example Item 1",
           "components": [
             {
               "name": "Transform",
@@ -343,10 +344,10 @@
           "children": []
         },
         {
-          "id": "6ae8434c-207a-4bc3-82fa-3c98c3cb422d",
-          "templateId": "c9491264-a219-480b-b5f3-baf9434a04ba",
+          "id": "ccdee69c-9151-4510-b1c1-830a30979a50",
+          "templateId": "9dda67a3-d655-4615-9570-03a69b0f8e02",
           "fromTemplate": true,
-          "name": "Example Item 1",
+          "name": "Example Item 2",
           "components": [
             {
               "name": "Transform",
@@ -918,6 +919,10 @@
               }
             ]
           }
+        },
+        {
+          "name": "Inventory",
+          "config": {}
         }
       ],
       "children": []
@@ -1035,7 +1040,7 @@
     },
     {
       "id": "c9491264-a219-480b-b5f3-baf9434a04ba",
-      "name": "Example Item",
+      "name": "Example Item 1",
       "components": [
         {
           "name": "Transform",
@@ -1057,7 +1062,7 @@
         {
           "name": "Sprite",
           "config": {
-            "src": "example-item.png",
+            "src": "example-item 1.png",
             "width": 13,
             "height": 13,
             "slice": 2,
@@ -1224,6 +1229,12 @@
                 "id": "92c9caa3-a091-4186-aa44-6a13c79ac771",
                 "event": "click",
                 "eventType": "CursorClick",
+                "attrs": []
+              },
+              {
+                "id": "c19340a2-4df5-4cd3-9fdf-78f35a2a4d24",
+                "event": "mouseleave",
+                "eventType": "CursorLeave",
                 "attrs": []
               }
             ]
@@ -1554,6 +1565,168 @@
           "name": "Interactable",
           "config": {
             "action": "enter"
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9dda67a3-d655-4615-9570-03a69b0f8e02",
+      "name": "Example Item 2",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "take"
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "example-item 2.png",
+            "width": 13,
+            "height": 13,
+            "slice": 2,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
+            "states": [
+              {
+                "id": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
+                "name": "Idle",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
+                      "fields": [
+                        {
+                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "64097c9b-d020-4aa6-96e3-0d2b071d4a59",
+                    "state": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "d7f2d6e3-8764-4f0a-93e4-406260e3ce63",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.Interactable.hover"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": true
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
+                "name": "Hover",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
+                      "fields": [
+                        {
+                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "6d4aa96d-5214-4fd4-8380-cc832612efef",
+                    "state": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "8ee3908c-46cb-4104-99ba-bb8cd51d858f",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.Interactable.hover"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": false
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 12,
+              "sizeY": 12,
+              "centerX": 0,
+              "centerY": 0
+            }
           }
         }
       ],
