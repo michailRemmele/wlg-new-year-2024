@@ -7,6 +7,11 @@ export const CursorClick = 'CursorClick';
 export const CursorLeave = 'CursorLeave';
 export const Interact = 'Interact';
 export const TakeItem = 'TakeItem';
+export const SelectItem = 'SelectItem';
+export const CancelItemSelection = 'CancelItemSelection';
+export const UpdateJournal = 'UpdateJournal';
+export const ApplyItem = 'ApplyItem';
+export const RemoveItem = 'RemoveItem';
 
 export type MoveEvent = ActorEvent<{ direction: number; point?: boolean }>;
 
@@ -16,9 +21,15 @@ export type CursorMoveEvent = ActorEvent<{ x: number; y: number }>;
 
 export type CursorClickEvent = ActorEvent<{ x: number; y: number }>;
 
-export type TakeItemEvent = ActorEvent<{ item: string }>;
+export type ApplyItemEvent = ActorEvent<{ item: string }>;
 
-export type InteractEvent = SceneEvent<{ actionTarget: string }>;
+export type TakeItemEvent = SceneEvent<{ item: string }>;
+export type SelectItemEvent = SceneEvent<{ item: string }>;
+export type RemoveItemEvent = SceneEvent<{ item: string }>;
+
+export type InteractEvent = SceneEvent<{ actionTarget: string; selectedItem?: string }>;
+
+export type UpdateJournalEvent = SceneEvent<{ id: string; title: string }>;
 
 declare module 'remiz' {
   export interface ActorEventMap {
@@ -27,10 +38,15 @@ declare module 'remiz' {
     [CursorMove]: CursorMoveEvent
     [CursorClick]: CursorClickEvent
     [CursorLeave]: ActorEvent
-    [TakeItem]: TakeItemEvent
+    [ApplyItem]: ApplyItemEvent
   }
 
   export interface SceneEventMap {
     [Interact]: InteractEvent
+    [TakeItem]: TakeItemEvent
+    [SelectItem]: SelectItemEvent
+    [RemoveItem]: RemoveItemEvent
+    [CancelItemSelection]: SceneEvent
+    [UpdateJournal]: UpdateJournalEvent
   }
 }

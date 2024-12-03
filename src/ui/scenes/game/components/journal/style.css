@@ -1,0 +1,22 @@
+.journal {
+  background-color: black;
+  width: 20%;
+  margin-right: 32px;
+
+  position: relative;
+  overflow: hidden;
+
+  min-width: 210px;
+}
+
+.journal__list {
+  padding-left: 22px;
+  margin: 12px 0;
+  font-size: 14px;
+
+  position: absolute;
+  bottom: 0;
+
+  width: calc(100% - 22px);
+  min-height: calc(100% - 24px);
+}

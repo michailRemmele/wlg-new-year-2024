@@ -26,6 +26,7 @@ export class PointAndClickScript extends Script {
   private scene: Scene;
   private destination: number | undefined;
   private destinationTarget: string | undefined;
+  private selectedItem: string | undefined;
 
   private wallPositionX: number | undefined;
 
@@ -37,6 +38,7 @@ export class PointAndClickScript extends Script {
 
     this.destination = undefined;
     this.destinationTarget = undefined;
+    this.selectedItem = undefined;
 
     this.wallPositionX = undefined;
 
@@ -87,6 +89,7 @@ export class PointAndClickScript extends Script {
 
   private handleInteract = (event: InteractEvent): void => {
     this.destinationTarget = event.actionTarget;
+    this.selectedItem = event.selectedItem;
   };
 
   private isDesinationReached(): boolean {
@@ -114,7 +117,6 @@ export class PointAndClickScript extends Script {
     }
 
     const target = this.scene.getEntityById(this.destinationTarget);
-
     if (!target) {
       return;
     }
@@ -123,11 +125,14 @@ export class PointAndClickScript extends Script {
 
     if (interactable.action === 'take') {
       const inventory = this.actor.getComponent(Inventory);
-      inventory.items.push(target.templateId as string);
+      inventory.items.push(target.id);
 
-      this.actor.dispatchEvent(EventType.TakeItem, { item: target.id });
+      this.scene.dispatchEvent(EventType.TakeItem, { item: target.id });
 
       target.remove();
+    }
+    if (interactable.action === 'inspect' && this.selectedItem) {
+      target.dispatchEvent(EventType.ApplyItem, { item: this.selectedItem });
     }
   }
 
@@ -145,6 +150,7 @@ export class PointAndClickScript extends Script {
 
       this.destination = undefined;
       this.destinationTarget = undefined;
+      this.selectedItem = undefined;
       return;
     }
 

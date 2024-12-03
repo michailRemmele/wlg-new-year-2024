@@ -21,6 +21,10 @@ export const interactable: WidgetSchema = {
           title: 'components.interactable.actions.enter.title',
           value: 'enter',
         },
+        {
+          title: 'components.interactable.actions.inspect.title',
+          value: 'inspect',
+        },
       ],
     },
   },

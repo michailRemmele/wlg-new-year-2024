@@ -10,6 +10,36 @@ body {
   user-select: none;
 
   background-color: black;
+
+  cursor: url(/images/cursor-move.svg) 0 0, auto;
+}
+
+button:not(:disabled) {
+  cursor: url(/images/cursor-select.svg) 0 0, pointer;
+}
+
+button:disabled {
+  cursor: url(/images/cursor-move.svg) 0 0, auto;
+}
+
+.cursor_take {
+  cursor: url(/images/cursor-take.svg) 0 0, auto;
+}
+
+.cursor_select {
+  cursor: url(/images/cursor-select.svg) 0 0, auto;
+}
+
+.cursor_enter {
+  cursor: url(/images/cursor-enter.svg) 0 0, auto;
+}
+
+.cursor_inspect {
+  cursor: url(/images/cursor-inspect.svg) 0 0, auto;
+}
+
+.cursor_apply {
+  cursor: url(/images/cursor-apply.svg) 0 0, auto;
 }
 
 #root, #ui-root {
@@ -22,8 +52,6 @@ body {
   z-index: 1;
 
   height: calc(100% - 200px);
-
-  cursor: none;
 }
 
 #ui-root {

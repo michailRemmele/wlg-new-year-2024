@@ -1,6 +1,6 @@
 import { Component } from 'remiz';
 
-export type Action = 'take' | 'enter';
+export type Action = 'take' | 'enter' | 'inspect';
 
 interface InteractableConfig {
   action: Action

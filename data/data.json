@@ -61,6 +61,10 @@
           "options": {}
         },
         {
+          "name": "Journal",
+          "options": {}
+        },
+        {
           "name": "Animator",
           "options": {}
         },
@@ -362,6 +366,43 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "a8a633c7-6f16-4eef-92d5-a156927e33f4",
+          "templateId": "7c256df5-67fd-4424-9a39-61751e8e2c29",
+          "fromTemplate": true,
+          "name": "New Year Tree",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -36,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "0c68fc6d-622d-43a7-a99a-8671a9dc51c0",
+              "templateId": "31491f5d-98d7-4a97-bf17-a91f7d781cc5",
+              "fromTemplate": true,
+              "name": "Decoration Place 1",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "0ac5c870-ba22-4370-a0b3-e402fe552458",
+              "templateId": "b276345d-9aa3-42d5-961e-ef9d75a62efe",
+              "fromTemplate": true,
+              "name": "Decoration Place 2",
+              "components": [],
+              "children": []
+            }
+          ]
         }
       ]
     }
@@ -896,19 +937,6 @@
           }
         },
         {
-          "name": "MouseControl",
-          "config": {
-            "inputEventBindings": [
-              {
-                "id": "fd22c229-250a-462c-8508-f71b0ba61bc1",
-                "event": "click",
-                "eventType": "ClickAction",
-                "attrs": []
-              }
-            ]
-          }
-        },
-        {
           "name": "ScriptBundle",
           "config": {
             "scripts": [
@@ -1073,7 +1101,7 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "decorations",
+            "sortingLayer": "decorations-2",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
@@ -1245,8 +1273,8 @@
           "config": {
             "type": "circleCollider",
             "collider": {
-              "centerX": 0,
-              "centerY": 0,
+              "centerX": 3,
+              "centerY": 3,
               "radius": 3
             }
           }
@@ -1272,7 +1300,7 @@
               "options": {
                 "blending": "normal",
                 "color": "#fff",
-                "opacity": 1
+                "opacity": 0
               }
             }
           }
@@ -1605,7 +1633,7 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "decorations",
+            "sortingLayer": "decorations-2",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
@@ -1731,6 +1759,169 @@
         }
       ],
       "children": []
+    },
+    {
+      "id": "7c256df5-67fd-4424-9a39-61751e8e2c29",
+      "name": "New Year Tree",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "christmas-tree.png",
+            "width": 24,
+            "height": 48,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "inspect"
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 24,
+              "sizeY": 48,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "545e50df-4fd5-4143-a557-ded3cf77774b",
+                "name": "ChristmasTreeScript",
+                "options": {}
+              }
+            ]
+          }
+        }
+      ],
+      "children": [
+        {
+          "id": "31491f5d-98d7-4a97-bf17-a91f7d781cc5",
+          "name": "Decoration Place 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -6,
+                "offsetY": -6,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 12,
+                "height": 12,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "default",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#003aff",
+                    "opacity": 0
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b276345d-9aa3-42d5-961e-ef9d75a62efe",
+          "name": "Decoration Place 2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 6,
+                "offsetY": 6,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 12,
+                "height": 12,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "default",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#003aff",
+                    "opacity": 0
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ],
   "loaders": [],
@@ -1742,6 +1933,7 @@
       "value": [
         "background",
         "decorations",
+        "decorations-2",
         "units",
         "default"
       ]

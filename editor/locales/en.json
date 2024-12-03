@@ -6,10 +6,13 @@
   "components.interactable.action.title": "Action",
   "components.interactable.actions.take.title": "take",
   "components.interactable.actions.enter.title": "enter",
+  "components.interactable.actions.inspect.title": "inspect",
 
   "components.cursor.title": "Cursor",
 
   "components.inventory.title": "Inventory",
 
-  "systems.movementSystem.title": "Movement System"
+  "systems.movementSystem.title": "Movement System",
+
+  "systems.journal.title": "Journal"
 }

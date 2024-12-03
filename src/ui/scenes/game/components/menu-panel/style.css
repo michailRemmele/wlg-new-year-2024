@@ -1,4 +1,7 @@
 .menu-panel {
+  display: flex;
+  justify-content: center;
+
   height: 200px;
 
   box-sizing: border-box;
@@ -6,33 +9,5 @@
 
   background-color: #068a6b;
 
-  cursor: initial;
   pointer-events: initial;
-}
-
-.inventory {
-  background-color: #3eb89b;
-
-  height: 100%;
-}
-
-.inventory__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  height: 100%;
-}
-
-.inventory__item {
-  padding: 16px;
-}
-
-.inventory__item-image {
-  width: 52px;
-  image-rendering: pixelated;
 }

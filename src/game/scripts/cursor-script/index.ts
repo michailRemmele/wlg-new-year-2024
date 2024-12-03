@@ -3,8 +3,12 @@ import type {
   Scene,
   ScriptOptions,
 } from 'remiz';
-import { Script, Transform, Sprite } from 'remiz';
-import { CollisionEnter, CollisionLeave } from 'remiz/events';
+import { Script, Transform } from 'remiz';
+import {
+  CollisionEnter,
+  CollisionStay,
+  CollisionLeave,
+} from 'remiz/events';
 import type {
   CollisionEnterEvent,
   CollisionLeaveEvent,
@@ -13,8 +17,11 @@ import type {
 import { Interactable, Cursor } from '../../components';
 import * as EventType from '../../events';
 import type {
+  CursorClickEvent,
   CursorMoveEvent,
+  SelectItemEvent,
 } from '../../events';
+import { PLAYER_NAME } from '../../../consts/actors';
 
 export class CursorScript extends Script {
   private actor: Actor;
@@ -27,10 +34,12 @@ export class CursorScript extends Script {
     this.scene = options.scene;
 
     this.actor.addEventListener(EventType.CursorMove, this.handleCursorMove);
-    this.actor.addEventListener(CollisionEnter, this.handleCollisionEnter);
+    this.actor.addEventListener(CollisionEnter, this.handleCollisionEnterOrStay);
+    this.actor.addEventListener(CollisionStay, this.handleCollisionEnterOrStay);
     this.actor.addEventListener(CollisionLeave, this.handleCollisionLeave);
     this.actor.addEventListener(EventType.CursorClick, this.handleCursorClick);
-    this.actor.addEventListener(EventType.CursorLeave, this.handleCursorLeave);
+
+    this.scene.addEventListener(EventType.SelectItem, this.handleSelectItem);
 
     const transform = this.actor.getComponent(Transform);
     transform.offsetX = 0;
@@ -39,10 +48,12 @@ export class CursorScript extends Script {
 
   destroy(): void {
     this.actor.removeEventListener(EventType.CursorMove, this.handleCursorMove);
-    this.actor.removeEventListener(CollisionEnter, this.handleCollisionEnter);
+    this.actor.removeEventListener(CollisionEnter, this.handleCollisionEnterOrStay);
+    this.actor.removeEventListener(CollisionStay, this.handleCollisionEnterOrStay);
     this.actor.removeEventListener(CollisionLeave, this.handleCollisionLeave);
     this.actor.removeEventListener(EventType.CursorClick, this.handleCursorClick);
-    this.actor.removeEventListener(EventType.CursorLeave, this.handleCursorLeave);
+
+    this.scene.removeEventListener(EventType.SelectItem, this.handleSelectItem);
   }
 
   private handleCursorMove = (event: CursorMoveEvent): void => {
@@ -52,57 +63,88 @@ export class CursorScript extends Script {
 
     transform.offsetX = x;
     transform.offsetY = y;
-
-    const sprite = this.actor.getComponent(Sprite);
-    sprite.material.options.opacity = 1;
   };
 
-  private handleCursorLeave = (): void => {
-    const sprite = this.actor.getComponent(Sprite);
-    sprite.material.options.opacity = 0;
-  };
-
-  private handleCollisionEnter = (event: CollisionEnterEvent): void => {
+  private handleCollisionEnterOrStay = (event: CollisionEnterEvent): void => {
     const { actor } = event;
 
     const interactable = actor.getComponent(Interactable);
-
     if (!interactable) {
       return;
     }
 
-    interactable.hover = true;
-
     const cursor = this.actor.getComponent(Cursor);
+
+    if (cursor.selectedItem) {
+      if (interactable.action === 'inspect') {
+        this.updateCursor(cursor.action, 'apply');
+        cursor.action = 'apply';
+      } else {
+        return;
+      }
+    } else {
+      this.updateCursor(cursor.action, interactable.action);
+      cursor.action = interactable.action;
+    }
+
+    interactable.hover = true;
     cursor.target = actor.id;
-    cursor.action = interactable.action;
   };
 
   private handleCollisionLeave = (event: CollisionLeaveEvent): void => {
     const { actor } = event;
 
     const interactable = actor.getComponent(Interactable);
-
     if (!interactable) {
       return;
     }
 
-    interactable.hover = false;
-
     const cursor = this.actor.getComponent(Cursor);
+
+    this.updateCursor(cursor.action, 'move');
+
+    interactable.hover = false;
     cursor.target = undefined;
     cursor.action = 'move';
   };
 
-  private handleCursorClick = (): void => {
+  private handleCursorClick = (event: CursorClickEvent): void => {
     const cursor = this.actor.getComponent(Cursor);
+    const { selectedItem, target, action } = cursor;
 
-    if (!cursor.target) {
+    if (selectedItem) {
+      this.scene.dispatchEvent(EventType.CancelItemSelection);
+      cursor.selectedItem = undefined;
+    }
+
+    if (!selectedItem || (selectedItem && action === 'apply')) {
+      const player = this.scene.getEntityByName(PLAYER_NAME);
+      player?.dispatchEvent(EventType.ClickAction, { x: event.x, y: event.y });
+    }
+
+    if (!target) {
       return;
     }
 
-    this.scene.dispatchEvent(EventType.Interact, { actionTarget: cursor.target });
+    this.scene.dispatchEvent(EventType.Interact, {
+      actionTarget: target,
+      selectedItem: selectedItem && action === 'apply' ? selectedItem : undefined,
+    });
   };
+
+  private handleSelectItem = (event: SelectItemEvent): void => {
+    const cursor = this.actor.getComponent(Cursor);
+    cursor.selectedItem = event.item;
+  };
+
+  private updateCursor(prev: string, next: string): void {
+    if (prev === next) {
+      return;
+    }
+
+    document.body.classList.remove(`cursor_${prev}`);
+    document.body.classList.add(`cursor_${next}`);
+  }
 }
 
 CursorScript.scriptName = 'CursorScript';
