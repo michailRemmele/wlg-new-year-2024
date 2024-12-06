@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { useContext, useEffect, useState } from 'react';
 
+import { MAX_JOURNAL_SIZE } from '../../../../../consts/journal';
 import * as EventType from '../../../../../game/events';
 import type { UpdateJournalEvent } from '../../../../../game/events';
 import { EngineContext } from '../../../../providers';
@@ -15,11 +16,14 @@ type Entry = {
 export const Journal: FC = () => {
   const { scene } = useContext(EngineContext);
 
-  const [entries, setEntries] = useState<Entry[]>([]);
+  const [entries, setEntries] = useState<Entry[]>(window.saveState?.journal ?? []);
 
   useEffect(() => {
     const handleUpdateJournal = (event: UpdateJournalEvent): void => {
-      setEntries((prev) => [...prev, { id: event.id, title: event.title }]);
+      setEntries((prev) => [
+        ...prev.slice(Math.max(prev.length - (MAX_JOURNAL_SIZE - 1), 0)),
+        { id: event.id, title: event.title },
+      ]);
     };
 
     scene.addEventListener(EventType.UpdateJournal, handleUpdateJournal);

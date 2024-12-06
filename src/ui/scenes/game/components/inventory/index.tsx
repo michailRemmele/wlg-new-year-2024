@@ -82,7 +82,7 @@ export const Inventory: FC = () => {
   const inventoryItems: JSX.Element[] = [];
   const inventorySize = getInventorySize(mediaChecks);
   for (let i = 0; i < inventorySize; i += 1) {
-    const itemId = items[(i + itemsStartIndex) % inventorySize];
+    const itemId = items.at((i + itemsStartIndex) % Math.max(items.length, inventorySize));
     inventoryItems.push(
       (
         <li className="inventory__item" key={itemId ?? i}>

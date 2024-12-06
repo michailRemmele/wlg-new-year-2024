@@ -12,6 +12,9 @@ export const CancelItemSelection = 'CancelItemSelection';
 export const UpdateJournal = 'UpdateJournal';
 export const ApplyItem = 'ApplyItem';
 export const RemoveItem = 'RemoveItem';
+export const EnterRoom = 'EnterRoom';
+export const LoadRoom = 'LoadRoom';
+export const ResetSaveState = 'ResetSaveState';
 
 export type MoveEvent = ActorEvent<{ direction: number; point?: boolean }>;
 
@@ -25,11 +28,14 @@ export type ApplyItemEvent = ActorEvent<{ item: string }>;
 
 export type TakeItemEvent = SceneEvent<{ item: string }>;
 export type SelectItemEvent = SceneEvent<{ item: string }>;
-export type RemoveItemEvent = SceneEvent<{ item: string }>;
+export type RemoveItemEvent = SceneEvent<{ item: string; applicationTarget: string }>;
 
 export type InteractEvent = SceneEvent<{ actionTarget: string; selectedItem?: string }>;
 
 export type UpdateJournalEvent = SceneEvent<{ id: string; title: string }>;
+
+export type EnterRoomEvent = SceneEvent<{ levelId: string, spawnerId: string }>;
+export type LoadRoomEvent = SceneEvent<{ levelId: string }>;
 
 declare module 'remiz' {
   export interface ActorEventMap {
@@ -48,5 +54,8 @@ declare module 'remiz' {
     [RemoveItem]: RemoveItemEvent
     [CancelItemSelection]: SceneEvent
     [UpdateJournal]: UpdateJournalEvent
+    [EnterRoom]: EnterRoomEvent
+    [LoadRoom]: LoadRoomEvent
+    [ResetSaveState]: SceneEvent
   }
 }

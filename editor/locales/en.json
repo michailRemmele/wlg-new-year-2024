@@ -12,7 +12,15 @@
 
   "components.inventory.title": "Inventory",
 
+  "components.entrance.title": "Entrance",
+  "components.entrance.levelId.title": "Level Id",
+  "components.entrance.spawnerId.title": "Spawner Id",
+
   "systems.movementSystem.title": "Movement System",
 
-  "systems.journal.title": "Journal"
+  "systems.journal.title": "Journal",
+
+  "systems.levelManager.title": "Level Manager",
+
+  "systems.saver.title": "Saver"
 }

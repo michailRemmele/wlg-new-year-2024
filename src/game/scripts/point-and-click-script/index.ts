@@ -10,7 +10,11 @@ import type {
   CollisionLeaveEvent,
 } from 'remiz/events';
 
-import { Interactable, Inventory } from '../../components';
+import {
+  Interactable,
+  Inventory,
+  Entrance,
+} from '../../components';
 import { WALL_PATH_BLOCK_ID } from '../../../consts/templates';
 import * as EventType from '../../events';
 import type {
@@ -133,6 +137,13 @@ export class PointAndClickScript extends Script {
     }
     if (interactable.action === 'inspect' && this.selectedItem) {
       target.dispatchEvent(EventType.ApplyItem, { item: this.selectedItem });
+    }
+    if (interactable.action === 'enter') {
+      const entrance = target.getComponent(Entrance);
+      this.scene.dispatchEvent(EventType.EnterRoom, {
+        levelId: entrance.levelId,
+        spawnerId: entrance.spawnerId,
+      });
     }
   }
 
