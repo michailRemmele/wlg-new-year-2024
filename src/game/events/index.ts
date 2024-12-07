@@ -12,6 +12,8 @@ export const CancelItemSelection = 'CancelItemSelection';
 export const UpdateJournal = 'UpdateJournal';
 export const ApplyItem = 'ApplyItem';
 export const RemoveItem = 'RemoveItem';
+export const StudyItem = 'StudyItem';
+export const RejectItem = 'RejectItem';
 export const EnterRoom = 'EnterRoom';
 export const LoadRoom = 'LoadRoom';
 export const ResetSaveState = 'ResetSaveState';
@@ -29,6 +31,8 @@ export type ApplyItemEvent = ActorEvent<{ item: string }>;
 export type TakeItemEvent = SceneEvent<{ item: string }>;
 export type SelectItemEvent = SceneEvent<{ item: string }>;
 export type RemoveItemEvent = SceneEvent<{ item: string; applicationTarget: string }>;
+export type StudyItemEvent = SceneEvent<{ item: string; }>;
+export type RejectItemEvent = SceneEvent<{ item: string; applicationTarget: string }>;
 
 export type InteractEvent = SceneEvent<{ actionTarget: string; selectedItem?: string }>;
 
@@ -52,6 +56,8 @@ declare module 'remiz' {
     [TakeItem]: TakeItemEvent
     [SelectItem]: SelectItemEvent
     [RemoveItem]: RemoveItemEvent
+    [StudyItem]: StudyItemEvent
+    [RejectItem]: RejectItemEvent
     [CancelItemSelection]: SceneEvent
     [UpdateJournal]: UpdateJournalEvent
     [EnterRoom]: EnterRoomEvent

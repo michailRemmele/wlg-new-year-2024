@@ -5,6 +5,7 @@ import {
   PointAndClickScript,
   CursorScript,
   ChristmasTreeScript,
+  DialogScript,
 } from '../../../src/game/scripts';
 
 import {
@@ -12,6 +13,7 @@ import {
   pointAndClickScript,
   cursorScript,
   christmasTreeScript,
+  dialogScript,
 } from './script-system';
 
 export const resourcesSchema = {
@@ -20,5 +22,6 @@ export const resourcesSchema = {
     [PointAndClickScript.scriptName]: pointAndClickScript,
     [CursorScript.scriptName]: cursorScript,
     [ChristmasTreeScript.scriptName]: christmasTreeScript,
+    [DialogScript.scriptName]: dialogScript,
   },
 };

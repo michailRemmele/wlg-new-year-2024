@@ -3,6 +3,7 @@ import {
   EXAMPLE_ITEM_2_ID,
   EXAMPLE_ITEM_3_ID,
   EXAMPLE_ITEM_4_ID,
+  EXAMPLE_ITEM_5_ID,
 } from './actors';
 
 interface Item {
@@ -36,5 +37,11 @@ export const ITEM: Record<string, Item> = {
     title: 'Предмет 4',
     imageUrl: './images/example-item-4.png',
     templateId: '77bcfe83-72de-4a00-9a57-53814b206d80',
+  },
+  [EXAMPLE_ITEM_5_ID]: {
+    name: 'exampleItem5',
+    title: 'Предмет 5',
+    imageUrl: './images/example-item-5.png',
+    templateId: 'b74d6f6c-3025-4acb-ba09-f22684a1a907',
   },
 };

@@ -82,3 +82,15 @@ button:disabled {
 #overlay.overlay_black {
   background-color: black;
 }
+
+#dialog {
+  max-width: 200px;
+
+  position: fixed;
+  z-index: 3;
+
+  color: white;
+  text-align: center;
+
+  text-shadow: 0 0 4px black;
+}

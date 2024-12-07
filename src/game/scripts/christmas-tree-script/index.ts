@@ -57,6 +57,14 @@ export class ChristmasTreeScript extends Script {
   private handleApplyItem = (event: ApplyItemEvent): void => {
     const { item } = event;
 
+    if (!DECORATIONS_MAP[item]) {
+      this.scene.dispatchEvent(EventType.RejectItem, {
+        item,
+        applicationTarget: this.actor.id,
+      });
+      return;
+    }
+
     this.applyItem(item);
 
     const player = this.scene.getEntityByName(PLAYER_NAME)!;
@@ -67,10 +75,6 @@ export class ChristmasTreeScript extends Script {
   };
 
   private applyItem(itemId: string): void {
-    if (!DECORATIONS_MAP[itemId]) {
-      return;
-    }
-
     const place = this.actor.getEntityById(DECORATIONS_MAP[itemId]);
     if (!place) {
       return;
