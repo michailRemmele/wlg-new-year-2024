@@ -71,6 +71,7 @@ export class Saver extends System {
     this.scene.addEventListener(EventType.TakeItem, this.handleTakeItem);
     this.scene.addEventListener(EventType.RemoveItem, this.handleRemoveItem);
     this.scene.addEventListener(EventType.LoadRoom, this.handleLoadRoom);
+    this.scene.addEventListener(EventType.EnterScene, this.handleEnterScene);
     this.scene.addEventListener(EventType.UpdateJournal, this.handleUpdateJournal);
 
     this.scene.addEventListener(EventType.ResetSaveState, this.handleResetSaveState);
@@ -80,6 +81,7 @@ export class Saver extends System {
     this.scene.removeEventListener(EventType.TakeItem, this.handleTakeItem);
     this.scene.removeEventListener(EventType.RemoveItem, this.handleRemoveItem);
     this.scene.removeEventListener(EventType.LoadRoom, this.handleLoadRoom);
+    this.scene.removeEventListener(EventType.EnterScene, this.handleEnterScene);
     this.scene.removeEventListener(EventType.UpdateJournal, this.handleUpdateJournal);
 
     this.scene.removeEventListener(EventType.ResetSaveState, this.handleResetSaveState);
@@ -100,6 +102,10 @@ export class Saver extends System {
       event.item,
     ];
 
+    this.save();
+  };
+
+  private handleEnterScene = (): void => {
     this.save();
   };
 

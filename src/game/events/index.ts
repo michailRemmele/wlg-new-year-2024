@@ -15,6 +15,7 @@ export const RemoveItem = 'RemoveItem';
 export const StudyItem = 'StudyItem';
 export const RejectItem = 'RejectItem';
 export const EnterRoom = 'EnterRoom';
+export const EnterScene = 'EnterScene';
 export const LoadRoom = 'LoadRoom';
 export const ResetSaveState = 'ResetSaveState';
 
@@ -31,7 +32,6 @@ export type ApplyItemEvent = ActorEvent<{ item: string }>;
 export type TakeItemEvent = SceneEvent<{ item: string }>;
 export type SelectItemEvent = SceneEvent<{ item: string }>;
 export type RemoveItemEvent = SceneEvent<{ item: string; applicationTarget: string }>;
-export type StudyItemEvent = SceneEvent<{ item: string; }>;
 export type RejectItemEvent = SceneEvent<{ item: string; applicationTarget: string }>;
 
 export type InteractEvent = SceneEvent<{ actionTarget: string; selectedItem?: string }>;
@@ -39,6 +39,7 @@ export type InteractEvent = SceneEvent<{ actionTarget: string; selectedItem?: st
 export type UpdateJournalEvent = SceneEvent<{ id: string; title: string }>;
 
 export type EnterRoomEvent = SceneEvent<{ levelId: string, spawnerId: string }>;
+export type EnterSceneEvent = SceneEvent<{ levelId: string, sceneId: string }>;
 export type LoadRoomEvent = SceneEvent<{ levelId: string }>;
 
 declare module 'remiz' {
@@ -49,6 +50,7 @@ declare module 'remiz' {
     [CursorClick]: CursorClickEvent
     [CursorLeave]: ActorEvent
     [ApplyItem]: ApplyItemEvent
+    [StudyItem]: ActorEvent
   }
 
   export interface SceneEventMap {
@@ -56,11 +58,11 @@ declare module 'remiz' {
     [TakeItem]: TakeItemEvent
     [SelectItem]: SelectItemEvent
     [RemoveItem]: RemoveItemEvent
-    [StudyItem]: StudyItemEvent
     [RejectItem]: RejectItemEvent
     [CancelItemSelection]: SceneEvent
     [UpdateJournal]: UpdateJournalEvent
     [EnterRoom]: EnterRoomEvent
+    [EnterScene]: EnterSceneEvent
     [LoadRoom]: LoadRoomEvent
     [ResetSaveState]: SceneEvent
   }

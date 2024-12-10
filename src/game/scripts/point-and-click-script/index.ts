@@ -139,7 +139,7 @@ export class PointAndClickScript extends Script {
       target.dispatchEvent(EventType.ApplyItem, { item: this.selectedItem });
     }
     if (interactable.action === 'inspect' && !this.selectedItem) {
-      this.scene.dispatchEvent(EventType.StudyItem, { item: target.id });
+      target.dispatchEvent(EventType.StudyItem);
     }
     if (interactable.action === 'enter') {
       const entrance = target.getComponent(Entrance);

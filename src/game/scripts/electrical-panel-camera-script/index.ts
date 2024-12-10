@@ -4,10 +4,9 @@ import type {
 } from 'remiz';
 import { Script, Camera } from 'remiz';
 
-const VIEWPORT_SIZE_X = 240;
 const VIEWPORT_SIZE_Y = 120;
 
-export class CameraScript extends Script {
+export class EletricalPanelCameraScript extends Script {
   private actor: Actor;
 
   constructor(options: ScriptOptions) {
@@ -16,17 +15,14 @@ export class CameraScript extends Script {
     this.actor = options.actor;
 
     const root = document.getElementById('root');
-    root?.classList.remove('fullscreen');
+    root?.classList.add('fullscreen');
 
     window.dispatchEvent(new Event('resize'));
   }
 
   private updateZoom(): void {
     const camera = this.actor.getComponent(Camera);
-    camera.zoom = Math.min(
-      camera.windowSizeX / VIEWPORT_SIZE_X,
-      camera.windowSizeY / VIEWPORT_SIZE_Y,
-    );
+    camera.zoom = camera.windowSizeY / VIEWPORT_SIZE_Y;
   }
 
   update(): void {
@@ -34,4 +30,4 @@ export class CameraScript extends Script {
   }
 }
 
-CameraScript.scriptName = 'CameraScript';
+EletricalPanelCameraScript.scriptName = 'EletricalPanelCameraScript';

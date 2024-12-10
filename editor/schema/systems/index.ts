@@ -5,16 +5,19 @@ import {
   Journal,
   LevelManager,
   Saver,
+  CursorPainter,
 } from '../../../src/game/systems';
 
 import { movementSystem } from './movement-system';
 import { journal } from './journal';
 import { levelManager } from './level-manager';
 import { saver } from './saver';
+import { cursorPainter } from './cursor-painer';
 
 export const systemsSchema: Record<string, WidgetSchema> = {
   [MovementSystem.systemName]: movementSystem,
   [Journal.systemName]: journal,
   [LevelManager.systemName]: levelManager,
   [Saver.systemName]: saver,
+  [CursorPainter.systemName]: cursorPainter,
 };

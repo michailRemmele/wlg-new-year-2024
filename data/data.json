@@ -13,6 +13,13 @@
           "options": {
             "filterComponents": []
           }
+        },
+        {
+          "name": "CursorPainter",
+          "options": {
+            "windowNodeId": "cursor-area",
+            "src": "cursor.png"
+          }
         }
       ],
       "levelId": null
@@ -99,9 +106,81 @@
           "options": {
             "frequency": 1000
           }
+        },
+        {
+          "name": "CursorPainter",
+          "options": {
+            "windowNodeId": "cursor-area",
+            "src": "cursor.png"
+          }
         }
       ],
       "levelId": "814bb481-8226-4f26-8df4-7963417938ec"
+    },
+    {
+      "id": "61a9daad-0b70-4c80-99df-09faaadf1d43",
+      "name": "Electrical Panel Game",
+      "systems": [
+        {
+          "name": "PhysicsSystem",
+          "options": {
+            "gravitationalAcceleration": 100
+          }
+        },
+        {
+          "name": "CameraSystem",
+          "options": {
+            "windowNodeId": "root",
+            "initialCamera": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+            "scaleSensitivity": 0
+          }
+        },
+        {
+          "name": "MouseInputSystem",
+          "options": {
+            "useWindow": false,
+            "windowNodeId": "root"
+          }
+        },
+        {
+          "name": "MouseControlSystem",
+          "options": {}
+        },
+        {
+          "name": "ScriptSystem",
+          "options": {}
+        },
+        {
+          "name": "LevelManager",
+          "options": {}
+        },
+        {
+          "name": "Animator",
+          "options": {}
+        },
+        {
+          "name": "SpriteRenderer",
+          "options": {
+            "windowNodeId": "root",
+            "backgroundColor": "#000",
+            "backgroundAlpha": 1
+          }
+        },
+        {
+          "name": "UiBridge",
+          "options": {
+            "filterComponents": []
+          }
+        },
+        {
+          "name": "CursorPainter",
+          "options": {
+            "windowNodeId": "cursor-area",
+            "src": "cursor.png"
+          }
+        }
+      ],
+      "levelId": "7576e9a6-9b5f-440e-8dc4-89b7f609c2ec"
     }
   ],
   "levels": [
@@ -370,7 +449,7 @@
           "id": "a8a633c7-6f16-4eef-92d5-a156927e33f4",
           "templateId": "7c256df5-67fd-4424-9a39-61751e8e2c29",
           "fromTemplate": true,
-          "name": "New Year Tree",
+          "name": "Christmas Tree",
           "components": [
             {
               "name": "Transform",
@@ -1003,6 +1082,230 @@
               "config": {
                 "offsetX": 18.5,
                 "offsetY": 30.5,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "34c64b15-fd26-4b4d-ab84-d56d67f54079",
+          "templateId": "18610733-beda-4ccd-94fb-d242cf37ce4d",
+          "fromTemplate": true,
+          "name": "Eletrical Panel",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -36,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "7576e9a6-9b5f-440e-8dc4-89b7f609c2ec",
+      "name": "Electrical Panel",
+      "actors": [
+        {
+          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "name": "Camera",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Camera",
+              "config": {
+                "zoom": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "756203e6-0187-4142-a5df-f78b046ff006",
+                    "name": "EletricalPanelCameraScript",
+                    "options": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0b37fd2a-c14e-433f-a0a1-b2b1966ac01e",
+          "name": "Background",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 480,
+                "height": 240,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "background",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#646464",
+                    "opacity": 1
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "221e12be-0300-4418-9b31-330dffffc70c",
+          "name": "Panel",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 100,
+                "height": 100,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "decorations",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#26a4c5",
+                    "opacity": 1
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7332fecb-e66a-4c3d-81ce-7bdae69d3432",
+          "templateId": "7b9816fe-f525-4abd-a8d1-6a87b80432d7",
+          "fromTemplate": true,
+          "name": "Panel Exit Right",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 108,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "42300798-dc73-47e4-a943-d36b55d7541e",
+                "spawnerId": ""
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a58a53ee-0b27-4d97-b989-114426a863de",
+          "templateId": "7b9816fe-f525-4abd-a8d1-6a87b80432d7",
+          "fromTemplate": true,
+          "name": "Panel Exit Left",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -108,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "42300798-dc73-47e4-a943-d36b55d7541e",
+                "spawnerId": ""
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e22261a9-f89e-4184-8118-fe2bb7a4685d",
+          "templateId": "c73ecd7a-6b76-4c3b-9bc6-e2a8c73d9c0d",
+          "fromTemplate": true,
+          "name": "Cursor",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1893,32 +2196,6 @@
           }
         },
         {
-          "name": "Sprite",
-          "config": {
-            "src": "cursor.png",
-            "width": 6,
-            "height": 6,
-            "slice": 3,
-            "rotation": 0,
-            "sortCenter": [
-              0,
-              0
-            ],
-            "flipX": false,
-            "flipY": false,
-            "sortingLayer": "default",
-            "fit": "stretch",
-            "material": {
-              "type": "basic",
-              "options": {
-                "blending": "normal",
-                "color": "#fff",
-                "opacity": 0
-              }
-            }
-          }
-        },
-        {
           "name": "Cursor",
           "config": {}
         },
@@ -1930,218 +2207,6 @@
                 "id": "50290596-416c-4f49-8ddf-2346f4cdc236",
                 "name": "CursorScript",
                 "options": {}
-              }
-            ]
-          }
-        },
-        {
-          "name": "Animatable",
-          "config": {
-            "initialState": "3db7a295-ad2a-4f92-a27a-58953614531b",
-            "states": [
-              {
-                "id": "3db7a295-ad2a-4f92-a27a-58953614531b",
-                "name": "Move",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "49851d00-f188-4d46-9130-bd983ac31bad",
-                      "fields": [
-                        {
-                          "id": "22263ac8-c3cc-4fd3-a987-81199ca7907d",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "c9c9546b-6b0b-4436-a9ea-7d11fe3c9693",
-                    "state": "f7c52b90-624f-45c6-9411-be128e0335e7",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "dc953ae5-b7fa-4998-8d2a-3b498ece20f4",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Cursor.action"
-                          },
-                          "arg2": {
-                            "type": "string",
-                            "value": "take"
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "id": "803821d4-0a79-4f98-bcc1-f468d3988768",
-                    "state": "3b9f1859-8760-4bde-aa97-8221644ce485",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "dc953ae5-b7fa-4998-8d2a-3b498ece20f4",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Cursor.action"
-                          },
-                          "arg2": {
-                            "type": "string",
-                            "value": "enter"
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "f7c52b90-624f-45c6-9411-be128e0335e7",
-                "name": "Take",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "49851d00-f188-4d46-9130-bd983ac31bad",
-                      "fields": [
-                        {
-                          "id": "22263ac8-c3cc-4fd3-a987-81199ca7907d",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "c9c9546b-6b0b-4436-a9ea-7d11fe3c9693",
-                    "state": "3db7a295-ad2a-4f92-a27a-58953614531b",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "dc953ae5-b7fa-4998-8d2a-3b498ece20f4",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Cursor.action"
-                          },
-                          "arg2": {
-                            "type": "string",
-                            "value": "move"
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "id": "803821d4-0a79-4f98-bcc1-f468d3988768",
-                    "state": "3b9f1859-8760-4bde-aa97-8221644ce485",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "dc953ae5-b7fa-4998-8d2a-3b498ece20f4",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Cursor.action"
-                          },
-                          "arg2": {
-                            "type": "string",
-                            "value": "enter"
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "3b9f1859-8760-4bde-aa97-8221644ce485",
-                "name": "Enter",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "49851d00-f188-4d46-9130-bd983ac31bad",
-                      "fields": [
-                        {
-                          "id": "22263ac8-c3cc-4fd3-a987-81199ca7907d",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 2
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "c9c9546b-6b0b-4436-a9ea-7d11fe3c9693",
-                    "state": "3db7a295-ad2a-4f92-a27a-58953614531b",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "dc953ae5-b7fa-4998-8d2a-3b498ece20f4",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Cursor.action"
-                          },
-                          "arg2": {
-                            "type": "string",
-                            "value": "move"
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "id": "803821d4-0a79-4f98-bcc1-f468d3988768",
-                    "state": "f7c52b90-624f-45c6-9411-be128e0335e7",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "dc953ae5-b7fa-4998-8d2a-3b498ece20f4",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Cursor.action"
-                          },
-                          "arg2": {
-                            "type": "string",
-                            "value": "take"
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
               }
             ]
           }
@@ -2375,7 +2440,7 @@
     },
     {
       "id": "7c256df5-67fd-4424-9a39-61751e8e2c29",
-      "name": "New Year Tree",
+      "name": "Christmas Tree",
       "components": [
         {
           "name": "Transform",
@@ -3149,6 +3214,312 @@
               "centerX": 0,
               "centerY": 0
             }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "18610733-beda-4ccd-94fb-d242cf37ce4d",
+      "name": "Electrical Panel",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "inspect"
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "eletrical-panel.png",
+            "width": 26,
+            "height": 26,
+            "slice": 2,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 24,
+              "sizeY": 24,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "86c349bb-762d-452c-bae7-da8c3f7f28f5",
+                "name": "ElectricalPanelScript",
+                "options": {}
+              }
+            ]
+          }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "b31298c1-267b-4190-8948-0d52639439b2",
+            "states": [
+              {
+                "id": "b31298c1-267b-4190-8948-0d52639439b2",
+                "name": "Idle",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "5150fc80-269e-4965-8e84-2e7148263e42",
+                      "fields": [
+                        {
+                          "id": "ef5343f3-30a9-411f-bf31-1a7bff9f1a25",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "11a47a39-ba9e-4830-9414-d842e0dd25d2",
+                    "state": "dbb1558c-385d-41f9-b59c-be8e1d662c82",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "582df387-0c75-47b9-844a-034832a5e845",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.Interactable.hover"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": true
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "dbb1558c-385d-41f9-b59c-be8e1d662c82",
+                "name": "Hover",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "5150fc80-269e-4965-8e84-2e7148263e42",
+                      "fields": [
+                        {
+                          "id": "ef5343f3-30a9-411f-bf31-1a7bff9f1a25",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "11a47a39-ba9e-4830-9414-d842e0dd25d2",
+                    "state": "b31298c1-267b-4190-8948-0d52639439b2",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "582df387-0c75-47b9-844a-034832a5e845",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.Interactable.hover"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": false
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7b9816fe-f525-4abd-a8d1-6a87b80432d7",
+      "name": "Panel Exit",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "",
+            "width": 120,
+            "height": 240,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#e9dc49",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 120,
+              "sizeY": 240,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "enter"
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c73ecd7a-6b76-4c3b-9bc6-e2a8c73d9c0d",
+      "name": "ElectricalPanelCursor",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "MouseControl",
+          "config": {
+            "inputEventBindings": [
+              {
+                "id": "d14294ae-e0e8-4586-9b22-d6d10720c65d",
+                "event": "mousemove",
+                "eventType": "CursorMove",
+                "attrs": []
+              },
+              {
+                "id": "92c9caa3-a091-4186-aa44-6a13c79ac771",
+                "event": "click",
+                "eventType": "CursorClick",
+                "attrs": []
+              },
+              {
+                "id": "c19340a2-4df5-4cd3-9fdf-78f35a2a4d24",
+                "event": "mouseleave",
+                "eventType": "CursorLeave",
+                "attrs": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "circleCollider",
+            "collider": {
+              "centerX": 3,
+              "centerY": 3,
+              "radius": 3
+            }
+          }
+        },
+        {
+          "name": "Cursor",
+          "config": {}
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "50290596-416c-4f49-8ddf-2346f4cdc236",
+                "name": "ElectricalPanelCursorScript",
+                "options": {}
+              }
+            ]
           }
         }
       ],

@@ -22,5 +22,9 @@
 
   "systems.levelManager.title": "Level Manager",
 
-  "systems.saver.title": "Saver"
+  "systems.saver.title": "Saver",
+
+  "systems.cursorPainter.title": "Cursor Painter",
+  "systems.cursorPainter.windowNodeId.title": "Window Node Id",
+  "systems.cursorPainter.src.title": "Source"
 }

@@ -6,6 +6,9 @@ import {
   CursorScript,
   ChristmasTreeScript,
   DialogScript,
+  ElectricalPanelScript,
+  EletricalPanelCameraScript,
+  ElectricalPanelCursorScript,
 } from '../../../src/game/scripts';
 
 import {
@@ -14,6 +17,9 @@ import {
   cursorScript,
   christmasTreeScript,
   dialogScript,
+  electricalPanelScript,
+  electricalPanelCameraScript,
+  electricalPanelCursorScript,
 } from './script-system';
 
 export const resourcesSchema = {
@@ -23,5 +29,8 @@ export const resourcesSchema = {
     [CursorScript.scriptName]: cursorScript,
     [ChristmasTreeScript.scriptName]: christmasTreeScript,
     [DialogScript.scriptName]: dialogScript,
+    [ElectricalPanelScript.scriptName]: electricalPanelScript,
+    [EletricalPanelCameraScript.scriptName]: electricalPanelCameraScript,
+    [ElectricalPanelCursorScript.scriptName]: electricalPanelCursorScript,
   },
 };

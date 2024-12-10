@@ -3,6 +3,7 @@ import type {
   Scene,
   ScriptOptions,
   UpdateOptions,
+  ActorEvent,
 } from 'remiz';
 import {
   Transform,
@@ -13,9 +14,6 @@ import {
 
 import { CHRISTMAS_TREE_ID } from '../../../consts/actors';
 import * as EventType from '../../events';
-import type {
-  StudyItemEvent,
-} from '../../events';
 
 const OFFSET_Y = 10;
 const DIALOG_TIMEOUT = 2000;
@@ -49,8 +47,8 @@ export class DialogScript extends Script {
     this.scene.removeEventListener(EventType.RejectItem, this.handleRejectItem);
   }
 
-  private handleStudyItem = (event: StudyItemEvent): void => {
-    const message = DIALOGS[event.item];
+  private handleStudyItem = (event: ActorEvent): void => {
+    const message = DIALOGS[event.target.id];
     if (!message) {
       return;
     }
