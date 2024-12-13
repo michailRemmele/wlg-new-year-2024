@@ -1,0 +1,26 @@
+.timer-bar {
+  grid-column: 3;
+  align-self: center;
+  justify-self: end;
+
+  height: 24px;
+  width: 30%;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 3px;
+
+  box-sizing: border-box;
+  border: 3px solid #ffffff;
+}
+
+.timer-bar__points {
+  background-color: #ffffff;
+
+  height: 100%;
+}
+
+@media screen and (max-height: 481px), screen and (max-width: 768px) {
+  .timer-bar {
+    height: 18px;
+  }
+}

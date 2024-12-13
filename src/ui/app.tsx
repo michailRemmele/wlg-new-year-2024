@@ -1,11 +1,19 @@
 import { useContext, useEffect } from 'react';
 import type { FC } from 'react';
 
-import { MAIN_MENU_ID, GAME_ID } from '../consts/scenes';
+import {
+  MAIN_MENU_ID,
+  GAME_ID,
+  ELECTRICAL_PANEL_GAME_ID,
+} from '../consts/scenes';
 import { createLongPressFixHandler } from '../utils/long-press-fix';
 
 import { EngineContext } from './providers';
-import { MainMenu, Game } from './scenes';
+import {
+  MainMenu,
+  Game,
+  ElectricalPanelGame,
+} from './scenes';
 
 export const App: FC = () => {
   const { scene } = useContext(EngineContext);
@@ -22,6 +30,7 @@ export const App: FC = () => {
     <>
       {scene.id === MAIN_MENU_ID && <MainMenu />}
       {scene.id === GAME_ID && <Game />}
+      {scene.id === ELECTRICAL_PANEL_GAME_ID && <ElectricalPanelGame />}
     </>
   );
 };

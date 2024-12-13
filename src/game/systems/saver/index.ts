@@ -13,6 +13,7 @@ import type {
   RemoveItemEvent,
   LoadRoomEvent,
   UpdateJournalEvent,
+  ChangeItemStateEvent,
 } from '../../events';
 import { PLAYER_NAME } from '../../../consts/actors';
 import { ROOM_1_ID } from '../../../consts/levels';
@@ -73,7 +74,7 @@ export class Saver extends System {
     this.scene.addEventListener(EventType.LoadRoom, this.handleLoadRoom);
     this.scene.addEventListener(EventType.EnterScene, this.handleEnterScene);
     this.scene.addEventListener(EventType.UpdateJournal, this.handleUpdateJournal);
-
+    this.scene.addEventListener(EventType.ChangeItemState, this.handleChangeItemState);
     this.scene.addEventListener(EventType.ResetSaveState, this.handleResetSaveState);
   }
 
@@ -83,7 +84,7 @@ export class Saver extends System {
     this.scene.removeEventListener(EventType.LoadRoom, this.handleLoadRoom);
     this.scene.removeEventListener(EventType.EnterScene, this.handleEnterScene);
     this.scene.removeEventListener(EventType.UpdateJournal, this.handleUpdateJournal);
-
+    this.scene.removeEventListener(EventType.ChangeItemState, this.handleChangeItemState);
     this.scene.removeEventListener(EventType.ResetSaveState, this.handleResetSaveState);
   }
 
@@ -125,19 +126,29 @@ export class Saver extends System {
     this.save();
   };
 
+  private handleChangeItemState = (event: ChangeItemStateEvent): void => {
+    window.saveState!.questItems[event.item] ??= { appliedItems: [] };
+    window.saveState!.questItems[event.item].state = event.state;
+
+    this.save();
+  };
+
   private handleResetSaveState = (): void => {
     window.saveState = structuredClone(INITIAL_SAVE_STATE);
     window.localStorage.removeItem(SAVE_STATE_LS_KEY);
   };
 
   private save(): void {
-    const player = this.scene.getEntityByName(PLAYER_NAME)!;
-    const transform = player.getComponent(Transform);
+    const player = this.scene.getEntityByName(PLAYER_NAME);
 
-    window.saveState!.playerPosition = {
-      x: transform.offsetX,
-      y: transform.offsetY,
-    };
+    if (player) {
+      const transform = player.getComponent(Transform);
+
+      window.saveState!.playerPosition = {
+        x: transform.offsetX,
+        y: transform.offsetY,
+      };
+    }
 
     window.saveState!.touched = true;
 

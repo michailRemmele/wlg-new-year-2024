@@ -1,0 +1,13 @@
+.score-bar {
+  grid-column: 2;
+  justify-self: center;
+  align-self: center;
+
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.score-bar__score {
+  margin-bottom: 4px;
+}

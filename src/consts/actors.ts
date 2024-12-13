@@ -12,6 +12,7 @@ export const DECORATION_PLACE_4_ID = '59b69b0a-dd50-4705-8ae3-7981e98b2680';
 export const INITIAL_SPAWNER_ID = '60b958e7-ec53-41d7-a78b-4fc5a4c7e6e2';
 
 export const CHRISTMAS_TREE_ID = 'a8a633c7-6f16-4eef-92d5-a156927e33f4';
+export const ELECTRICAL_PANEL_ID = '34c64b15-fd26-4b4d-ab84-d56d67f54079';
 
 export const PLAYER_NAME = 'Player';
 export const CURSOR_NAME = 'Cursor';

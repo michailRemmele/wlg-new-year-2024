@@ -6,6 +6,8 @@ import {
   CursorMove,
   CursorClick,
   CursorLeave,
+  CursorDown,
+  CursorUp,
 } from '../../src/game/events';
 
 export const controlEventsReference: Reference = {
@@ -15,5 +17,7 @@ export const controlEventsReference: Reference = {
     CursorMove,
     CursorClick,
     CursorLeave,
+    CursorDown,
+    CursorUp,
   ].map((value) => ({ title: value, value })),
 };

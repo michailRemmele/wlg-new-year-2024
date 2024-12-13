@@ -9,7 +9,7 @@ import { CURSOR_NAME } from '../../../consts/actors';
 
 import { ImageLoader } from './image-loader';
 
-const CURSOR_SOURCE_SIZE = 16;
+const CURSOR_SOURCE_SIZE = 32;
 const CURSOR_SIZE = 32;
 const CURSOR_STATE: Record<string, number> = {
   move: 0,
@@ -37,8 +37,8 @@ export class CursorPainter extends System {
 
   private cursorSrc: string;
   private cursorImage?: CanvasImageSource;
-  private cursorX: number;
-  private cursorY: number;
+  private cursorX?: number;
+  private cursorY?: number;
 
   constructor(options: SystemOptions) {
     super();
@@ -69,8 +69,8 @@ export class CursorPainter extends System {
     this.imageLoader = new ImageLoader();
 
     this.cursorSrc = src;
-    this.cursorX = window.cursorX ?? this.canvasWidth / 2;
-    this.cursorY = window.cursorY ?? this.canvasHeight / 2;
+    this.cursorX = window.cursorX;
+    this.cursorY = window.cursorY;
   }
 
   async load(): Promise<void> {
@@ -91,14 +91,25 @@ export class CursorPainter extends System {
   }
 
   private handleWindowResize = (): void => {
-    this.canvasWidth = this.windowNode.clientWidth;
-    this.canvasHeight = this.windowNode.clientHeight;
+    const ratio = window.devicePixelRatio ?? 1;
+
+    this.canvasWidth = Math.floor(this.windowNode.clientWidth * ratio);
+    this.canvasHeight = Math.floor(this.windowNode.clientHeight * ratio);
 
     this.windowNode.width = this.canvasWidth;
     this.windowNode.height = this.canvasHeight;
+
+    this.windowNode.style.width = `${this.canvasWidth / ratio}px`;
+    this.windowNode.style.height = `${this.canvasHeight / ratio}px`;
   };
 
   private handleMouseMove = (event: MouseEvent): void => {
+    if (this.cursorX === undefined || this.cursorY === undefined) {
+      if (!document.body.classList.contains('cursor-hidden')) {
+        document.body.classList.add('cursor-hidden');
+      }
+    }
+
     this.cursorX = event.clientX;
     this.cursorY = event.clientY;
 
@@ -112,6 +123,9 @@ export class CursorPainter extends System {
     if (!this.cursorImage) {
       return;
     }
+    if (this.cursorX === undefined || this.cursorY === undefined) {
+      return;
+    }
 
     let state = 'move';
 
@@ -122,6 +136,8 @@ export class CursorPainter extends System {
       state = cursor.action;
     }
 
+    const ratio = window.devicePixelRatio ?? 1;
+
     this.context.imageSmoothingEnabled = false;
     this.context.drawImage(
       this.cursorImage,
@@ -129,10 +145,10 @@ export class CursorPainter extends System {
       0,
       CURSOR_SOURCE_SIZE,
       CURSOR_SOURCE_SIZE,
-      this.cursorX,
-      this.cursorY,
-      CURSOR_SIZE,
-      CURSOR_SIZE,
+      Math.floor(this.cursorX * ratio),
+      Math.floor(this.cursorY * ratio),
+      CURSOR_SIZE * Math.floor(ratio),
+      CURSOR_SIZE * Math.floor(ratio),
     );
   }
 }

@@ -5,6 +5,7 @@ import {
 import type {
   SystemOptions,
 } from 'remiz';
+import { v4 as uuidv4 } from 'uuid';
 
 import * as EventType from '../../events';
 import type { SelectItemEvent, TakeItemEvent } from '../../events';
@@ -33,21 +34,21 @@ export class Journal extends System {
 
   private handleSelectItem = (event: SelectItemEvent): void => {
     this.scene.dispatchEvent(EventType.UpdateJournal, {
-      id: crypto.randomUUID(),
+      id: uuidv4(),
       title: `Вы выбрали: ${ITEM[event.item].title}`,
     });
   };
 
   private handleTakeItem = (event: TakeItemEvent): void => {
     this.scene.dispatchEvent(EventType.UpdateJournal, {
-      id: crypto.randomUUID(),
+      id: uuidv4(),
       title: `Вы подобрали: ${ITEM[event.item].title}`,
     });
   };
 
   private handleRemoveItem = (event: TakeItemEvent): void => {
     this.scene.dispatchEvent(EventType.UpdateJournal, {
-      id: crypto.randomUUID(),
+      id: uuidv4(),
       title: `Вы использовали: ${ITEM[event.item].title}`,
     });
   };

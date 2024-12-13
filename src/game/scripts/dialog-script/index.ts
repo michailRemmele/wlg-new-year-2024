@@ -12,14 +12,20 @@ import {
   CameraService,
 } from 'remiz';
 
-import { CHRISTMAS_TREE_ID } from '../../../consts/actors';
+import {
+  CHRISTMAS_TREE_ID,
+  ELECTRICAL_PANEL_ID,
+} from '../../../consts/actors';
 import * as EventType from '../../events';
 
 const OFFSET_Y = 10;
 const DIALOG_TIMEOUT = 2000;
 
-const DIALOGS: Record<string, string | undefined> = {
+const DIALOGS: Record<string, string | Record<string, string | undefined> | undefined> = {
   [CHRISTMAS_TREE_ID]: 'На елке не хватает украшений',
+  [ELECTRICAL_PANEL_ID]: {
+    done: 'Это мне больше не нужно',
+  },
 };
 
 export class DialogScript extends Script {
@@ -49,11 +55,21 @@ export class DialogScript extends Script {
 
   private handleStudyItem = (event: ActorEvent): void => {
     const message = DIALOGS[event.target.id];
+    const state = window.saveState?.questItems[event.target.id]?.state;
+
     if (!message) {
       return;
     }
 
-    this.showDialog(message);
+    if (typeof message === 'object') {
+      if (!state || !message[state]) {
+        return;
+      }
+      this.showDialog(message[state]);
+    } else {
+      this.showDialog(message);
+    }
+
     this.updateDialogPosition();
 
     this.timeout = DIALOG_TIMEOUT;

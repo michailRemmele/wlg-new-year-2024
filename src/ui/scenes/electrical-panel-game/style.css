@@ -1,0 +1,17 @@
+.electrical-panel-game {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  height: 100%;
+  box-sizing: border-box;
+
+  padding: 16px;
+}
+
+.electrical-panel-game__footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  width: 100%;
+}

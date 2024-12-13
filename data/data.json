@@ -122,6 +122,10 @@
       "name": "Electrical Panel Game",
       "systems": [
         {
+          "name": "Saver",
+          "options": {}
+        },
+        {
           "name": "PhysicsSystem",
           "options": {
             "gravitationalAcceleration": 100
@@ -149,6 +153,13 @@
         {
           "name": "ScriptSystem",
           "options": {}
+        },
+        {
+          "name": "ElectricalPanelGame",
+          "options": {
+            "windowNodeId": "drawing-area",
+            "exitLevelId": "42300798-dc73-47e4-a943-d36b55d7541e"
+          }
         },
         {
           "name": "LevelManager",
@@ -1100,8 +1111,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -36,
-                "offsetY": 12,
+                "offsetX": -35,
+                "offsetY": 13,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1124,8 +1135,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 0,
-                "offsetY": 0,
+                "offsetX": 7.5,
+                "offsetY": -4.5,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1204,8 +1215,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 0,
-                "offsetY": 0,
+                "offsetX": 7.5,
+                "offsetY": -4.5,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1216,8 +1227,8 @@
               "name": "Sprite",
               "config": {
                 "src": "",
-                "width": 100,
-                "height": 100,
+                "width": 105,
+                "height": 105,
                 "slice": 1,
                 "rotation": 0,
                 "sortCenter": [
@@ -1250,7 +1261,7 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 108,
+                "offsetX": 117,
                 "offsetY": 0,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -1277,7 +1288,7 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -108,
+                "offsetX": -105,
                 "offsetY": 0,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -1306,6 +1317,1746 @@
               "config": {
                 "offsetX": 0,
                 "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "27b267ef-b74d-44c1-a720-da5fe4af7b7e",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 22",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 6,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8ee391ac-75af-4ffe-9a32-47926c7821f2",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 23",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 9,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0f7e1a90-e760-4711-9d65-9e16d1b75bfd",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 24",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 12,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2a1fd6ac-8cae-4d23-a816-e2ef3bb57e08",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 25",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 15,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "09e03cdc-0550-45ea-a622-9e1a50badf1c",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 26",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 18,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "97920876-3a5e-44bb-a622-eacb854eae67",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 27",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 21,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c09e63af-5a0c-466a-9c2a-a0a883879e52",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 36",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 3,
+                "offsetY": -3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cd665b86-ef8e-4fde-bb48-c4d82d7c8732",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 37",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 3,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8cd306c5-e834-4c62-944a-b3b9426341b9",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 38",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "30c5222d-2ec9-4559-9ca8-3bb671cdac66",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 39",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 6,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b63d8119-1c3d-4211-b125-fec23f8bb30b",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 40",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -3,
+                "offsetY": 9,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "4d4c0315-2ac2-40f3-8ef9-a6f4a00d4f70",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 41",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -3,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "51058d0f-a412-455e-a57d-98ba285c230b",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 42",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -6,
+                "offsetY": 15,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "dd1ac702-b811-4433-b966-68528267bcc0",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 43",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 24,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f58f9a07-b734-459b-8f8e-19649ac632c1",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 44",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 27,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9c9ef7d6-985d-4096-b406-540da90cfb2c",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 45",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -6,
+                "offsetY": 18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cc0c49f7-3812-4cd7-b675-cfd7f5923c9f",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 46",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -9,
+                "offsetY": 21,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "22923c1f-4798-49af-877c-f890cc543ef3",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 51",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 9,
+                "offsetY": -21,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b2a45fc3-4a5a-442c-a570-bc5b5d2e3218",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 52",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 12,
+                "offsetY": -24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "721c2f8a-b06b-48b9-9e59-740cdf2f06b2",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 53",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 15,
+                "offsetY": -27,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9af73e52-f209-4384-a011-092c92310297",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 54",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 18,
+                "offsetY": -30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "56a789ee-0512-459c-8f3e-3d7d214ed460",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 55",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 21,
+                "offsetY": -33,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2993cd0b-1886-41e9-8c2a-839c419132d7",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 56",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 24,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "93759ef2-7633-4ef4-bd89-2c8b987cebdb",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 57",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 27,
+                "offsetY": -39,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b8e49875-06b9-471a-a746-23e4cbee818e",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 61",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 30,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "46b586c6-6578-484b-b2a3-e513e48c31ad",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 62",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -9,
+                "offsetY": 24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1fcdc0c2-df7c-491d-bf29-8db5f019ad51",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 63",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": 27,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1cd56911-cb39-40ed-a07f-012432b7b444",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 64",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1ae827d1-a779-4cfa-ab4e-65e708260426",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 65",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -15,
+                "offsetY": 33,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7615b9f5-0df6-4042-92c9-fb2201e9537d",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 66",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": 33,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e94a74c5-d5d8-4a91-b439-d40ff558fd0a",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 67",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -9,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8603ad0d-99c2-4797-9de2-a2b3c131d257",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 68",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -6,
+                "offsetY": 27,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "4ff1b2ff-b6bb-43cd-a5a5-296517216316",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 69",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -3,
+                "offsetY": 24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "11b44558-241d-45e9-a917-f471df2160c4",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 70",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 21,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b4308d51-e77a-4665-9798-6ddac8f3141f",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 71",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 3,
+                "offsetY": 18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e431c485-6ddf-45b3-a063-df12f0f7ae21",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 72",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 6,
+                "offsetY": 15,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6233448b-5999-4c1b-8710-3d32f50b6824",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 63",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 9,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "bf91cacb-0fae-4684-bbd4-331e4597b017",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 64",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 12,
+                "offsetY": 9,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1e39f5af-256c-4e2b-bd2a-c1ee07773ce5",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 65",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 15,
+                "offsetY": 6,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b6f13edf-3c51-47f0-8d99-4fbe69860f44",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 66",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 18,
+                "offsetY": 3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "55d4575d-05d9-40d5-ba1d-11a3df3415c9",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 67",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 21,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "51b646d1-1e09-4757-b4b7-04c42aec2739",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 68",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 24,
+                "offsetY": -3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8c0838cd-205e-4da6-9e2c-6062a03e7eb1",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 69",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 27,
+                "offsetY": -6,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7d16ce60-b47c-42ef-8f95-748e8ad392de",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 70",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 30,
+                "offsetY": -9,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9140b072-9dfd-414f-a997-4cac3b1c90a8",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 71",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 33,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a1aa9611-ad8c-447c-9d4d-c0e58b750375",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 72",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 36,
+                "offsetY": -15,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f17fb012-0296-442a-bfc8-5891b9b48037",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 73",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 39,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "77502d38-4347-427f-bf12-31bb339730c9",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 74",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 36,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6a7d3fea-1a36-425d-9f75-95c6e66a6247",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 75",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 33,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3a999148-a44a-4b12-a64e-1cb08069bd88",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 76",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": -3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8c1a74dd-8e4e-4547-bd44-745eb36acec7",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 77",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -3,
+                "offsetY": -3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b5df45a8-7719-48a9-aee8-233a846925cc",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 78",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -6,
+                "offsetY": -3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "b257ec22-618b-404f-9715-b67a904bba4b",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 79",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": -3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a3c3ee63-d6c0-4ebf-8ca5-935e2bb1d2e3",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 80",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -9,
+                "offsetY": -3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d42a488c-362a-4f83-9ed6-e3e8dc5c1cb0",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 81",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -15,
+                "offsetY": -3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "35b00d54-ceab-4391-b451-0884a6e80620",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 83",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -18,
+                "offsetY": -3,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "72447bb7-f194-4186-9256-66e6a5a2207b",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 67",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -18,
+                "offsetY": -6,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "39ae02cf-2beb-4222-a003-a1deb106894d",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 68",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -18,
+                "offsetY": -9,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ff7bcdf1-af6d-419a-ae4d-39e53c24d669",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 69",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -18,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "dd9bbaa0-6358-4f42-9ab8-534a3d82e5ad",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 70",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -18,
+                "offsetY": -15,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6d312e4b-f727-4dd0-abde-eb5aa081cc2f",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 72",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -15,
+                "offsetY": -21,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8af80a07-1ce5-4372-b011-9c05de757d05",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 73",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -15,
+                "offsetY": -24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2ac8c9ce-b39f-4785-bb7a-4d082aaf1dd7",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 74",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -15,
+                "offsetY": -27,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cfb876d6-843f-4114-803a-2b85c7fc06b8",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 80",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -15,
+                "offsetY": 36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0cb12f34-da40-4b43-9362-446db0ed6aa3",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 76",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -15,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "02a257fa-4096-4e20-a20d-8e0b547ea065",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 77",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -15,
+                "offsetY": -30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "72ee8587-296a-4502-9275-16256050f2c8",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 78",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": -33,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "763c432e-7474-4afe-a400-1841eb95d3a0",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 79",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": -36,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "02fe3f54-6036-47c0-a2ee-9aceca350711",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 80",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": -39,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1475c90a-3a32-47e6-8869-4a86f9f47812",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 81",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": -42,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e4c7415b-cd46-405a-8e62-47f8f442bd5f",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 82",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cea25495-5477-4d15-835b-221427f69a4c",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 83",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -9,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3c61e49d-bddd-47ad-a700-22455be9fee6",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 84",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -6,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "88867f12-e64a-4321-befa-9ab914bf2cf7",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 85",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -3,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d757e89c-2862-430a-9404-e570ab5a8f12",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 86",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a64cf497-268b-4aa9-b831-2424e05662f4",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 87",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 3,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "aae89f9d-7212-4c1c-a135-78038ed1f7cd",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 88",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 6,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1111975a-23c9-4792-84fe-f7000968f386",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 89",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 9,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7560ae2d-e35d-4b6d-bce7-8b4b603635a9",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 90",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 12,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2fb47b28-8386-4029-8007-cc0285d042e5",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 91",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 15,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3ba002c0-f83e-4523-b31a-15002c95a1f5",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 92",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 18,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "784aff74-d709-47d5-9ece-340ac8eecff5",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 93",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 21,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "65b9f338-6b5a-4d81-af2a-20faf90b5420",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 94",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 24,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "65bfa112-0cad-4037-a38b-0eecec0ccd4e",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 95",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 27,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a7d5f861-341e-40ea-a4ef-41b9842471d5",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 96",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 30,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "261fb901-114d-400f-b588-b09071473170",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 97",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 33,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a499c508-cf56-4c14-baf4-9c0f656ca29f",
+          "templateId": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+          "fromTemplate": true,
+          "name": "PathMark 98",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 30,
+                "offsetY": -42,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -3491,6 +5242,20 @@
                 "event": "mouseleave",
                 "eventType": "CursorLeave",
                 "attrs": []
+              },
+              {
+                "id": "ac0dcc1e-534b-47d1-b102-43497b79672e",
+                "event": "mousedown",
+                "eventType": "CursorDown",
+                "attrs": [],
+                "button": 0
+              },
+              {
+                "id": "32eaf8ed-ca51-4529-8afe-9999c107acce",
+                "event": "mouseup",
+                "eventType": "CursorUp",
+                "attrs": [],
+                "button": 0
               }
             ]
           }
@@ -3500,9 +5265,9 @@
           "config": {
             "type": "circleCollider",
             "collider": {
-              "centerX": 3,
-              "centerY": 3,
-              "radius": 3
+              "centerX": 0,
+              "centerY": 0,
+              "radius": 1
             }
           }
         },
@@ -3518,6 +5283,154 @@
                 "id": "50290596-416c-4f49-8ddf-2346f4cdc236",
                 "name": "ElectricalPanelCursorScript",
                 "options": {}
+              }
+            ]
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8c1d986e-28af-45e4-b229-cff673a7e7e9",
+      "name": "PathMark",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "path-mark.png",
+            "width": 6,
+            "height": 6,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 0.5
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "circleCollider",
+            "collider": {
+              "centerX": 0,
+              "centerY": 0,
+              "radius": 3
+            }
+          }
+        },
+        {
+          "name": "PathMark",
+          "config": {}
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "4b7bb79d-5e45-41ad-bea5-edcf32d723d3",
+            "states": [
+              {
+                "id": "4b7bb79d-5e45-41ad-bea5-edcf32d723d3",
+                "name": "Idle",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "5aa08117-aede-4045-be09-95ba3983c7e5",
+                      "fields": [
+                        {
+                          "id": "d010d257-1058-4528-bb94-13ac860f3d06",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 0.5
+                        },
+                        {
+                          "id": "968e101a-4b59-4b03-8ec3-a882cd41229f",
+                          "name": "components.Sprite.material.options.color",
+                          "type": "string",
+                          "value": "#fff"
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "71af0698-f1f2-4fcb-b450-318f821924d4",
+                    "state": "2cb7d32e-588c-41dd-9eb2-50733146fa75",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "1c005728-e128-413e-8f0c-7d2c4966e044",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.PathMark.passed"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": true
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "2cb7d32e-588c-41dd-9eb2-50733146fa75",
+                "name": "Passed",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "5aa08117-aede-4045-be09-95ba3983c7e5",
+                      "fields": [
+                        {
+                          "id": "d010d257-1058-4528-bb94-13ac860f3d06",
+                          "name": "components.Sprite.material.options.opacity",
+                          "type": "number",
+                          "value": 1
+                        },
+                        {
+                          "id": "968e101a-4b59-4b03-8ec3-a882cd41229f",
+                          "name": "components.Sprite.material.options.color",
+                          "type": "string",
+                          "value": "#FCFF00"
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": []
               }
             ]
           }

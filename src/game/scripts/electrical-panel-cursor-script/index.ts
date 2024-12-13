@@ -18,11 +18,15 @@ import { Interactable, Cursor, Entrance } from '../../components';
 import * as EventType from '../../events';
 import type {
   CursorMoveEvent,
+  CursorDownEvent,
+  CursorUpEvent,
 } from '../../events';
 
 export class ElectricalPanelCursorScript extends Script {
   private actor: Actor;
   private scene: Scene;
+
+  private isRepairing: boolean;
 
   constructor(options: ScriptOptions) {
     super();
@@ -30,11 +34,15 @@ export class ElectricalPanelCursorScript extends Script {
     this.actor = options.actor;
     this.scene = options.scene;
 
+    this.isRepairing = false;
+
     this.actor.addEventListener(EventType.CursorMove, this.handleCursorMove);
     this.actor.addEventListener(CollisionEnter, this.handleCollisionEnterOrStay);
     this.actor.addEventListener(CollisionStay, this.handleCollisionEnterOrStay);
     this.actor.addEventListener(CollisionLeave, this.handleCollisionLeave);
     this.actor.addEventListener(EventType.CursorClick, this.handleCursorClick);
+    this.actor.addEventListener(EventType.CursorDown, this.handleCursorDown);
+    this.actor.addEventListener(EventType.CursorUp, this.handleCursorUp);
 
     const transform = this.actor.getComponent(Transform);
     transform.offsetX = 0;
@@ -47,6 +55,8 @@ export class ElectricalPanelCursorScript extends Script {
     this.actor.removeEventListener(CollisionStay, this.handleCollisionEnterOrStay);
     this.actor.removeEventListener(CollisionLeave, this.handleCollisionLeave);
     this.actor.removeEventListener(EventType.CursorClick, this.handleCursorClick);
+    this.actor.removeEventListener(EventType.CursorDown, this.handleCursorDown);
+    this.actor.removeEventListener(EventType.CursorUp, this.handleCursorUp);
   }
 
   private handleCursorMove = (event: CursorMoveEvent): void => {
@@ -59,6 +69,10 @@ export class ElectricalPanelCursorScript extends Script {
   };
 
   private handleCollisionEnterOrStay = (event: CollisionEnterEvent): void => {
+    if (this.isRepairing) {
+      return;
+    }
+
     const { actor } = event;
 
     const interactable = actor.getComponent(Interactable);
@@ -75,6 +89,10 @@ export class ElectricalPanelCursorScript extends Script {
   };
 
   private handleCollisionLeave = (event: CollisionLeaveEvent): void => {
+    if (this.isRepairing) {
+      return;
+    }
+
     const { actor } = event;
 
     const interactable = actor.getComponent(Interactable);
@@ -90,6 +108,10 @@ export class ElectricalPanelCursorScript extends Script {
   };
 
   private handleCursorClick = (): void => {
+    if (this.isRepairing) {
+      return;
+    }
+
     const cursor = this.actor.getComponent(Cursor);
     const { target, action } = cursor;
 
@@ -106,7 +128,33 @@ export class ElectricalPanelCursorScript extends Script {
       const entrance = targetActor.getComponent(Entrance);
       this.scene.dispatchEvent(EventType.EnterRoom, {
         levelId: entrance.levelId,
-        spawnerId: entrance.spawnerId,
+        spawnerId: '',
+      });
+    }
+  };
+
+  private handleCursorDown = (event: CursorDownEvent): void => {
+    const cursor = this.actor.getComponent(Cursor);
+    const { action } = cursor;
+
+    if (action === 'move') {
+      this.scene.dispatchEvent(EventType.RepairStart, {
+        screenX: event.screenX,
+        screenY: event.screenY,
+      });
+
+      this.isRepairing = true;
+    }
+  };
+
+  private handleCursorUp = (event: CursorUpEvent): void => {
+    const cursor = this.actor.getComponent(Cursor);
+    const { action } = cursor;
+
+    if (action === 'move') {
+      this.scene.dispatchEvent(EventType.RepairEnd, {
+        screenX: event.screenX,
+        screenY: event.screenY,
       });
     }
   };

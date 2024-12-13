@@ -6,6 +6,7 @@ import {
   LevelManager,
   Saver,
   CursorPainter,
+  ElectricalPanelGame,
 } from '../../../src/game/systems';
 
 import { movementSystem } from './movement-system';
@@ -13,6 +14,7 @@ import { journal } from './journal';
 import { levelManager } from './level-manager';
 import { saver } from './saver';
 import { cursorPainter } from './cursor-painer';
+import { electricalPanelGame } from './electrical-panel-game';
 
 export const systemsSchema: Record<string, WidgetSchema> = {
   [MovementSystem.systemName]: movementSystem,
@@ -20,4 +22,5 @@ export const systemsSchema: Record<string, WidgetSchema> = {
   [LevelManager.systemName]: levelManager,
   [Saver.systemName]: saver,
   [CursorPainter.systemName]: cursorPainter,
+  [ElectricalPanelGame.systemName]: electricalPanelGame,
 };

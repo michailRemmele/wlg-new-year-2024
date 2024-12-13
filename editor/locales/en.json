@@ -16,6 +16,8 @@
   "components.entrance.levelId.title": "Level Id",
   "components.entrance.spawnerId.title": "Spawner Id",
 
+  "components.pathMark.title": "Path Mark",
+
   "systems.movementSystem.title": "Movement System",
 
   "systems.journal.title": "Journal",
@@ -26,5 +28,9 @@
 
   "systems.cursorPainter.title": "Cursor Painter",
   "systems.cursorPainter.windowNodeId.title": "Window Node Id",
-  "systems.cursorPainter.src.title": "Source"
+  "systems.cursorPainter.src.title": "Source",
+
+  "systems.electricalPanelGame.title": "Electrical Panel Game",
+  "systems.electricalPanelGame.windowNodeId.title": "Window Node Id",
+  "systems.electricalPanelGame.exitLevelId.title": "Exit Level Id"
 }
