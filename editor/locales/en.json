@@ -18,7 +18,13 @@
 
   "components.pathMark.title": "Path Mark",
 
+  "components.courierHealth.title": "Courier Health",
+  "components.courierHealth.points.title": "Points",
+
   "systems.movementSystem.title": "Movement System",
+
+  "components.trap.title": "Trap",
+  "components.trap.damage.title": "Damage",
 
   "systems.journal.title": "Journal",
 
@@ -32,5 +38,8 @@
 
   "systems.electricalPanelGame.title": "Electrical Panel Game",
   "systems.electricalPanelGame.windowNodeId.title": "Window Node Id",
-  "systems.electricalPanelGame.exitLevelId.title": "Exit Level Id"
+  "systems.electricalPanelGame.exitLevelId.title": "Exit Level Id",
+
+  "systems.arcadeCabinetGame.title": "Arcade Cabinet Game",
+  "systems.arcadeCabinetGame.exitLevelId.title": "Exit Level Id"
 }

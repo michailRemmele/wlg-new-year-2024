@@ -7,6 +7,8 @@ import {
   Inventory,
   Entrance,
   PathMark,
+  CourierHealth,
+  Trap,
 } from '../../../src/game/components';
 
 import { movement } from './movement';
@@ -15,6 +17,8 @@ import { cursor } from './cursor';
 import { inventory } from './inventory';
 import { entrance } from './entrance';
 import { pathMark } from './path-mark';
+import { courierHealth } from './courier-health';
+import { trap } from './trap';
 
 export const componentsSchema: Record<string, WidgetSchema> = {
   [Movement.componentName]: movement,
@@ -23,4 +27,6 @@ export const componentsSchema: Record<string, WidgetSchema> = {
   [Inventory.componentName]: inventory,
   [Entrance.componentName]: entrance,
   [PathMark.componentName]: pathMark,
+  [CourierHealth.componentName]: courierHealth,
+  [Trap.componentName]: trap,
 };

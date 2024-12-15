@@ -5,6 +5,7 @@ import {
   MAIN_MENU_ID,
   GAME_ID,
   ELECTRICAL_PANEL_GAME_ID,
+  ARCADE_CABINET_GAME_ID,
 } from '../consts/scenes';
 import { createLongPressFixHandler } from '../utils/long-press-fix';
 
@@ -13,6 +14,7 @@ import {
   MainMenu,
   Game,
   ElectricalPanelGame,
+  ArcadeCabinetGame,
 } from './scenes';
 
 export const App: FC = () => {
@@ -31,6 +33,7 @@ export const App: FC = () => {
       {scene.id === MAIN_MENU_ID && <MainMenu />}
       {scene.id === GAME_ID && <Game />}
       {scene.id === ELECTRICAL_PANEL_GAME_ID && <ElectricalPanelGame />}
+      {scene.id === ARCADE_CABINET_GAME_ID && <ArcadeCabinetGame />}
     </>
   );
 };

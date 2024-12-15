@@ -6,3 +6,6 @@ export { dialogScript } from './dialog-script';
 export { electricalPanelScript } from './electrical-panel-script';
 export { electricalPanelCameraScript } from './electrical-panel-camera-script';
 export { electricalPanelCursorScript } from './electrical-panel-cursor-script';
+export { arcadeCabinetCameraScript } from './arcade-cabinet-camera-script';
+export { arcadeCabinetCursorScript } from './arcade-cabinet-cursor-script';
+export { arcadeCabinetScript } from './arcade-cabinet-script';

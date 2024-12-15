@@ -5,12 +5,16 @@ import {
   EXAMPLE_ITEM_4_ID,
   EXAMPLE_ITEM_5_ID,
 } from './actors';
+import {
+  PIZZA_ID,
+} from './templates';
 
 interface Item {
   name: string
   title: string
   imageUrl: string
   templateId: string
+  onlyTemplate?: boolean
 }
 
 export const ITEM: Record<string, Item> = {
@@ -43,5 +47,13 @@ export const ITEM: Record<string, Item> = {
     title: 'Предмет 5',
     imageUrl: './images/example-item-5.png',
     templateId: 'b74d6f6c-3025-4acb-ba09-f22684a1a907',
+  },
+
+  [PIZZA_ID]: {
+    name: 'pizza',
+    title: 'Пицца',
+    imageUrl: './images/pizza.png',
+    templateId: PIZZA_ID,
+    onlyTemplate: true,
   },
 };

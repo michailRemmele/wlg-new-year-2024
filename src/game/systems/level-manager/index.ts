@@ -15,6 +15,7 @@ import { Inventory } from '../../components';
 import { INITIAL_SPAWNER_ID, PLAYER_NAME } from '../../../consts/actors';
 import { GAME_ID } from '../../../consts/scenes';
 import { PLAYER_ID } from '../../../consts/templates';
+import { ITEM } from '../../../consts/items';
 import * as EventType from '../../events';
 import type { EnterRoomEvent, EnterSceneEvent } from '../../events';
 
@@ -111,7 +112,7 @@ export class LevelManager extends System {
       if (collected && !activated) {
         inventory.items.push(itemId);
       }
-      if (collected) {
+      if (collected && !ITEM[itemId]?.onlyTemplate) {
         const item = this.scene.getEntityById(itemId);
         item?.remove();
       }

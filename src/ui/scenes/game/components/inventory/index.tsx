@@ -46,11 +46,7 @@ export const Inventory: FC = () => {
     const inventory = player.getComponent(InventoryComponent);
     setItems([...inventory.items]);
 
-    const handleTakeItem = (): void => {
-      setItems([...inventory.items]);
-    };
-
-    const handleRemoveItem = (): void => {
+    const handleUpdateItems = (): void => {
       setItems([...inventory.items]);
     };
 
@@ -58,13 +54,15 @@ export const Inventory: FC = () => {
       setSelectedItem(undefined);
     };
 
-    scene.addEventListener(EventType.TakeItem, handleTakeItem);
-    scene.addEventListener(EventType.RemoveItem, handleRemoveItem);
+    scene.addEventListener(EventType.TakeItem, handleUpdateItems);
+    scene.addEventListener(EventType.GiveItem, handleUpdateItems);
+    scene.addEventListener(EventType.RemoveItem, handleUpdateItems);
     scene.addEventListener(EventType.CancelItemSelection, handleCancelItemSelection);
 
     return (): void => {
-      scene.removeEventListener(EventType.TakeItem, handleTakeItem);
-      scene.removeEventListener(EventType.RemoveItem, handleRemoveItem);
+      scene.removeEventListener(EventType.TakeItem, handleUpdateItems);
+      scene.removeEventListener(EventType.GiveItem, handleUpdateItems);
+      scene.removeEventListener(EventType.RemoveItem, handleUpdateItems);
       scene.removeEventListener(EventType.CancelItemSelection, handleCancelItemSelection);
     };
   }, []);

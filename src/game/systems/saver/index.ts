@@ -10,6 +10,7 @@ import type {
 import * as EventType from '../../events';
 import type {
   TakeItemEvent,
+  GiveItemEvent,
   RemoveItemEvent,
   LoadRoomEvent,
   UpdateJournalEvent,
@@ -70,6 +71,7 @@ export class Saver extends System {
 
   mount(): void {
     this.scene.addEventListener(EventType.TakeItem, this.handleTakeItem);
+    this.scene.addEventListener(EventType.GiveItem, this.handleGiveItem);
     this.scene.addEventListener(EventType.RemoveItem, this.handleRemoveItem);
     this.scene.addEventListener(EventType.LoadRoom, this.handleLoadRoom);
     this.scene.addEventListener(EventType.EnterScene, this.handleEnterScene);
@@ -80,6 +82,7 @@ export class Saver extends System {
 
   unmount(): void {
     this.scene.removeEventListener(EventType.TakeItem, this.handleTakeItem);
+    this.scene.removeEventListener(EventType.GiveItem, this.handleGiveItem);
     this.scene.removeEventListener(EventType.RemoveItem, this.handleRemoveItem);
     this.scene.removeEventListener(EventType.LoadRoom, this.handleLoadRoom);
     this.scene.removeEventListener(EventType.EnterScene, this.handleEnterScene);
@@ -89,6 +92,12 @@ export class Saver extends System {
   }
 
   private handleTakeItem = (event: TakeItemEvent): void => {
+    window.saveState!.collectableItems[event.item] = { collected: true, activated: false };
+
+    this.save();
+  };
+
+  private handleGiveItem = (event: GiveItemEvent): void => {
     window.saveState!.collectableItems[event.item] = { collected: true, activated: false };
 
     this.save();

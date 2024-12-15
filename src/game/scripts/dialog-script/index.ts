@@ -15,6 +15,7 @@ import {
 import {
   CHRISTMAS_TREE_ID,
   ELECTRICAL_PANEL_ID,
+  ARCADE_CABINET_ID,
 } from '../../../consts/actors';
 import * as EventType from '../../events';
 
@@ -24,6 +25,9 @@ const DIALOG_TIMEOUT = 2000;
 const DIALOGS: Record<string, string | Record<string, string | undefined> | undefined> = {
   [CHRISTMAS_TREE_ID]: 'На елке не хватает украшений',
   [ELECTRICAL_PANEL_ID]: {
+    done: 'Это мне больше не нужно',
+  },
+  [ARCADE_CABINET_ID]: {
     done: 'Это мне больше не нужно',
   },
 };
@@ -46,11 +50,17 @@ export class DialogScript extends Script {
 
     this.scene.addEventListener(EventType.StudyItem, this.handleStudyItem);
     this.scene.addEventListener(EventType.RejectItem, this.handleRejectItem);
+    this.scene.addEventListener(EventType.RepairFail, this.handleFail);
+    this.scene.addEventListener(EventType.CourierFail, this.handleFail);
+
+    this.hideDialog();
   }
 
   destroy(): void {
     this.scene.removeEventListener(EventType.StudyItem, this.handleStudyItem);
     this.scene.removeEventListener(EventType.RejectItem, this.handleRejectItem);
+    this.scene.removeEventListener(EventType.RepairFail, this.handleFail);
+    this.scene.removeEventListener(EventType.CourierFail, this.handleFail);
   }
 
   private handleStudyItem = (event: ActorEvent): void => {
@@ -77,6 +87,13 @@ export class DialogScript extends Script {
 
   private handleRejectItem = (): void => {
     this.showDialog('Это сюда не подходит');
+    this.updateDialogPosition();
+
+    this.timeout = DIALOG_TIMEOUT;
+  };
+
+  private handleFail = (): void => {
+    this.showDialog('Зараза! Нужно попробовать еще раз');
     this.updateDialogPosition();
 
     this.timeout = DIALOG_TIMEOUT;

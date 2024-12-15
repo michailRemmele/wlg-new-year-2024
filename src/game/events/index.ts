@@ -9,6 +9,7 @@ export const CursorUp = 'CursorUp';
 export const CursorLeave = 'CursorLeave';
 export const Interact = 'Interact';
 export const TakeItem = 'TakeItem';
+export const GiveItem = 'GiveItem';
 export const SelectItem = 'SelectItem';
 export const CancelItemSelection = 'CancelItemSelection';
 export const UpdateJournal = 'UpdateJournal';
@@ -27,6 +28,12 @@ export const RepairTimerUpdate = 'RepairTimerUpdate';
 export const RepairScoreUpdate = 'RepairScoreUpdate';
 export const RepairSuccess = 'RepairSuccess';
 export const RepairFail = 'RepairFail';
+export const CourierPlay = 'CourierPlay';
+export const CourierStart = 'CourierStart';
+export const CourierJump = 'CourierJump';
+export const CourierDamage = 'CourierDamage';
+export const CourierSuccess = 'CourierSuccess';
+export const CourierFail = 'CourierFail';
 
 export type MoveEvent = ActorEvent<{ direction: number; point?: boolean }>;
 
@@ -58,7 +65,10 @@ export type CursorUpEvent = ActorEvent<{
 
 export type ApplyItemEvent = ActorEvent<{ item: string }>;
 
+export type CourierDamageEvent = ActorEvent<{ value: number }>;
+
 export type TakeItemEvent = SceneEvent<{ item: string }>;
+export type GiveItemEvent = SceneEvent<{ item: string }>;
 export type SelectItemEvent = SceneEvent<{ item: string }>;
 export type RemoveItemEvent = SceneEvent<{ item: string; applicationTarget: string }>;
 export type RejectItemEvent = SceneEvent<{ item: string; applicationTarget: string }>;
@@ -88,11 +98,13 @@ declare module 'remiz' {
     [CursorUp]: CursorUpEvent
     [ApplyItem]: ApplyItemEvent
     [StudyItem]: ActorEvent
+    [CourierDamage]: CourierDamageEvent
   }
 
   export interface SceneEventMap {
     [Interact]: InteractEvent
     [TakeItem]: TakeItemEvent
+    [GiveItem]: GiveItemEvent
     [SelectItem]: SelectItemEvent
     [RemoveItem]: RemoveItemEvent
     [RejectItem]: RejectItemEvent
@@ -109,5 +121,10 @@ declare module 'remiz' {
     [RepairScoreUpdate]: RepairScoreUpdateEvent
     [RepairSuccess]: SceneEvent
     [RepairFail]: SceneEvent
+    [CourierPlay]: SceneEvent
+    [CourierStart]: SceneEvent
+    [CourierJump]: SceneEvent
+    [CourierSuccess]: SceneEvent
+    [CourierFail]: SceneEvent
   }
 }

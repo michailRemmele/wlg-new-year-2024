@@ -1,0 +1,24 @@
+.arcade-cabinet-game {
+  display: flex;
+
+  height: 100%;
+  box-sizing: border-box;
+
+  padding: 16px;
+}
+
+.arcade-cabinet-game__menu {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: initial;
+}
+
+.arcade-cabinet-game__count {
+  font-size: 64px;
+  color: #ffffff;
+}

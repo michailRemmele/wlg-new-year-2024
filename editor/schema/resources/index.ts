@@ -9,6 +9,9 @@ import {
   ElectricalPanelScript,
   EletricalPanelCameraScript,
   ElectricalPanelCursorScript,
+  ArcadeCabinetCameraScript,
+  ArcadeCabinetCursorScript,
+  ArcadeCabinetScript,
 } from '../../../src/game/scripts';
 
 import {
@@ -20,6 +23,9 @@ import {
   electricalPanelScript,
   electricalPanelCameraScript,
   electricalPanelCursorScript,
+  arcadeCabinetCameraScript,
+  arcadeCabinetCursorScript,
+  arcadeCabinetScript,
 } from './script-system';
 
 export const resourcesSchema = {
@@ -32,5 +38,8 @@ export const resourcesSchema = {
     [ElectricalPanelScript.scriptName]: electricalPanelScript,
     [EletricalPanelCameraScript.scriptName]: electricalPanelCameraScript,
     [ElectricalPanelCursorScript.scriptName]: electricalPanelCursorScript,
+    [ArcadeCabinetCameraScript.scriptName]: arcadeCabinetCameraScript,
+    [ArcadeCabinetCursorScript.scriptName]: arcadeCabinetCursorScript,
+    [ArcadeCabinetScript.scriptName]: arcadeCabinetScript,
   },
 };

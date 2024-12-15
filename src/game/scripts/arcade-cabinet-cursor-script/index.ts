@@ -14,18 +14,17 @@ import type {
   CollisionLeaveEvent,
 } from 'remiz/events';
 
-import { Interactable, Cursor } from '../../components';
+import { Interactable, Cursor, Entrance } from '../../components';
 import * as EventType from '../../events';
 import type {
-  CursorClickEvent,
   CursorMoveEvent,
-  SelectItemEvent,
 } from '../../events';
-import { PLAYER_NAME } from '../../../consts/actors';
 
-export class CursorScript extends Script {
+export class ArcadeCabinetCursorScript extends Script {
   private actor: Actor;
   private scene: Scene;
+
+  private isPlaying: boolean;
 
   constructor(options: ScriptOptions) {
     super();
@@ -33,13 +32,19 @@ export class CursorScript extends Script {
     this.actor = options.actor;
     this.scene = options.scene;
 
+    this.isPlaying = false;
+
     this.actor.addEventListener(EventType.CursorMove, this.handleCursorMove);
     this.actor.addEventListener(CollisionEnter, this.handleCollisionEnterOrStay);
     this.actor.addEventListener(CollisionStay, this.handleCollisionEnterOrStay);
     this.actor.addEventListener(CollisionLeave, this.handleCollisionLeave);
     this.actor.addEventListener(EventType.CursorClick, this.handleCursorClick);
 
-    this.scene.addEventListener(EventType.SelectItem, this.handleSelectItem);
+    this.scene.addEventListener(EventType.CourierPlay, this.handleCourierPlay);
+
+    const transform = this.actor.getComponent(Transform);
+    transform.offsetX = 0;
+    transform.offsetY = 0;
   }
 
   destroy(): void {
@@ -49,7 +54,7 @@ export class CursorScript extends Script {
     this.actor.removeEventListener(CollisionLeave, this.handleCollisionLeave);
     this.actor.removeEventListener(EventType.CursorClick, this.handleCursorClick);
 
-    this.scene.removeEventListener(EventType.SelectItem, this.handleSelectItem);
+    this.scene.removeEventListener(EventType.CourierPlay, this.handleCourierPlay);
   }
 
   private handleCursorMove = (event: CursorMoveEvent): void => {
@@ -62,6 +67,10 @@ export class CursorScript extends Script {
   };
 
   private handleCollisionEnterOrStay = (event: CollisionEnterEvent): void => {
+    if (this.isPlaying) {
+      return;
+    }
+
     const { actor } = event;
 
     const interactable = actor.getComponent(Interactable);
@@ -71,21 +80,17 @@ export class CursorScript extends Script {
 
     const cursor = this.actor.getComponent(Cursor);
 
-    if (cursor.selectedItem) {
-      if (interactable.action === 'inspect') {
-        cursor.action = 'apply';
-      } else {
-        return;
-      }
-    } else {
-      cursor.action = interactable.action;
-    }
+    cursor.action = interactable.action;
 
     interactable.hover = true;
     cursor.target = actor.id;
   };
 
   private handleCollisionLeave = (event: CollisionLeaveEvent): void => {
+    if (this.isPlaying) {
+      return;
+    }
+
     const { actor } = event;
 
     const interactable = actor.getComponent(Interactable);
@@ -100,34 +105,35 @@ export class CursorScript extends Script {
     cursor.action = 'move';
   };
 
-  private handleCursorClick = (event: CursorClickEvent): void => {
+  private handleCursorClick = (): void => {
     const cursor = this.actor.getComponent(Cursor);
-    const { selectedItem, target, action } = cursor;
+    const { target, action } = cursor;
 
-    if (selectedItem) {
-      this.scene.dispatchEvent(EventType.CancelItemSelection);
-      cursor.selectedItem = undefined;
+    if (action === 'move') {
+      this.scene.dispatchEvent(EventType.CourierJump);
     }
 
-    if (!selectedItem || (selectedItem && action === 'apply')) {
-      const player = this.scene.getEntityByName(PLAYER_NAME);
-      player?.dispatchEvent(EventType.ClickAction, { x: event.x, y: event.y });
-    }
-
-    if (!target) {
+    if (!target || this.isPlaying) {
       return;
     }
 
-    this.scene.dispatchEvent(EventType.Interact, {
-      actionTarget: target,
-      selectedItem: selectedItem && action === 'apply' ? selectedItem : undefined,
-    });
+    const targetActor = this.scene.getEntityById(target);
+    if (!targetActor) {
+      return;
+    }
+
+    if (action === 'enter') {
+      const entrance = targetActor.getComponent(Entrance);
+      this.scene.dispatchEvent(EventType.EnterRoom, {
+        levelId: entrance.levelId,
+        spawnerId: '',
+      });
+    }
   };
 
-  private handleSelectItem = (event: SelectItemEvent): void => {
-    const cursor = this.actor.getComponent(Cursor);
-    cursor.selectedItem = event.item;
+  private handleCourierPlay = (): void => {
+    this.isPlaying = true;
   };
 }
 
-CursorScript.scriptName = 'CursorScript';
+ArcadeCabinetCursorScript.scriptName = 'ArcadeCabinetCursorScript';

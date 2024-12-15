@@ -192,6 +192,81 @@
         }
       ],
       "levelId": "7576e9a6-9b5f-440e-8dc4-89b7f609c2ec"
+    },
+    {
+      "id": "3bcb6f17-6697-4db5-8042-79e7b8bee4e8",
+      "name": "Arcade Cabinet Game",
+      "systems": [
+        {
+          "name": "Saver",
+          "options": {}
+        },
+        {
+          "name": "PhysicsSystem",
+          "options": {
+            "gravitationalAcceleration": 400
+          }
+        },
+        {
+          "name": "CameraSystem",
+          "options": {
+            "windowNodeId": "root",
+            "initialCamera": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+            "scaleSensitivity": 0
+          }
+        },
+        {
+          "name": "MouseInputSystem",
+          "options": {
+            "useWindow": false,
+            "windowNodeId": "root"
+          }
+        },
+        {
+          "name": "MouseControlSystem",
+          "options": {}
+        },
+        {
+          "name": "ScriptSystem",
+          "options": {}
+        },
+        {
+          "name": "ArcadeCabinetGame",
+          "options": {
+            "exitLevelId": "d2e56cd1-1b13-47e1-9036-6e5233b237a7"
+          }
+        },
+        {
+          "name": "LevelManager",
+          "options": {}
+        },
+        {
+          "name": "Animator",
+          "options": {}
+        },
+        {
+          "name": "SpriteRenderer",
+          "options": {
+            "windowNodeId": "root",
+            "backgroundColor": "#000",
+            "backgroundAlpha": 1
+          }
+        },
+        {
+          "name": "UiBridge",
+          "options": {
+            "filterComponents": []
+          }
+        },
+        {
+          "name": "CursorPainter",
+          "options": {
+            "windowNodeId": "cursor-area",
+            "src": "cursor.png"
+          }
+        }
+      ],
+      "levelId": "6e9db19b-0421-47a1-9126-e384e2cb7683"
     }
   ],
   "levels": [
@@ -850,6 +925,26 @@
               "config": {
                 "offsetX": -29.5,
                 "offsetY": 30.5,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "496f1441-e5aa-449c-94de-7f164ac77f65",
+          "templateId": "a19ac184-3d43-4484-9126-b49ab1e9f145",
+          "fromTemplate": true,
+          "name": "Arcade Cabinet",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 1,
+                "offsetY": 18,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -3067,6 +3162,1167 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "6e9db19b-0421-47a1-9126-e384e2cb7683",
+      "name": "Arcade Cabinet",
+      "actors": [
+        {
+          "id": "2250200f-3eea-4478-b3b9-bcb261c465c8",
+          "name": "Background",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 480,
+                "height": 240,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "background",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#4fc863",
+                    "opacity": 1
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "name": "Camera",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Camera",
+              "config": {
+                "zoom": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "5000c3ef-8d25-4c61-8bfc-1f04450f47b8",
+                    "name": "ArcadeCabinetCameraScript",
+                    "options": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "78672a27-9256-4659-8aff-21682fb21cc9",
+              "name": "Cabinet Top",
+              "components": [
+                {
+                  "name": "Transform",
+                  "config": {
+                    "offsetX": 0,
+                    "offsetY": -85,
+                    "offsetZ": 0,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                  }
+                },
+                {
+                  "name": "Sprite",
+                  "config": {
+                    "src": "",
+                    "width": 480,
+                    "height": 70,
+                    "slice": 1,
+                    "rotation": 0,
+                    "sortCenter": [
+                      0,
+                      0
+                    ],
+                    "flipX": false,
+                    "flipY": false,
+                    "sortingLayer": "units",
+                    "fit": "stretch",
+                    "material": {
+                      "type": "basic",
+                      "options": {
+                        "blending": "normal",
+                        "color": "#ffcd00",
+                        "opacity": 1
+                      }
+                    }
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "da4c30b5-e247-4da2-b542-86d37d72e71f",
+              "name": "Cabinet Bottom",
+              "components": [
+                {
+                  "name": "Transform",
+                  "config": {
+                    "offsetX": 0,
+                    "offsetY": 85,
+                    "offsetZ": 0,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                  }
+                },
+                {
+                  "name": "Sprite",
+                  "config": {
+                    "src": "",
+                    "width": 480,
+                    "height": 70,
+                    "slice": 1,
+                    "rotation": 0,
+                    "sortCenter": [
+                      0,
+                      0
+                    ],
+                    "flipX": false,
+                    "flipY": false,
+                    "sortingLayer": "units",
+                    "fit": "stretch",
+                    "material": {
+                      "type": "basic",
+                      "options": {
+                        "blending": "normal",
+                        "color": "#ffcd00",
+                        "opacity": 1
+                      }
+                    }
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "7bbe89ba-953c-49ea-beae-a178defb57e4",
+              "name": "Cabinet Left",
+              "components": [
+                {
+                  "name": "Transform",
+                  "config": {
+                    "offsetX": -145,
+                    "offsetY": 0,
+                    "offsetZ": 0,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                  }
+                },
+                {
+                  "name": "Sprite",
+                  "config": {
+                    "src": "",
+                    "width": 190,
+                    "height": 100,
+                    "slice": 1,
+                    "rotation": 0,
+                    "sortCenter": [
+                      0,
+                      0
+                    ],
+                    "flipX": false,
+                    "flipY": false,
+                    "sortingLayer": "units",
+                    "fit": "stretch",
+                    "material": {
+                      "type": "basic",
+                      "options": {
+                        "blending": "normal",
+                        "color": "#ffcd00",
+                        "opacity": 1
+                      }
+                    }
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "f5fe0cfa-6d36-4f03-82ac-e77d4efaf3fc",
+              "name": "Cabinet Right",
+              "components": [
+                {
+                  "name": "Transform",
+                  "config": {
+                    "offsetX": 145,
+                    "offsetY": 0,
+                    "offsetZ": 0,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                  }
+                },
+                {
+                  "name": "Sprite",
+                  "config": {
+                    "src": "",
+                    "width": 190,
+                    "height": 100,
+                    "slice": 1,
+                    "rotation": 0,
+                    "sortCenter": [
+                      0,
+                      0
+                    ],
+                    "flipX": false,
+                    "flipY": false,
+                    "sortingLayer": "units",
+                    "fit": "stretch",
+                    "material": {
+                      "type": "basic",
+                      "options": {
+                        "blending": "normal",
+                        "color": "#ffcd00",
+                        "opacity": 1
+                      }
+                    }
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "4d8445b6-bf54-48a3-93a5-69abfb2addd4",
+              "name": "Screen",
+              "components": [
+                {
+                  "name": "Transform",
+                  "config": {
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 0,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                  }
+                },
+                {
+                  "name": "Sprite",
+                  "config": {
+                    "src": "",
+                    "width": 100,
+                    "height": 100,
+                    "slice": 1,
+                    "rotation": 0,
+                    "sortCenter": [
+                      0,
+                      0
+                    ],
+                    "flipX": false,
+                    "flipY": false,
+                    "sortingLayer": "decorations",
+                    "fit": "stretch",
+                    "material": {
+                      "type": "basic",
+                      "options": {
+                        "blending": "normal",
+                        "color": "#94ffa6",
+                        "opacity": 1
+                      }
+                    }
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "2cbf16b6-121f-4aeb-b237-814eeba672a7",
+              "name": "HealthBarPlacement",
+              "components": [
+                {
+                  "name": "Transform",
+                  "config": {
+                    "offsetX": -45,
+                    "offsetY": -45,
+                    "offsetZ": 0,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                  }
+                },
+                {
+                  "name": "Sprite",
+                  "config": {
+                    "src": "",
+                    "width": 10,
+                    "height": 10,
+                    "slice": 1,
+                    "rotation": 0,
+                    "sortCenter": [
+                      0,
+                      0
+                    ],
+                    "flipX": false,
+                    "flipY": false,
+                    "sortingLayer": "default",
+                    "fit": "stretch",
+                    "material": {
+                      "type": "basic",
+                      "options": {
+                        "blending": "normal",
+                        "color": "#ffffff",
+                        "opacity": 0
+                      }
+                    }
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "53a1b261-5684-45b2-afa6-f998460c86a0",
+              "name": "DistanceBar",
+              "components": [
+                {
+                  "name": "Transform",
+                  "config": {
+                    "offsetX": 0,
+                    "offsetY": 45,
+                    "offsetZ": 0,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                  }
+                },
+                {
+                  "name": "Sprite",
+                  "config": {
+                    "src": "distance.png",
+                    "width": 100,
+                    "height": 10,
+                    "slice": 1,
+                    "rotation": 0,
+                    "sortCenter": [
+                      0,
+                      0
+                    ],
+                    "flipX": false,
+                    "flipY": false,
+                    "sortingLayer": "units",
+                    "fit": "stretch",
+                    "material": {
+                      "type": "basic",
+                      "options": {
+                        "blending": "normal",
+                        "color": "#fff",
+                        "opacity": 0
+                      }
+                    }
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "id": "9e274094-e636-4c33-9764-ac99923d4d3f",
+                  "name": "DistanceMarker",
+                  "components": [
+                    {
+                      "name": "Transform",
+                      "config": {
+                        "offsetX": -45,
+                        "offsetY": 0,
+                        "offsetZ": 0,
+                        "rotation": 0,
+                        "scaleX": 1,
+                        "scaleY": 1
+                      }
+                    },
+                    {
+                      "name": "Sprite",
+                      "config": {
+                        "src": "distance-marker.png",
+                        "width": 10,
+                        "height": 10,
+                        "slice": 1,
+                        "rotation": 0,
+                        "sortCenter": [
+                          0,
+                          0
+                        ],
+                        "flipX": false,
+                        "flipY": false,
+                        "sortingLayer": "units",
+                        "fit": "stretch",
+                        "material": {
+                          "type": "basic",
+                          "options": {
+                            "blending": "normal",
+                            "color": "#fff",
+                            "opacity": 0
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "10e197c6-3193-46dd-ac65-31ab18e4edb3",
+          "templateId": "4965565a-3627-46ef-a70a-d0eea9e4e170",
+          "fromTemplate": true,
+          "name": "Cursor",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -180,
+                "offsetY": -120,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a02cb9da-b502-468f-8251-fcdc6069d0a1",
+          "templateId": "7b9816fe-f525-4abd-a8d1-6a87b80432d7",
+          "fromTemplate": true,
+          "name": "Cabinet Exit Left",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -110,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "d2e56cd1-1b13-47e1-9036-6e5233b237a7",
+                "spawnerId": ""
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "06f615a1-ad0d-484f-bc47-9ddd2b4a59db",
+          "templateId": "7b9816fe-f525-4abd-a8d1-6a87b80432d7",
+          "fromTemplate": true,
+          "name": "Cabinet Exit Right",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 110,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "d2e56cd1-1b13-47e1-9036-6e5233b237a7",
+                "spawnerId": ""
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "32cdb63e-ad6d-422e-a212-bf2d6d887ab1",
+          "name": "Road",
+          "components": [
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 5000,
+                "height": 20,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "decorations-2",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#999999",
+                    "opacity": 1
+                  }
+                }
+              }
+            },
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 2330,
+                "offsetY": 40,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "ColliderContainer",
+              "config": {
+                "type": "boxCollider",
+                "collider": {
+                  "sizeX": 5000,
+                  "sizeY": 20,
+                  "centerX": 0,
+                  "centerY": 0
+                }
+              }
+            },
+            {
+              "name": "RigidBody",
+              "config": {
+                "type": "static",
+                "mass": 1,
+                "useGravity": false,
+                "isPermeable": false,
+                "ghost": false,
+                "drag": 0
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f0aeee44-1dc3-475b-8e8a-48a2d0be8c2c",
+          "templateId": "62a0e430-fd1a-450e-8ca0-f000069bb6d9",
+          "fromTemplate": true,
+          "name": "Courier",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -25,
+                "offsetY": 25,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "fd9aaaf6-7b57-4b75-8e05-f669be1a3340",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 180,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c8d8dc72-e5e8-4cac-83ae-21f5dfdba062",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 370,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "af5809b5-94af-42f9-8d40-56a8c4e87977",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 560,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0d07a6e9-3d2b-4d32-8b88-174997403d1a",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 3",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 750,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "12bfdfaf-f16e-4ecf-bacc-a76e456c3ccd",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 4",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 960,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d2ff6919-527b-4d06-b43c-3a387d53c9aa",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 5",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 1160,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3b675c86-2fee-4e09-ace6-83d2f4b076a5",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 6",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 1370,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e80e494e-4de1-460f-ad85-ac728fdea2d5",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 7",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 1620,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1f176291-3483-42aa-b460-c151209631da",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 8",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 1830,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a4ade42a-e5df-4213-8955-e5e5c5da7ed0",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 9",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 2060,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c69e255c-830b-479b-b47f-428ed88e5f2e",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 10",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 2270,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "577d4724-b486-445c-a38f-66f343fc9e9d",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 11",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 2490,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3e397758-4b78-4d3d-b5b6-aa86e9f90795",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 13",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 2620,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "eb49a656-1f10-4f0b-8c56-27cda8f3d5c6",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 14",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 2760,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "57abae10-2039-458b-938a-073dfdfb3e44",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 15",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 2900,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c199e542-22c4-4dc4-bd97-16c5286ff9f2",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 16",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 3050,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f39acaba-4d1f-4471-9ef5-f2d491478c95",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 17",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 3250,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "87dd7b64-67d7-4ffb-843e-9203018408b0",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 18",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 3320,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "3aed5a88-4f9f-43c4-b1ca-91b88394c7b1",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 19",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 3490,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "66ecaf16-b5c4-4d87-88b1-1188aeafae07",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 20",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 3670,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2f185671-11d7-4109-8e92-5502e1a998f7",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 21",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 3860,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "930776ef-d56c-4c06-ac66-1f98f7c885e1",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 22",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 4040,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "1f062a29-6e45-4e60-affb-9b3615d7ecf3",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 23",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 4210,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6bf65873-75a5-4808-8e91-8726df4ad456",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 24",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 4370,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a3a9d2fb-442a-4f48-930e-606df42c7b8b",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 25",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 4460,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9f934765-65be-40e9-bd65-1aaa1a3346bc",
+          "templateId": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+          "fromTemplate": true,
+          "name": "Trap 26",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 4570,
+                "offsetY": 30,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "092e5148-811d-4ac9-8c89-ca41ad0204ff",
+          "templateId": "e2bd9b73-9ab0-42f2-ae63-76b25119830b",
+          "fromTemplate": true,
+          "name": "Finish",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 4790,
+                "offsetY": 10,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "98c7e8ee-29dd-456a-b908-458f51a4a862",
+          "templateId": "5c6b3c5d-2c3d-479c-8d85-a1a32be88108",
+          "fromTemplate": true,
+          "name": "PreFinish",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 4690,
+                "offsetY": 10,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ],
   "templates": [
@@ -5180,7 +6436,7 @@
               "options": {
                 "blending": "normal",
                 "color": "#e9dc49",
-                "opacity": 1
+                "opacity": 0
               }
             }
           }
@@ -5433,6 +6689,760 @@
                 "transitions": []
               }
             ]
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a19ac184-3d43-4484-9126-b49ab1e9f145",
+      "name": "Arcade Cabinet",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "inspect"
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "arcade-cabinet.png",
+            "width": 26,
+            "height": 38,
+            "slice": 2,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 26,
+              "sizeY": 38,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "4038a9f2-56ca-4264-b73c-eb25d7a39193",
+                "name": "ArcadeCabinetScript",
+                "options": {}
+              }
+            ]
+          }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "b31298c1-267b-4190-8948-0d52639439b2",
+            "states": [
+              {
+                "id": "b31298c1-267b-4190-8948-0d52639439b2",
+                "name": "Idle",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "5150fc80-269e-4965-8e84-2e7148263e42",
+                      "fields": [
+                        {
+                          "id": "ef5343f3-30a9-411f-bf31-1a7bff9f1a25",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "11a47a39-ba9e-4830-9414-d842e0dd25d2",
+                    "state": "dbb1558c-385d-41f9-b59c-be8e1d662c82",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "582df387-0c75-47b9-844a-034832a5e845",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.Interactable.hover"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": true
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "dbb1558c-385d-41f9-b59c-be8e1d662c82",
+                "name": "Hover",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "5150fc80-269e-4965-8e84-2e7148263e42",
+                      "fields": [
+                        {
+                          "id": "ef5343f3-30a9-411f-bf31-1a7bff9f1a25",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "11a47a39-ba9e-4830-9414-d842e0dd25d2",
+                    "state": "b31298c1-267b-4190-8948-0d52639439b2",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "582df387-0c75-47b9-844a-034832a5e845",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.Interactable.hover"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": false
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4965565a-3627-46ef-a70a-d0eea9e4e170",
+      "name": "ArcadeCabinetCursor",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "MouseControl",
+          "config": {
+            "inputEventBindings": [
+              {
+                "id": "d14294ae-e0e8-4586-9b22-d6d10720c65d",
+                "event": "mousemove",
+                "eventType": "CursorMove",
+                "attrs": []
+              },
+              {
+                "id": "92c9caa3-a091-4186-aa44-6a13c79ac771",
+                "event": "click",
+                "eventType": "CursorClick",
+                "attrs": []
+              },
+              {
+                "id": "c19340a2-4df5-4cd3-9fdf-78f35a2a4d24",
+                "event": "mouseleave",
+                "eventType": "CursorLeave",
+                "attrs": []
+              },
+              {
+                "id": "ac0dcc1e-534b-47d1-b102-43497b79672e",
+                "event": "mousedown",
+                "eventType": "CursorDown",
+                "attrs": [],
+                "button": 0
+              },
+              {
+                "id": "32eaf8ed-ca51-4529-8afe-9999c107acce",
+                "event": "mouseup",
+                "eventType": "CursorUp",
+                "attrs": [],
+                "button": 0
+              }
+            ]
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "circleCollider",
+            "collider": {
+              "centerX": 0,
+              "centerY": 0,
+              "radius": 1
+            }
+          }
+        },
+        {
+          "name": "Cursor",
+          "config": {}
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "50290596-416c-4f49-8ddf-2346f4cdc236",
+                "name": "ArcadeCabinetCursorScript",
+                "options": {}
+              }
+            ]
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "62a0e430-fd1a-450e-8ca0-f000069bb6d9",
+      "name": "Courier",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 10,
+              "sizeY": 10,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "",
+            "width": 10,
+            "height": 10,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "units",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#ff9f00",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "RigidBody",
+          "config": {
+            "type": "dynamic",
+            "mass": 1,
+            "useGravity": true,
+            "isPermeable": false,
+            "ghost": false,
+            "drag": 0
+          }
+        },
+        {
+          "name": "CourierHealth",
+          "config": {
+            "points": 3
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "df4a73da-89a2-4060-98c8-e9f692decfe7",
+      "name": "Trap",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "trap.png",
+            "width": 20,
+            "height": 20,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "circleCollider",
+            "collider": {
+              "centerX": 0,
+              "centerY": 0,
+              "radius": 10
+            }
+          }
+        },
+        {
+          "name": "Trap",
+          "config": {
+            "damage": 1
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e2bd9b73-9ab0-42f2-ae63-76b25119830b",
+      "name": "Finish",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "",
+            "width": 80,
+            "height": 40,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#4a7151",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 80,
+              "sizeY": 40,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5c6b3c5d-2c3d-479c-8d85-a1a32be88108",
+      "name": "PreFinish",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "",
+            "width": 40,
+            "height": 40,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#27eeff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 80,
+              "sizeY": 40,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "aeabe575-8dbb-4786-9e3e-0bc691d268d5",
+      "name": "Pizza",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "take"
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "example-item 5.png",
+            "width": 13,
+            "height": 13,
+            "slice": 2,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
+            "states": [
+              {
+                "id": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
+                "name": "Idle",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
+                      "fields": [
+                        {
+                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "64097c9b-d020-4aa6-96e3-0d2b071d4a59",
+                    "state": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "d7f2d6e3-8764-4f0a-93e4-406260e3ce63",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.Interactable.hover"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": true
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
+                "name": "Hover",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
+                      "fields": [
+                        {
+                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "6d4aa96d-5214-4fd4-8380-cc832612efef",
+                    "state": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "8ee3908c-46cb-4104-99ba-bb8cd51d858f",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.Interactable.hover"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": false
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 12,
+              "sizeY": 12,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1e18d374-156d-4633-96cc-478ac8fa39af",
+      "name": "HealthBarPlacement",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "",
+            "width": 10,
+            "height": 10,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "default",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 0
+              }
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7ba70ace-f522-42e9-ba9e-da0737168458",
+      "name": "Health",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "heart.png",
+            "width": 10,
+            "height": 10,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "units",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
           }
         }
       ],

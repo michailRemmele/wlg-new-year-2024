@@ -13,6 +13,14 @@ export const INITIAL_SPAWNER_ID = '60b958e7-ec53-41d7-a78b-4fc5a4c7e6e2';
 
 export const CHRISTMAS_TREE_ID = 'a8a633c7-6f16-4eef-92d5-a156927e33f4';
 export const ELECTRICAL_PANEL_ID = '34c64b15-fd26-4b4d-ab84-d56d67f54079';
+export const ARCADE_CABINET_ID = '496f1441-e5aa-449c-94de-7f164ac77f65';
+
+export const PRE_FINISH_ID = '98c7e8ee-29dd-456a-b908-458f51a4a862';
+export const FINISH_ID = '092e5148-811d-4ac9-8c89-ca41ad0204ff';
+export const HEALTH_BAR_PLACEMENT_ID = '2cbf16b6-121f-4aeb-b237-814eeba672a7';
+export const DISTANCE_MARKER_ID = '9e274094-e636-4c33-9764-ac99923d4d3f';
+export const DISTANCE_BAR_ID = '53a1b261-5684-45b2-afa6-f998460c86a0';
 
 export const PLAYER_NAME = 'Player';
 export const CURSOR_NAME = 'Cursor';
+export const COURIER_NAME = 'Courier';
