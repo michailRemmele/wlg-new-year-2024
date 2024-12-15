@@ -16,6 +16,7 @@ import {
   Entrance,
 } from '../../components';
 import { WALL_PATH_BLOCK_ID } from '../../../consts/templates';
+import { PLAYER_NAME } from '../../../consts/actors';
 import * as EventType from '../../events';
 import type {
   ClickActionEvent,
@@ -34,6 +35,8 @@ export class PointAndClickScript extends Script {
 
   private wallPositionX: number | undefined;
 
+  private player: Actor;
+
   constructor(options: ScriptOptions) {
     super();
 
@@ -45,6 +48,13 @@ export class PointAndClickScript extends Script {
     this.selectedItem = undefined;
 
     this.wallPositionX = undefined;
+
+    const player = this.scene.getEntityByName(PLAYER_NAME);
+    if (!player) {
+      throw new Error('Can\'t find player');
+    }
+
+    this.player = player;
 
     this.actor.addEventListener(EventType.ClickAction, this.handleClickAction);
     this.actor.addEventListener(CollisionEnter, this.handleWallCollision);
@@ -132,6 +142,7 @@ export class PointAndClickScript extends Script {
       inventory.items.push(target.id);
 
       this.scene.dispatchEvent(EventType.TakeItem, { item: target.id });
+      this.player.dispatchEvent(EventType.PlayerAction);
 
       target.remove();
     }

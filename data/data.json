@@ -4421,6 +4421,20 @@
                 "transitions": [
                   {
                     "id": "a3eaf848-de07-453a-882b-e369bfa9185d",
+                    "state": "7213ba75-4749-40a0-a4de-ed7f5895b12c",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "97450b55-1ac9-4d18-a9a3-0bce2b682b38",
+                        "type": "event",
+                        "props": {
+                          "eventType": "PlayerAction"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "cdfe8b19-a1dd-4e74-83b8-a5db2999afff",
                     "state": "ef3dccd3-02b7-4132-98f8-d886fd01931c",
                     "time": 0,
                     "conditions": [
@@ -4575,10 +4589,24 @@
                 "id": "ef3dccd3-02b7-4132-98f8-d886fd01931c",
                 "name": "Run",
                 "type": "group",
-                "speed": 0.5,
+                "speed": 0.75,
                 "transitions": [
                   {
                     "id": "7a6430ca-49e8-421a-9290-1888285b8c55",
+                    "state": "7213ba75-4749-40a0-a4de-ed7f5895b12c",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "519cba00-f602-453b-9de1-649ee223b244",
+                        "type": "event",
+                        "props": {
+                          "eventType": "PlayerAction"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "3c4442a4-afa8-44c2-894a-01c716839f38",
                     "state": "d9a336e9-8b8b-4d34-9d70-d0a107ed82fb",
                     "time": 0,
                     "conditions": [
@@ -4728,6 +4756,148 @@
                 "pickProps": {
                   "x": "components.Movement.viewDirection"
                 }
+              },
+              {
+                "id": "7213ba75-4749-40a0-a4de-ed7f5895b12c",
+                "name": "Action",
+                "type": "group",
+                "speed": 1,
+                "transitions": [
+                  {
+                    "id": "f0716c76-6e83-4e1b-81b2-de91551554d7",
+                    "state": "d9a336e9-8b8b-4d34-9d70-d0a107ed82fb",
+                    "time": 1,
+                    "conditions": []
+                  }
+                ],
+                "substates": [
+                  {
+                    "id": "10c95385-cb65-4979-aed4-edf44f050b0e",
+                    "name": "Right",
+                    "timeline": {
+                      "frames": [
+                        {
+                          "id": "5838eafe-3f98-42ee-ac61-b660821145c3",
+                          "fields": [
+                            {
+                              "id": "3ff64309-7812-4abc-b89f-6b728e9909b0",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 6
+                            },
+                            {
+                              "id": "4f624a29-cd6c-4c9a-8ac1-9328d3d131d7",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": false
+                            }
+                          ]
+                        },
+                        {
+                          "id": "18321ae4-f2aa-4a98-99c7-70bafc9cbb88",
+                          "fields": [
+                            {
+                              "id": "3ff64309-7812-4abc-b89f-6b728e9909b0",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 7
+                            },
+                            {
+                              "id": "4f624a29-cd6c-4c9a-8ac1-9328d3d131d7",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": false
+                            }
+                          ]
+                        },
+                        {
+                          "id": "cf333b08-91cb-4186-b2fe-955a9a119213",
+                          "fields": [
+                            {
+                              "id": "3ff64309-7812-4abc-b89f-6b728e9909b0",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 7
+                            },
+                            {
+                              "id": "4f624a29-cd6c-4c9a-8ac1-9328d3d131d7",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": false
+                            }
+                          ]
+                        }
+                      ],
+                      "looped": true
+                    },
+                    "x": 1
+                  },
+                  {
+                    "id": "89c4e2b3-fa1f-471d-83e8-5e5bd16852de",
+                    "name": "Left",
+                    "timeline": {
+                      "frames": [
+                        {
+                          "id": "5838eafe-3f98-42ee-ac61-b660821145c3",
+                          "fields": [
+                            {
+                              "id": "3ff64309-7812-4abc-b89f-6b728e9909b0",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 6
+                            },
+                            {
+                              "id": "4f624a29-cd6c-4c9a-8ac1-9328d3d131d7",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": true
+                            }
+                          ]
+                        },
+                        {
+                          "id": "34c67cad-25fc-45d3-814e-edc15109909e",
+                          "fields": [
+                            {
+                              "id": "3ff64309-7812-4abc-b89f-6b728e9909b0",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 7
+                            },
+                            {
+                              "id": "4f624a29-cd6c-4c9a-8ac1-9328d3d131d7",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": true
+                            }
+                          ]
+                        },
+                        {
+                          "id": "5a399981-7833-4af0-8a9d-89abe73d7cb9",
+                          "fields": [
+                            {
+                              "id": "3ff64309-7812-4abc-b89f-6b728e9909b0",
+                              "name": "components.Sprite.currentFrame",
+                              "type": "number",
+                              "value": 7
+                            },
+                            {
+                              "id": "4f624a29-cd6c-4c9a-8ac1-9328d3d131d7",
+                              "name": "components.Sprite.flipX",
+                              "type": "boolean",
+                              "value": true
+                            }
+                          ]
+                        }
+                      ],
+                      "looped": true
+                    },
+                    "x": -1
+                  }
+                ],
+                "pickMode": "1D",
+                "pickProps": {
+                  "x": "components.Movement.viewDirection"
+                }
               }
             ]
           }
@@ -4735,10 +4905,10 @@
         {
           "name": "Sprite",
           "config": {
-            "src": "player.png",
+            "src": "wlg.png",
             "width": 24,
             "height": 24,
-            "slice": 6,
+            "slice": 8,
             "rotation": 0,
             "sortCenter": [
               0,

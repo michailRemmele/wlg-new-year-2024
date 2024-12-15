@@ -19,7 +19,7 @@ import {
 } from '../../../consts/actors';
 import * as EventType from '../../events';
 
-const OFFSET_Y = 10;
+const OFFSET_Y = 14;
 const DIALOG_TIMEOUT = 2000;
 
 const DIALOGS: Record<string, string | Record<string, string | undefined> | undefined> = {

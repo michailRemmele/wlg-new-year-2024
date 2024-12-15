@@ -1,6 +1,7 @@
 import type { ActorEvent, SceneEvent } from 'remiz';
 
 export const Move = 'Move';
+export const PlayerAction = 'PlayerAction';
 export const ClickAction = 'ClickAction';
 export const CursorMove = 'CursorMove';
 export const CursorClick = 'CursorClick';
@@ -90,6 +91,7 @@ export type RepairScoreUpdateEvent = SceneEvent<{ score: number }>;
 declare module 'remiz' {
   export interface ActorEventMap {
     [Move]: MoveEvent
+    [PlayerAction]: ActorEvent
     [ClickAction]: ClickActionEvent
     [CursorMove]: CursorMoveEvent
     [CursorClick]: CursorClickEvent
