@@ -4,7 +4,7 @@ import type {
 } from 'remiz';
 import { Script, Camera } from 'remiz';
 
-const VIEWPORT_SIZE_X = 240;
+const VIEWPORT_SIZE_X = 288;
 const VIEWPORT_SIZE_Y = 120;
 
 export class CameraScript extends Script {

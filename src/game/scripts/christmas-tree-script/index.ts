@@ -7,14 +7,16 @@ import type {
 import { Script, Transform } from 'remiz';
 
 import {
-  EXAMPLE_ITEM_1_ID,
-  EXAMPLE_ITEM_2_ID,
-  EXAMPLE_ITEM_3_ID,
-  EXAMPLE_ITEM_4_ID,
+  BAUBLE_1_ID,
+  BAUBLE_2_ID,
+  BAUBLE_3_ID,
+  BAUBLE_4_ID,
+  BAUBLE_5_ID,
   DECORATION_PLACE_1_ID,
   DECORATION_PLACE_2_ID,
   DECORATION_PLACE_3_ID,
   DECORATION_PLACE_4_ID,
+  DECORATION_PLACE_5_ID,
   PLAYER_NAME,
 } from '../../../consts/actors';
 import { ITEM } from '../../../consts/items';
@@ -23,10 +25,11 @@ import type { ApplyItemEvent } from '../../events';
 import { Interactable, Inventory } from '../../components';
 
 const DECORATIONS_MAP: Record<string, string> = {
-  [EXAMPLE_ITEM_1_ID]: DECORATION_PLACE_1_ID,
-  [EXAMPLE_ITEM_2_ID]: DECORATION_PLACE_2_ID,
-  [EXAMPLE_ITEM_3_ID]: DECORATION_PLACE_3_ID,
-  [EXAMPLE_ITEM_4_ID]: DECORATION_PLACE_4_ID,
+  [BAUBLE_1_ID]: DECORATION_PLACE_1_ID,
+  [BAUBLE_2_ID]: DECORATION_PLACE_2_ID,
+  [BAUBLE_3_ID]: DECORATION_PLACE_3_ID,
+  [BAUBLE_4_ID]: DECORATION_PLACE_4_ID,
+  [BAUBLE_5_ID]: DECORATION_PLACE_5_ID,
 };
 
 export class ChristmasTreeScript extends Script {

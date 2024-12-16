@@ -1,9 +1,9 @@
 import {
-  EXAMPLE_ITEM_1_ID,
-  EXAMPLE_ITEM_2_ID,
-  EXAMPLE_ITEM_3_ID,
-  EXAMPLE_ITEM_4_ID,
-  EXAMPLE_ITEM_5_ID,
+  BAUBLE_1_ID,
+  BAUBLE_2_ID,
+  BAUBLE_3_ID,
+  BAUBLE_4_ID,
+  BAUBLE_5_ID,
 } from './actors';
 import {
   PIZZA_ID,
@@ -18,35 +18,35 @@ interface Item {
 }
 
 export const ITEM: Record<string, Item> = {
-  [EXAMPLE_ITEM_1_ID]: {
-    name: 'exampleItem1',
-    title: 'Предмет 1',
-    imageUrl: './images/example-item-1.png',
-    templateId: 'c9491264-a219-480b-b5f3-baf9434a04ba',
+  [BAUBLE_1_ID]: {
+    name: 'bauble1',
+    title: 'Красный шар',
+    imageUrl: './images/bauble-1.png',
+    templateId: '9738343c-f321-4781-aef8-7224536980dc',
   },
-  [EXAMPLE_ITEM_2_ID]: {
-    name: 'exampleItem2',
-    title: 'Предмет 2',
-    imageUrl: './images/example-item-2.png',
-    templateId: '9dda67a3-d655-4615-9570-03a69b0f8e02',
+  [BAUBLE_2_ID]: {
+    name: 'bauble2',
+    title: 'Синий шар',
+    imageUrl: './images/bauble-2.png',
+    templateId: 'fa503edd-278d-4b6c-8ec3-a0245ea1a247',
   },
-  [EXAMPLE_ITEM_3_ID]: {
-    name: 'exampleItem3',
-    title: 'Предмет 3',
-    imageUrl: './images/example-item-3.png',
-    templateId: '4f114cf8-6b1f-45dd-886b-329ef8ab9099',
+  [BAUBLE_3_ID]: {
+    name: 'bauble3',
+    title: 'Фиолетовый шар',
+    imageUrl: './images/bauble-3.png',
+    templateId: 'b1aed82a-d5a5-449d-b6ec-9f750da53f24',
   },
-  [EXAMPLE_ITEM_4_ID]: {
-    name: 'exampleItem4',
-    title: 'Предмет 4',
-    imageUrl: './images/example-item-4.png',
-    templateId: '77bcfe83-72de-4a00-9a57-53814b206d80',
+  [BAUBLE_4_ID]: {
+    name: 'bauble4',
+    title: 'Зеленый шар',
+    imageUrl: './images/bauble-4.png',
+    templateId: 'b8aecb00-27ac-4923-a70f-9e8402bfbdd5',
   },
-  [EXAMPLE_ITEM_5_ID]: {
-    name: 'exampleItem5',
-    title: 'Предмет 5',
-    imageUrl: './images/example-item-5.png',
-    templateId: 'b74d6f6c-3025-4acb-ba09-f22684a1a907',
+  [BAUBLE_5_ID]: {
+    name: 'bauble5',
+    title: 'Бирюзовый шар',
+    imageUrl: './images/bauble-5.png',
+    templateId: 'c7d71713-3b1c-4d1c-8e51-11afdc71ef42',
   },
 
   [PIZZA_ID]: {
