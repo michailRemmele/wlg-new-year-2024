@@ -4,7 +4,7 @@ import type {
 } from 'remiz';
 import { Script, Camera } from 'remiz';
 
-const VIEWPORT_SIZE_Y = 120;
+const VIEWPORT_SIZE_Y = 144;
 
 export class EletricalPanelCameraScript extends Script {
   private actor: Actor;

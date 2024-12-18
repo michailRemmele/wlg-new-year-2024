@@ -115,7 +115,7 @@
           }
         }
       ],
-      "levelId": "814bb481-8226-4f26-8df4-7963417938ec"
+      "levelId": "b541efa6-215b-487b-9134-b669ba9a072b"
     },
     {
       "id": "61a9daad-0b70-4c80-99df-09faaadf1d43",
@@ -272,7 +272,7 @@
   "levels": [
     {
       "id": "814bb481-8226-4f26-8df4-7963417938ec",
-      "name": "Room 1",
+      "name": "Workplace",
       "actors": [
         {
           "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
@@ -518,6 +518,14 @@
               "name": "Decoration Place 5",
               "components": [],
               "children": []
+            },
+            {
+              "id": "cac62a44-9418-4c20-baf0-04fb86f7cf52",
+              "templateId": "247efb44-ad45-4697-ba2a-fc4a538e2031",
+              "fromTemplate": true,
+              "name": "Garland Place",
+              "components": [],
+              "children": []
             }
           ]
         },
@@ -531,26 +539,6 @@
               "name": "Transform",
               "config": {
                 "offsetX": 132,
-                "offsetY": 30,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "60b958e7-ec53-41d7-a78b-4fc5a4c7e6e2",
-          "templateId": "029613e2-7ae5-4aec-b2d7-d14cef4a11e1",
-          "fromTemplate": true,
-          "name": "Initial Spawner",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": -72,
                 "offsetY": 30,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -827,12 +815,32 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "3c0a01c1-33bc-4105-91e0-d531fba264e6",
+          "templateId": "85354b42-38c7-469d-932a-378a912a6abe",
+          "fromTemplate": true,
+          "name": "Switcher",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 1,
+                "offsetY": 5,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
         }
       ]
     },
     {
       "id": "d2e56cd1-1b13-47e1-9036-6e5233b237a7",
-      "name": "Room 2",
+      "name": "Dining Room",
       "actors": [
         {
           "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
@@ -1056,7 +1064,7 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -29,
+                "offsetX": -17,
                 "offsetY": 19.5,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -1076,8 +1084,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 1,
-                "offsetY": 7,
+                "offsetX": -42,
+                "offsetY": 1,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1127,8 +1135,8 @@
             {
               "name": "Entrance",
               "config": {
-                "levelId": "42300798-dc73-47e4-a943-d36b55d7541e",
-                "spawnerId": "1d1b1746-c8e4-4a5e-b5de-f0c8e2ec0c5b"
+                "levelId": "b541efa6-215b-487b-9134-b669ba9a072b",
+                "spawnerId": "a99939c5-0e43-4da7-93c1-2113440d5faa"
               }
             }
           ],
@@ -1295,26 +1303,6 @@
           "children": []
         },
         {
-          "id": "b14f654e-69e8-4c23-a44e-89383f8caba7",
-          "templateId": "ca0a9df9-5ce2-438c-8f5a-d6f57707e30c",
-          "fromTemplate": true,
-          "name": "Wall-1 4",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 84,
-                "offsetY": -12,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
           "id": "c9ebfda5-7275-4500-8258-a7ae6498c30e",
           "templateId": "4050aa10-c9fe-4318-b94a-2139a764f788",
           "fromTemplate": true,
@@ -1333,12 +1321,79 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "94ca4d7b-01ef-4972-926b-ca811479802a",
+          "templateId": "73a64c7f-3304-4b85-bf5a-4fb76edfafec",
+          "fromTemplate": true,
+          "name": "EntranceFront",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 72,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "4bc5758d-140b-42d3-a8ca-af8c21ba85cd",
+                "spawnerId": "f3daa198-6a0e-41dd-933e-ae8e4ac40c94"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7b7a74c9-b1a7-4b39-ab9b-743799d17422",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 4",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 84,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e7080258-cf46-43d4-9bc3-f7c96cdd1f9c",
+          "templateId": "029613e2-7ae5-4aec-b2d7-d14cef4a11e1",
+          "fromTemplate": true,
+          "name": "Spawner Center",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 72,
+                "offsetY": 18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
         }
       ]
     },
     {
       "id": "42300798-dc73-47e4-a943-d36b55d7541e",
-      "name": "Room 3",
+      "name": "Generator Room",
       "actors": [
         {
           "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
@@ -1467,42 +1522,15 @@
           "children": []
         },
         {
-          "id": "8ab77544-79bc-4030-b1e4-53669c6a039c",
-          "templateId": "5d3b25d6-2d03-4759-bee6-2c4d9b3f036e",
-          "fromTemplate": true,
-          "name": "Entrance",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": -132,
-                "offsetY": 0,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            },
-            {
-              "name": "Entrance",
-              "config": {
-                "levelId": "d2e56cd1-1b13-47e1-9036-6e5233b237a7",
-                "spawnerId": "509438e1-065a-4843-a7e1-a1ece0c38aed"
-              }
-            }
-          ],
-          "children": []
-        },
-        {
           "id": "1d1b1746-c8e4-4a5e-b5de-f0c8e2ec0c5b",
           "templateId": "029613e2-7ae5-4aec-b2d7-d14cef4a11e1",
           "fromTemplate": true,
-          "name": "Left Spawner",
+          "name": "Spawner Ladder Up",
           "components": [
             {
               "name": "Transform",
               "config": {
-                "offsetX": -120,
+                "offsetX": 60,
                 "offsetY": 18,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -1522,7 +1550,7 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 19,
+                "offsetX": -59,
                 "offsetY": 19.5,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -1542,7 +1570,7 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 81,
+                "offsetX": -27,
                 "offsetY": -9,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -1734,26 +1762,6 @@
           "children": []
         },
         {
-          "id": "e8cbc0c6-1d80-4f20-87a4-6352483ceda9",
-          "templateId": "ca0a9df9-5ce2-438c-8f5a-d6f57707e30c",
-          "fromTemplate": true,
-          "name": "Wall-1",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 60,
-                "offsetY": -12,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
           "id": "d919efad-dd63-4d95-aae4-a6d265e74c4c",
           "templateId": "ca0a9df9-5ce2-438c-8f5a-d6f57707e30c",
           "fromTemplate": true,
@@ -1783,6 +1791,73 @@
               "name": "Transform",
               "config": {
                 "offsetX": -60,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8b222575-09dc-4cd9-b14e-d4f16a4ebea7",
+          "templateId": "73d93bba-3422-48cd-91f0-003b1e661471",
+          "fromTemplate": true,
+          "name": "LadderUp",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 60,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "4bc5758d-140b-42d3-a8ca-af8c21ba85cd",
+                "spawnerId": "fc1990a8-bf91-4fa0-aab9-55a75f5902c5"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "eebe564c-3f5b-4e95-9baf-eef6b4509b67",
+          "templateId": "41c94e29-bcd1-4280-b893-eae9d6dd8c35",
+          "fromTemplate": true,
+          "name": "SideWallLeft",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -132,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7c58c60b-2c2c-49ed-a15e-17c0bee35ab8",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 6",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 60,
                 "offsetY": -12,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -1843,7 +1918,7 @@
               "name": "Transform",
               "config": {
                 "offsetX": 0,
-                "offsetY": 0,
+                "offsetY": -4.5,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1853,9 +1928,9 @@
             {
               "name": "Sprite",
               "config": {
-                "src": "",
+                "src": "wall-electrical-panel-bg.png",
                 "width": 480,
-                "height": 240,
+                "height": 144,
                 "slice": 1,
                 "rotation": 0,
                 "sortCenter": [
@@ -1865,12 +1940,12 @@
                 "flipX": false,
                 "flipY": false,
                 "sortingLayer": "background",
-                "fit": "stretch",
+                "fit": "repeat",
                 "material": {
                   "type": "basic",
                   "options": {
                     "blending": "normal",
-                    "color": "#646464",
+                    "color": "#ffffff",
                     "opacity": 1
                   }
                 }
@@ -1897,9 +1972,9 @@
             {
               "name": "Sprite",
               "config": {
-                "src": "",
-                "width": 105,
-                "height": 105,
+                "src": "electrical-panel-bg.png",
+                "width": 144,
+                "height": 144,
                 "slice": 1,
                 "rotation": 0,
                 "sortCenter": [
@@ -1914,7 +1989,7 @@
                   "type": "basic",
                   "options": {
                     "blending": "normal",
-                    "color": "#26a4c5",
+                    "color": "#ffffff",
                     "opacity": 1
                   }
                 }
@@ -4899,6 +4974,1437 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "4bc5758d-140b-42d3-a8ca-af8c21ba85cd",
+      "name": "Corridor",
+      "actors": [
+        {
+          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "name": "Camera",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Camera",
+              "config": {
+                "zoom": 1
+              }
+            },
+            {
+              "name": "Light",
+              "config": {
+                "type": "ambient",
+                "options": {
+                  "color": "#fff",
+                  "intensity": 1
+                }
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "11c5466d-8c6b-403a-9335-da48c4f00d92",
+                    "name": "CameraScript",
+                    "options": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "18e0f792-573e-4f6f-a941-2919399de65f",
+          "templateId": "93488f65-e9da-4219-ae81-65f6f771dfa3",
+          "fromTemplate": true,
+          "name": "FloorPathBlock",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 48,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6c0f5c72-bcff-4905-9a8a-f30c5792f2cb",
+          "templateId": "0c23bed3-fad2-4930-bf1c-bcedc3b7866c",
+          "fromTemplate": true,
+          "name": "WallPathBlock",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -144,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a0c7e689-efe5-4e3d-92e2-5ae06af6e0e3",
+          "templateId": "0c23bed3-fad2-4930-bf1c-bcedc3b7866c",
+          "fromTemplate": true,
+          "name": "WallPathBlock 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 144,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "92524a67-26f0-4a90-b4d0-f276b2d6979a",
+          "templateId": "4997e9ed-e2bb-4fef-9716-c0415c084822",
+          "fromTemplate": true,
+          "name": "Cursor",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -93,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f3daa198-6a0e-41dd-933e-ae8e4ac40c94",
+          "templateId": "029613e2-7ae5-4aec-b2d7-d14cef4a11e1",
+          "fromTemplate": true,
+          "name": "Spawner Center",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "281b61da-4757-4470-b411-9cf38b610667",
+          "templateId": "e410c32b-fa8f-4946-ae01-fa982a0f71c4",
+          "fromTemplate": true,
+          "name": "Floor",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c68f8a70-fe6a-4936-8ce2-725bbe10990c",
+          "templateId": "21adf2e6-815b-4ed9-a210-7288ef5cd5ea",
+          "fromTemplate": true,
+          "name": "SideWallRight",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 132,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c8dbcc7d-63b2-4b0c-9c14-51ecb053beef",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -108,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "36f54adf-b417-4993-8feb-758fe820619f",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -84,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "369b1f90-57bf-4928-a4e5-bc59ae2cb5a8",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 84,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "abae5df1-bd7b-426a-a901-7bdde85a0881",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 3",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 36,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2be9ae5a-193e-48b0-9f0d-8ffafae3702a",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 4",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 12,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5b9635cf-051e-448a-8457-62d6f26f4996",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 5",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -36,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ad7f350c-dae9-4dd9-836b-60ac611d5a85",
+          "templateId": "4050aa10-c9fe-4318-b94a-2139a764f788",
+          "fromTemplate": true,
+          "name": "Wall-Last",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 108,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2a766bd5-2117-4502-a908-319397b7da5b",
+          "templateId": "ca0a9df9-5ce2-438c-8f5a-d6f57707e30c",
+          "fromTemplate": true,
+          "name": "Wall-1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 60,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "72c6bb6a-b4be-48c7-93bc-473cd3e11f68",
+          "templateId": "ca0a9df9-5ce2-438c-8f5a-d6f57707e30c",
+          "fromTemplate": true,
+          "name": "Wall-1 2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -60,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f086e9ef-f882-48d0-b9ef-2231837fb0d2",
+          "templateId": "41c94e29-bcd1-4280-b893-eae9d6dd8c35",
+          "fromTemplate": true,
+          "name": "SideWallLeft",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -132,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7b8afb2e-7ef7-487f-8b94-2e29668ec502",
+          "templateId": "73a64c7f-3304-4b85-bf5a-4fb76edfafec",
+          "fromTemplate": true,
+          "name": "EntranceFront",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "d2e56cd1-1b13-47e1-9036-6e5233b237a7",
+                "spawnerId": "e7080258-cf46-43d4-9bc3-f7c96cdd1f9c"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9d5262dc-3b41-402f-a979-91edf6344503",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 6",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5758408f-2792-458a-af1f-7b07e72a33b3",
+          "templateId": "8b949666-ab44-4d51-b132-fc6f6afa0e6d",
+          "fromTemplate": true,
+          "name": "LadderDown",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -89,
+                "offsetY": 4,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "42300798-dc73-47e4-a943-d36b55d7541e",
+                "spawnerId": "1d1b1746-c8e4-4a5e-b5de-f0c8e2ec0c5b"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e9ed4240-9b2e-4d28-bb8d-aab855aa40f0",
+          "templateId": "73d93bba-3422-48cd-91f0-003b1e661471",
+          "fromTemplate": true,
+          "name": "LadderUp",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 84,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "101d8b37-d1d7-4ef9-9d11-9abf89ae5d33",
+                "spawnerId": "c60dc581-acfa-4243-bf47-718639afe92f"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "fc1990a8-bf91-4fa0-aab9-55a75f5902c5",
+          "templateId": "029613e2-7ae5-4aec-b2d7-d14cef4a11e1",
+          "fromTemplate": true,
+          "name": "Spawner Ladder Down",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -90,
+                "offsetY": 18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8360fc29-a7ec-475d-b494-da64e4928a38",
+          "templateId": "029613e2-7ae5-4aec-b2d7-d14cef4a11e1",
+          "fromTemplate": true,
+          "name": "Spawner Ladder Up",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 84,
+                "offsetY": 18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "b541efa6-215b-487b-9134-b669ba9a072b",
+      "name": "Bedroom",
+      "actors": [
+        {
+          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "name": "Camera",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Camera",
+              "config": {
+                "zoom": 1
+              }
+            },
+            {
+              "name": "Light",
+              "config": {
+                "type": "ambient",
+                "options": {
+                  "color": "#fff",
+                  "intensity": 1
+                }
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "11c5466d-8c6b-403a-9335-da48c4f00d92",
+                    "name": "CameraScript",
+                    "options": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "55e68cb1-61f7-4823-8eee-a21a680f3086",
+          "templateId": "93488f65-e9da-4219-ae81-65f6f771dfa3",
+          "fromTemplate": true,
+          "name": "FloorPathBlock",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 48,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d63e5ec7-56ea-4c06-a83d-a262df46f109",
+          "templateId": "0c23bed3-fad2-4930-bf1c-bcedc3b7866c",
+          "fromTemplate": true,
+          "name": "WallPathBlock",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -144,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "57c54c34-c6de-491f-8312-d713c579741f",
+          "templateId": "0c23bed3-fad2-4930-bf1c-bcedc3b7866c",
+          "fromTemplate": true,
+          "name": "WallPathBlock 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 144,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "5e9529dc-1d53-4a17-ae65-76a8e9b1a796",
+          "templateId": "4997e9ed-e2bb-4fef-9716-c0415c084822",
+          "fromTemplate": true,
+          "name": "Cursor",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -93,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "65a736d3-9986-48a4-bd07-62d70f27f70a",
+          "templateId": "e410c32b-fa8f-4946-ae01-fa982a0f71c4",
+          "fromTemplate": true,
+          "name": "Floor",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6a8dd760-7d7e-4219-a961-86d34481044c",
+          "templateId": "21adf2e6-815b-4ed9-a210-7288ef5cd5ea",
+          "fromTemplate": true,
+          "name": "SideWallRight",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 132,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "812b9ebe-6dfc-4238-acb9-7366e90d9398",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -108,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "616e00eb-5889-40cc-89fb-6eb7c89c6187",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -84,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2eebee46-2be2-44f6-9891-648b069d3cae",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 84,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ddbbfcc3-11c3-4de5-9d2a-4a3d13d8ed15",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 3",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 36,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "03a94f63-911e-4686-a853-ee5ec8161931",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 4",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 12,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a0332491-55e0-46b6-b851-c254a5fcb31c",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 5",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -36,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "bf4ce97e-8b9a-45b3-b1a2-ea7f38b405c2",
+          "templateId": "4050aa10-c9fe-4318-b94a-2139a764f788",
+          "fromTemplate": true,
+          "name": "Wall-Last",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 108,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e3a5990f-9c9e-4d64-8cde-f69e25734810",
+          "templateId": "ca0a9df9-5ce2-438c-8f5a-d6f57707e30c",
+          "fromTemplate": true,
+          "name": "Wall-1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 60,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "70ec0860-df08-4f83-aaec-b307ecbe2541",
+          "templateId": "ca0a9df9-5ce2-438c-8f5a-d6f57707e30c",
+          "fromTemplate": true,
+          "name": "Wall-1 2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -60,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c1809a07-d367-4831-941d-e7a9801a9e75",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 6",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a99939c5-0e43-4da7-93c1-2113440d5faa",
+          "templateId": "029613e2-7ae5-4aec-b2d7-d14cef4a11e1",
+          "fromTemplate": true,
+          "name": "Spawner Left",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -120,
+                "offsetY": 18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7e9c7cf8-9268-4793-8e1c-2808ddfe716b",
+          "templateId": "5d3b25d6-2d03-4759-bee6-2c4d9b3f036e",
+          "fromTemplate": true,
+          "name": "EntranceLeft",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -132,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "d2e56cd1-1b13-47e1-9036-6e5233b237a7",
+                "spawnerId": "509438e1-065a-4843-a7e1-a1ece0c38aed"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "03737978-674b-4774-a967-14695239ad6f",
+          "templateId": "029613e2-7ae5-4aec-b2d7-d14cef4a11e1",
+          "fromTemplate": true,
+          "name": "Initial Spawner",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 12,
+                "offsetY": 18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "101d8b37-d1d7-4ef9-9d11-9abf89ae5d33",
+      "name": "Vault Exit",
+      "actors": [
+        {
+          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "name": "Camera",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Camera",
+              "config": {
+                "zoom": 1
+              }
+            },
+            {
+              "name": "Light",
+              "config": {
+                "type": "ambient",
+                "options": {
+                  "color": "#fff",
+                  "intensity": 1
+                }
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "11c5466d-8c6b-403a-9335-da48c4f00d92",
+                    "name": "CameraScript",
+                    "options": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e0043a65-c84d-4fa4-90bb-c454fe380f4f",
+          "templateId": "93488f65-e9da-4219-ae81-65f6f771dfa3",
+          "fromTemplate": true,
+          "name": "FloorPathBlock",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 48,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "20e4c990-a439-4706-8b47-ac04304bca70",
+          "templateId": "0c23bed3-fad2-4930-bf1c-bcedc3b7866c",
+          "fromTemplate": true,
+          "name": "WallPathBlock",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -144,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9a4c71b0-486a-46f1-8613-7600842258c4",
+          "templateId": "0c23bed3-fad2-4930-bf1c-bcedc3b7866c",
+          "fromTemplate": true,
+          "name": "WallPathBlock 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 144,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a68b7a06-9019-4543-9345-19aa9c398d03",
+          "templateId": "4997e9ed-e2bb-4fef-9716-c0415c084822",
+          "fromTemplate": true,
+          "name": "Cursor",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -93,
+                "offsetY": -45,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7dbb293e-18bd-4b63-9469-e5b30a771c0f",
+          "templateId": "e410c32b-fa8f-4946-ae01-fa982a0f71c4",
+          "fromTemplate": true,
+          "name": "Floor",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "49136508-0bda-4edf-9411-47dee3c53e4b",
+          "templateId": "21adf2e6-815b-4ed9-a210-7288ef5cd5ea",
+          "fromTemplate": true,
+          "name": "SideWallRight",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 132,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cebfe764-12d5-465f-88e4-a2b11d6716eb",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -108,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "afbf1cb2-658f-41ce-a2ea-3277a13038c7",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -84,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f254f26c-1481-4e5a-84a4-642db8f5b1df",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 84,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e41d359a-6d46-487c-a1d6-0dbe0bab14c7",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 3",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 36,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ac03dccb-7463-409d-9176-5070bd9bf25a",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 4",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 12,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6ece0889-8017-4494-a2c7-46667e8efc05",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 5",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -36,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "706dbe2c-87c4-4431-9e1e-9b4556acece7",
+          "templateId": "4050aa10-c9fe-4318-b94a-2139a764f788",
+          "fromTemplate": true,
+          "name": "Wall-Last",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 108,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7361b9f1-727a-49bf-a984-38c85f0316a0",
+          "templateId": "ca0a9df9-5ce2-438c-8f5a-d6f57707e30c",
+          "fromTemplate": true,
+          "name": "Wall-1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 60,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f6721235-77b3-44ad-b427-4e9087aea133",
+          "templateId": "ca0a9df9-5ce2-438c-8f5a-d6f57707e30c",
+          "fromTemplate": true,
+          "name": "Wall-1 2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -60,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "2e75dd53-8eaa-43cc-9135-fd72df52831b",
+          "templateId": "7662e7ad-4945-459e-b450-948684dc041c",
+          "fromTemplate": true,
+          "name": "Wall-2 6",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -12,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "c60dc581-acfa-4243-bf47-718639afe92f",
+          "templateId": "029613e2-7ae5-4aec-b2d7-d14cef4a11e1",
+          "fromTemplate": true,
+          "name": "Spawner Ladder Down",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -78,
+                "offsetY": 18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "4e7618d4-eda5-428b-9d0b-baea1544043b",
+          "templateId": "8b949666-ab44-4d51-b132-fc6f6afa0e6d",
+          "fromTemplate": true,
+          "name": "LadderDown",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -78,
+                "offsetY": 4,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Entrance",
+              "config": {
+                "levelId": "4bc5758d-140b-42d3-a8ca-af8c21ba85cd",
+                "spawnerId": "8360fc29-a7ec-475d-b494-da64e4928a38"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "91189559-d489-49b2-96f2-f324e2eba40f",
+          "templateId": "41c94e29-bcd1-4280-b893-eae9d6dd8c35",
+          "fromTemplate": true,
+          "name": "SideWallLeft",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -132,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a0d63fda-4ea1-4940-ad4c-ab537d0bd0ba",
+          "templateId": "b3a8b979-fbe2-4cf9-883c-463082ee89a3",
+          "fromTemplate": true,
+          "name": "Garland",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 66,
+                "offsetY": 12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ],
   "templates": [
@@ -6483,6 +7989,50 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "247efb44-ad45-4697-ba2a-fc4a538e2031",
+          "name": "Garland Place",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 10,
+                "height": 10,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "default",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#ffffff",
+                    "opacity": 0
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
         }
       ]
     },
@@ -7332,6 +8882,193 @@
               }
             ]
           }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "sparks.png",
+            "width": 18,
+            "height": 18,
+            "slice": 4,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "7df9ead4-0b4f-4366-a3ed-3e5abfd71380",
+            "states": [
+              {
+                "id": "7df9ead4-0b4f-4366-a3ed-3e5abfd71380",
+                "name": "Idle",
+                "type": "individual",
+                "speed": 1.5,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "a87e118a-19cc-4200-be4e-d8da967c00ad",
+                      "fields": [
+                        {
+                          "id": "6be4f23c-6120-47dd-b6e5-b8414e1bc0c3",
+                          "name": "components.Sprite.disabled",
+                          "type": "boolean",
+                          "value": true
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": true
+                },
+                "transitions": [
+                  {
+                    "id": "8937f150-4a60-47da-8b2c-f115b171fdf8",
+                    "state": "cf851a1a-31b7-41a9-aff9-4d27d78e7da3",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "89a6296a-37ca-4900-a0b3-9e26486070f5",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "repairStarted"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cf851a1a-31b7-41a9-aff9-4d27d78e7da3",
+                "name": "Repair",
+                "type": "individual",
+                "speed": 1.5,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "a87e118a-19cc-4200-be4e-d8da967c00ad",
+                      "fields": [
+                        {
+                          "id": "6be4f23c-6120-47dd-b6e5-b8414e1bc0c3",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "id": "35587148-92a0-40a3-bdd5-672a04c0cde5",
+                          "name": "components.Sprite.disabled",
+                          "type": "boolean",
+                          "value": false
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ff4cda89-c7af-42f9-8e6c-945be9ae22a1",
+                      "fields": [
+                        {
+                          "id": "6be4f23c-6120-47dd-b6e5-b8414e1bc0c3",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        },
+                        {
+                          "id": "62719e9f-6ca5-40f9-82dc-0fa50d672674",
+                          "name": "components.Sprite.disabled",
+                          "type": "boolean",
+                          "value": false
+                        }
+                      ]
+                    },
+                    {
+                      "id": "a75f51a3-6af0-41bf-96e5-998e55c75a37",
+                      "fields": [
+                        {
+                          "id": "6be4f23c-6120-47dd-b6e5-b8414e1bc0c3",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 2
+                        },
+                        {
+                          "id": "c36447cb-7822-49a3-b7bd-e0e28e5fdc52",
+                          "name": "components.Sprite.disabled",
+                          "type": "boolean",
+                          "value": false
+                        }
+                      ]
+                    },
+                    {
+                      "id": "84b9ee93-fe85-4ff1-bf29-d42493590934",
+                      "fields": [
+                        {
+                          "id": "6be4f23c-6120-47dd-b6e5-b8414e1bc0c3",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 3
+                        },
+                        {
+                          "id": "70d25d0c-86cd-4c4c-b5dd-e5af652bf275",
+                          "name": "components.Sprite.disabled",
+                          "type": "boolean",
+                          "value": false
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": true
+                },
+                "transitions": [
+                  {
+                    "id": "cbeaec71-5e2f-49a3-aebe-8490d6f794f2",
+                    "state": "7df9ead4-0b4f-4366-a3ed-3e5abfd71380",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "fa8cb1b0-de62-4b03-a946-38bb9d8e2aa3",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "repairFinished"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "State",
+          "config": {}
         }
       ],
       "children": []
@@ -7372,7 +9109,7 @@
               "options": {
                 "blending": "normal",
                 "color": "#fff",
-                "opacity": 0.5
+                "opacity": 0.75
               }
             }
           }
@@ -7509,8 +9246,8 @@
           "name": "Sprite",
           "config": {
             "src": "arcade-cabinet.png",
-            "width": 26,
-            "height": 38,
+            "width": 36,
+            "height": 50,
             "slice": 2,
             "rotation": 0,
             "sortCenter": [
@@ -8779,6 +10516,825 @@
                 "opacity": 1
               }
             }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "73a64c7f-3304-4b85-bf5a-4fb76edfafec",
+      "name": "EntranceFront",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "gate-front.png",
+            "width": 36,
+            "height": 48,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-2",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 36,
+              "sizeY": 48,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "enter"
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8b949666-ab44-4d51-b132-fc6f6afa0e6d",
+      "name": "LadderDown",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "ladder-down.png",
+            "width": 36,
+            "height": 48,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-2",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 38,
+              "sizeY": 48,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "enter"
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "73d93bba-3422-48cd-91f0-003b1e661471",
+      "name": "LadderUp",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "ladder-up.png",
+            "width": 24,
+            "height": 48,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-2",
+            "fit": "stretch",
+            "material": {
+              "type": "basic",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 24,
+              "sizeY": 48,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "enter"
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b3a8b979-fbe2-4cf9-883c-463082ee89a3",
+      "name": "Garland",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "take"
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "",
+            "width": 24,
+            "height": 24,
+            "slice": 2,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#7200fa",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
+            "states": [
+              {
+                "id": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
+                "name": "Idle",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
+                      "fields": [
+                        {
+                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "64097c9b-d020-4aa6-96e3-0d2b071d4a59",
+                    "state": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "d7f2d6e3-8764-4f0a-93e4-406260e3ce63",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.Interactable.hover"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": true
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
+                "name": "Hover",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
+                      "fields": [
+                        {
+                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "6d4aa96d-5214-4fd4-8380-cc832612efef",
+                    "state": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "8ee3908c-46cb-4104-99ba-bb8cd51d858f",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.Interactable.hover"
+                          },
+                          "arg2": {
+                            "type": "boolean",
+                            "value": false
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 12,
+              "sizeY": 12,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e44bfbb8-72c9-42ec-a08b-4cfb936828b3",
+      "name": "Garland Used",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "",
+            "width": 48,
+            "height": 72,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#7200fa",
+                "opacity": 0.5
+              }
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "85354b42-38c7-469d-932a-378a912a6abe",
+      "name": "Switcher",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "switcher.png",
+            "width": 14,
+            "height": 22,
+            "slice": 3,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "inspect"
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 14,
+              "sizeY": 22,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "8ad78f49-e12c-4134-b75b-b9e6454d8c99",
+                "name": "SwitcherScript",
+                "options": {}
+              }
+            ]
+          }
+        },
+        {
+          "name": "State",
+          "config": {}
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "53986f2c-aea5-4945-900d-18a545a65ae5",
+            "states": [
+              {
+                "id": "53986f2c-aea5-4945-900d-18a545a65ae5",
+                "name": "Useless Fail",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "093a6001-7513-4b61-a0e2-e4dd2e7e79fc",
+                      "fields": [
+                        {
+                          "id": "b8eb6257-94d6-4fa0-ad57-fbfbfab0082e",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "9596a1b6-c233-458e-b041-1433ec5815ed",
+                    "state": "53db6e54-07c3-49ec-af86-7f979ea38045",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "3b53b595-d02d-4e1f-9ce4-7c2461c4e31b",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "inactiveFail"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "d35613ac-50f1-4205-b42a-8387ce5d2478",
+                    "state": "f4477360-d3c0-4f25-a368-927d6fe96748",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "3b53b595-d02d-4e1f-9ce4-7c2461c4e31b",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "activeFail"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "8c209b39-c357-4f8d-ae2f-89107f62cd42",
+                    "state": "c6d3848a-78c5-4dc1-a1fd-d0674dc498a5",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "3b53b595-d02d-4e1f-9ce4-7c2461c4e31b",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "uselessSuccess"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "326682ee-da6b-4de5-bb18-f64809a522de",
+                    "state": "9021732d-65d3-44f5-8a25-4cc82ca3529f",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "3b53b595-d02d-4e1f-9ce4-7c2461c4e31b",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "inactiveSuccess"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "82857993-104f-4bb5-97a0-5d4144430f4a",
+                    "state": "a33bd47c-a019-4a13-992b-4cab86ebc568",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "3b53b595-d02d-4e1f-9ce4-7c2461c4e31b",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "activeSuccess"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "53db6e54-07c3-49ec-af86-7f979ea38045",
+                "name": "Inactive Fail",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "093a6001-7513-4b61-a0e2-e4dd2e7e79fc",
+                      "fields": [
+                        {
+                          "id": "b8eb6257-94d6-4fa0-ad57-fbfbfab0082e",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "606d3a71-a987-414a-8c7e-62d3900a5066",
+                    "state": "f4477360-d3c0-4f25-a368-927d6fe96748",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "f9bd7322-7f39-4594-9b8b-d27d6fd76afb",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "activeFail"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "f4477360-d3c0-4f25-a368-927d6fe96748",
+                "name": "Active Fail",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "093a6001-7513-4b61-a0e2-e4dd2e7e79fc",
+                      "fields": [
+                        {
+                          "id": "b8eb6257-94d6-4fa0-ad57-fbfbfab0082e",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 2
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "91d1fef1-39d3-413e-a9a3-a87fb076460c",
+                    "state": "c6d3848a-78c5-4dc1-a1fd-d0674dc498a5",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "d32abad8-d3cb-43b1-a319-f5ea2df6991a",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "uselessSuccess"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "c6d3848a-78c5-4dc1-a1fd-d0674dc498a5",
+                "name": "Useless Success",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "093a6001-7513-4b61-a0e2-e4dd2e7e79fc",
+                      "fields": [
+                        {
+                          "id": "b8eb6257-94d6-4fa0-ad57-fbfbfab0082e",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "43da41f8-08dc-4cab-bf14-59f062ee6a5e",
+                    "state": "9021732d-65d3-44f5-8a25-4cc82ca3529f",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "efc48dda-436e-4b2f-b0e4-1d16b30d787d",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "inactiveSuccess"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "9021732d-65d3-44f5-8a25-4cc82ca3529f",
+                "name": "Inactive Success",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "093a6001-7513-4b61-a0e2-e4dd2e7e79fc",
+                      "fields": [
+                        {
+                          "id": "b8eb6257-94d6-4fa0-ad57-fbfbfab0082e",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "43da41f8-08dc-4cab-bf14-59f062ee6a5e",
+                    "state": "a33bd47c-a019-4a13-992b-4cab86ebc568",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "efc48dda-436e-4b2f-b0e4-1d16b30d787d",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "activeSuccess"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "a33bd47c-a019-4a13-992b-4cab86ebc568",
+                "name": "Active Success",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "093a6001-7513-4b61-a0e2-e4dd2e7e79fc",
+                      "fields": [
+                        {
+                          "id": "b8eb6257-94d6-4fa0-ad57-fbfbfab0082e",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 2
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": []
+              }
+            ]
           }
         }
       ],

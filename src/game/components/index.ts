@@ -6,3 +6,4 @@ export { Entrance } from './entrance';
 export { PathMark } from './path-mark';
 export { CourierHealth } from './courier-health';
 export { Trap } from './trap';
+export { State } from './state';

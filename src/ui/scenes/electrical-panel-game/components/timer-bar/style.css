@@ -1,20 +1,36 @@
-.timer-bar {
+.timer-bar__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
   grid-column: 3;
   align-self: center;
   justify-self: end;
+}
 
+.timer-bar {
   height: 24px;
   width: 30%;
-  min-width: 200px;
-  max-width: 300px;
-  padding: 3px;
+  min-width: 250px;
+  max-width: 400px;
+  padding: 3px 3px 3px 0;
 
   box-sizing: border-box;
-  border: 3px solid #ffffff;
+  border: 3px solid #75ff66;
+  border-left: none;
+}
+
+.timer-bar__icon {
+  width: 99px;
+  height: 69px;
+
+  margin-right: 0px;
+
+  image-rendering: pixelated;
 }
 
 .timer-bar__points {
-  background-color: #ffffff;
+  background-color: #75ff66;
 
   height: 100%;
 }

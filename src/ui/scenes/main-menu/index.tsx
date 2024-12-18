@@ -32,10 +32,10 @@ export const MainMenu: FC = () => {
 
   return (
     <div className="main-menu">
-      <h1>WLG New Year 2024</h1>
+      <h1>WLG Новый Год 2024</h1>
       <div className="main-menu__buttons">
-        {window.saveState!.touched && <Button onClick={handleContinue}>Continue</Button>}
-        <Button onClick={handleNewGame}>New Game</Button>
+        {window.saveState!.touched && <Button onClick={handleContinue}>Продолжить</Button>}
+        <Button onClick={handleNewGame}>Новая игра</Button>
       </div>
     </div>
   );

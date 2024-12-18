@@ -9,3 +9,4 @@ export { ElectricalPanelCursorScript } from './electrical-panel-cursor-script';
 export { ArcadeCabinetCameraScript } from './arcade-cabinet-camera-script';
 export { ArcadeCabinetCursorScript } from './arcade-cabinet-cursor-script';
 export { ArcadeCabinetScript } from './arcade-cabinet-script';
+export { SwitcherScript } from './switcher-script';

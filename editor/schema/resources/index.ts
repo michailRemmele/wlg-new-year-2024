@@ -12,6 +12,7 @@ import {
   ArcadeCabinetCameraScript,
   ArcadeCabinetCursorScript,
   ArcadeCabinetScript,
+  SwitcherScript,
 } from '../../../src/game/scripts';
 
 import {
@@ -26,6 +27,7 @@ import {
   arcadeCabinetCameraScript,
   arcadeCabinetCursorScript,
   arcadeCabinetScript,
+  switcherScript,
 } from './script-system';
 
 export const resourcesSchema = {
@@ -41,5 +43,6 @@ export const resourcesSchema = {
     [ArcadeCabinetCameraScript.scriptName]: arcadeCabinetCameraScript,
     [ArcadeCabinetCursorScript.scriptName]: arcadeCabinetCursorScript,
     [ArcadeCabinetScript.scriptName]: arcadeCabinetScript,
+    [SwitcherScript.scriptName]: switcherScript,
   },
 };

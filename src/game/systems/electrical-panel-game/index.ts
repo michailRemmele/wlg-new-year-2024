@@ -25,7 +25,7 @@ import {
   ELECTRICAL_PANEL_ID,
 } from '../../../consts/actors';
 import { PASSING_SCORE } from '../../../consts/electrical-panel';
-import { PathMark } from '../../components';
+import { PathMark, State } from '../../components';
 
 const TIMER = 5000;
 const INITIAL_TIMEOUT = 2000;
@@ -150,6 +150,9 @@ export class ElectricalPanelGame extends System {
       return;
     }
 
+    const cursorState = this.cursor.getComponent(State);
+    cursorState.value = 'repairStarted';
+
     this.isRepairStarted = true;
 
     this.context.strokeStyle = '#f9f265';
@@ -199,6 +202,9 @@ export class ElectricalPanelGame extends System {
   };
 
   private endRepair(): void {
+    const cursorState = this.cursor.getComponent(State);
+    cursorState.value = 'repairFinished';
+
     this.isRepairFinished = true;
 
     this.marksQueue = Array.from(this.passedMarks);

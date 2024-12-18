@@ -26,6 +26,7 @@ module.exports = {
     'react/no-unused-class-component-methods': 0,
     'react/prop-types': 0,
     'react/require-default-props': 0,
+    'react/state-in-constructor': 0,
   },
   overrides: [
     {

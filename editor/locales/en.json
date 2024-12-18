@@ -26,6 +26,8 @@
   "components.trap.title": "Trap",
   "components.trap.damage.title": "Damage",
 
+  "components.state.title": "State",
+
   "systems.journal.title": "Journal",
 
   "systems.levelManager.title": "Level Manager",

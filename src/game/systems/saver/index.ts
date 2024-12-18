@@ -19,6 +19,7 @@ import type {
 import { PLAYER_NAME } from '../../../consts/actors';
 import { ROOM_1_ID } from '../../../consts/levels';
 import { MAX_JOURNAL_SIZE } from '../../../consts/journal';
+import { State } from '../../components';
 
 const SAVE_STATE_LS_KEY = 'saveState';
 
@@ -138,6 +139,12 @@ export class Saver extends System {
   private handleChangeItemState = (event: ChangeItemStateEvent): void => {
     window.saveState!.questItems[event.item] ??= { appliedItems: [] };
     window.saveState!.questItems[event.item].state = event.state;
+
+    const actor = this.scene.getEntityById(event.item);
+    if (actor && actor.getComponent(State)) {
+      const state = actor.getComponent(State);
+      state.value = event.state;
+    }
 
     this.save();
   };

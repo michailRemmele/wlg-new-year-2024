@@ -26,11 +26,14 @@ export const TimerBar: FC = () => {
   }, []);
 
   return (
-    <div className="timer-bar">
-      <div
-        className="timer-bar__points"
-        style={{ width: `${maxPoints ? ((points / maxPoints) * 100) : 0}%` }}
-      />
+    <div className="timer-bar__wrapper">
+      <img className="timer-bar__icon" src="./images/watch.png" alt="часы" />
+      <div className="timer-bar">
+        <div
+          className="timer-bar__points"
+          style={{ width: `${maxPoints ? ((points / maxPoints) * 100) : 0}%` }}
+        />
+      </div>
     </div>
   );
 };

@@ -4,8 +4,9 @@
   align-self: center;
 
   text-align: center;
-  color: #ffffff;
-  font-size: 18px;
+  color: #75ff66;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .score-bar__score {

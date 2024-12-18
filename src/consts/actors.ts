@@ -9,8 +9,12 @@ export const DECORATION_PLACE_2_ID = '0ac5c870-ba22-4370-a0b3-e402fe552458';
 export const DECORATION_PLACE_3_ID = '81df8877-643c-4c83-923c-c6287d302434';
 export const DECORATION_PLACE_4_ID = '59b69b0a-dd50-4705-8ae3-7981e98b2680';
 export const DECORATION_PLACE_5_ID = '1c2c15c7-d947-4006-aeee-3c6b08b26d7a';
+export const GARLAND_PLACE_ID = 'cac62a44-9418-4c20-baf0-04fb86f7cf52';
 
-export const INITIAL_SPAWNER_ID = '60b958e7-ec53-41d7-a78b-4fc5a4c7e6e2';
+export const GARLAND_ID = 'a0d63fda-4ea1-4940-ad4c-ab537d0bd0ba';
+export const SWITCHER_ID = '3c0a01c1-33bc-4105-91e0-d531fba264e6';
+
+export const INITIAL_SPAWNER_ID = '03737978-674b-4774-a967-14695239ad6f';
 
 export const CHRISTMAS_TREE_ID = 'a8a633c7-6f16-4eef-92d5-a156927e33f4';
 export const ELECTRICAL_PANEL_ID = '34c64b15-fd26-4b4d-ab84-d56d67f54079';
