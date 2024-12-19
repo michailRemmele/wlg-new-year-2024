@@ -28,13 +28,13 @@ import {
   DISTANCE_BAR_ID,
 } from '../../../consts/actors';
 import { HEALTH } from '../../../consts/templates';
-import { Trap, CourierHealth } from '../../components';
+import { Trap, CourierHealth, State } from '../../components';
 
-const EXIT_TIMEOUT = 1000;
+const EXIT_TIMEOUT = 1500;
 
 const JUMP_IMPULSE = -125;
 const MOVEMENT_SPEED = 100;
-const DISTANCE_BAR_LENGTH = 90;
+const DISTANCE_BAR_LENGTH = 60;
 
 interface ArcadeCabinetGameOptions extends SystemOptions {
   exitLevelId: string
@@ -120,6 +120,9 @@ export class ArcadeCabinetGame extends System {
   }
 
   private handleStart = (): void => {
+    const courierState = this.courier.getComponent(State);
+    courierState.value = 'drive';
+
     this.isPlaying = true;
 
     this.updateHealthBar();
@@ -138,6 +141,8 @@ export class ArcadeCabinetGame extends System {
       value: new Vector2(0, JUMP_IMPULSE),
     });
     this.isJumping = true;
+
+    this.courier.dispatchEvent(EventType.CourierJumpSuccess);
   };
 
   private handleCollisionEnter = (event: CollisionEnterEvent): void => {
@@ -153,6 +158,9 @@ export class ArcadeCabinetGame extends System {
       return;
     }
     if (actor.id === FINISH_ID) {
+      const courierState = this.courier.getComponent(State);
+      courierState.value = 'finish';
+
       this.isFinished = true;
       return;
     }
@@ -174,6 +182,8 @@ export class ArcadeCabinetGame extends System {
 
     if (health.points === 0) {
       this.isFailed = true;
+
+      this.courier.dispatchEvent(EventType.CourierDeath);
     }
   };
 

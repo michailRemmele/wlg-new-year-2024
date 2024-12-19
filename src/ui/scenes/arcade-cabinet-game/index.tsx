@@ -44,7 +44,7 @@ export const ArcadeCabinetGame: FC = () => {
     <div className="arcade-cabinet-game">
       {state === 'menu' && (
         <div className="arcade-cabinet-game__menu">
-          <Button onClick={handlePlay}>Играть</Button>
+          <Button className="arcade-cabinet-game__button" onClick={handlePlay}>Играть</Button>
         </div>
       )}
       {state === 'count' && (

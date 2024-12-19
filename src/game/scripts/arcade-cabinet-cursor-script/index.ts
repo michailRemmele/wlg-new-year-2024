@@ -39,6 +39,7 @@ export class ArcadeCabinetCursorScript extends Script {
     this.actor.addEventListener(CollisionStay, this.handleCollisionEnterOrStay);
     this.actor.addEventListener(CollisionLeave, this.handleCollisionLeave);
     this.actor.addEventListener(EventType.CursorClick, this.handleCursorClick);
+    this.actor.addEventListener(EventType.CursorDown, this.handleCursorDown);
 
     this.scene.addEventListener(EventType.CourierPlay, this.handleCourierPlay);
 
@@ -53,6 +54,7 @@ export class ArcadeCabinetCursorScript extends Script {
     this.actor.removeEventListener(CollisionStay, this.handleCollisionEnterOrStay);
     this.actor.removeEventListener(CollisionLeave, this.handleCollisionLeave);
     this.actor.removeEventListener(EventType.CursorClick, this.handleCursorClick);
+    this.actor.removeEventListener(EventType.CursorDown, this.handleCursorDown);
 
     this.scene.removeEventListener(EventType.CourierPlay, this.handleCourierPlay);
   }
@@ -109,10 +111,6 @@ export class ArcadeCabinetCursorScript extends Script {
     const cursor = this.actor.getComponent(Cursor);
     const { target, action } = cursor;
 
-    if (action === 'move') {
-      this.scene.dispatchEvent(EventType.CourierJump);
-    }
-
     if (!target || this.isPlaying) {
       return;
     }
@@ -128,6 +126,15 @@ export class ArcadeCabinetCursorScript extends Script {
         levelId: entrance.levelId,
         spawnerId: '',
       });
+    }
+  };
+
+  private handleCursorDown = (): void => {
+    const cursor = this.actor.getComponent(Cursor);
+    const { action } = cursor;
+
+    if (action === 'move') {
+      this.scene.dispatchEvent(EventType.CourierJump);
     }
   };
 

@@ -14,11 +14,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  pointer-events: initial;
 }
 
 .arcade-cabinet-game__count {
   font-size: 64px;
-  color: #ffffff;
+  color: #1a1932;
+}
+
+.arcade-cabinet-game__button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 42px;
+  color: #1a1932;
+}
+
+.arcade-cabinet-game__button:hover {
+  box-shadow: 0 0 0 6px #1a1932;
 }

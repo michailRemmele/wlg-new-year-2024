@@ -7,7 +7,7 @@ import { Script, Camera, Transform } from 'remiz';
 
 import { COURIER_NAME } from '../../../consts/actors';
 
-const VIEWPORT_SIZE_Y = 120;
+const VIEWPORT_SIZE_Y = 144;
 
 export class ArcadeCabinetCameraScript extends Script {
   private actor: Actor;

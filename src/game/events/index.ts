@@ -32,7 +32,9 @@ export const RepairFail = 'RepairFail';
 export const CourierPlay = 'CourierPlay';
 export const CourierStart = 'CourierStart';
 export const CourierJump = 'CourierJump';
+export const CourierJumpSuccess = 'CourierJumpSuccess';
 export const CourierDamage = 'CourierDamage';
+export const CourierDeath = 'CourierDeath';
 export const CourierSuccess = 'CourierSuccess';
 export const CourierFail = 'CourierFail';
 
@@ -100,7 +102,9 @@ declare module 'remiz' {
     [CursorUp]: CursorUpEvent
     [ApplyItem]: ApplyItemEvent
     [StudyItem]: ActorEvent
+    [CourierJumpSuccess]: ActorEvent
     [CourierDamage]: CourierDamageEvent
+    [CourierDeath]: ActorEvent
   }
 
   export interface SceneEventMap {

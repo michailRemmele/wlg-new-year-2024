@@ -5,6 +5,8 @@
   color: white;
   background: none;
   text-transform: uppercase;
+
+  pointer-events: initial;
 }
 
 .button:hover {

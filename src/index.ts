@@ -24,6 +24,10 @@ import {
   Transform,
   ScriptBundle,
 } from 'remiz';
+import {
+  ParallaxSystem,
+  Parallax,
+} from 'remiz-game-systems';
 
 import * as GameSystems from './game/systems';
 import * as GameComponents from './game/components';
@@ -55,6 +59,7 @@ const engine = new Engine({
       ]
       : []
     ),
+    ParallaxSystem,
     ...Object.values(GameSystems),
   ],
   components: [
@@ -68,6 +73,7 @@ const engine = new Engine({
     Sprite,
     Transform,
     ScriptBundle,
+    Parallax,
     ...Object.values(GameComponents),
   ],
   resources: {
