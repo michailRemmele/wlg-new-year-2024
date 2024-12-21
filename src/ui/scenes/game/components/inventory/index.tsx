@@ -13,18 +13,18 @@ import './style.css';
 
 const getInventorySize = (mediaChecks: MediaChecks): number => {
   if (mediaChecks.isDesktopL) {
-    return 10;
-  }
-  if (mediaChecks.isDesktopM) {
-    return 9;
-  }
-  if (mediaChecks.isDesktopS) {
     return 6;
   }
-  if (mediaChecks.isTablet) {
-    return 4;
+  if (mediaChecks.isDesktopM) {
+    return 5;
   }
-  return 3;
+  if (mediaChecks.isDesktopS) {
+    return 3;
+  }
+  if (mediaChecks.isTablet) {
+    return 2;
+  }
+  return 1;
 };
 
 export const Inventory: FC = () => {
@@ -115,7 +115,7 @@ export const Inventory: FC = () => {
           ⬆
         </button>
         <button
-          className="inventory__control"
+          className="inventory__control inventory__control_down"
           type="button"
           onClick={() => setItemsStartIndex((prev) => prev - 1)}
           disabled={items.length <= inventorySize}

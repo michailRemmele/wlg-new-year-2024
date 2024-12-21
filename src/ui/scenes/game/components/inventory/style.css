@@ -1,37 +1,65 @@
 .inventory {
   display: flex;
-  align-items: center;
 
-  background-color: #3eb89b;
+  width: 100%;
 }
 
 .inventory__controls {
   display: flex;
   flex-direction: column;
 
-  padding-left: 16px;
+  padding: 81px 18px 0 15px;
 }
 
 .inventory__control {
-  width: 42px;
+  width: 36px;
+  height: 36px;
+
+  color: transparent;
+
+  border: none;
+  background-color: transparent;
+  background-image: url(./images/hud-button.png);
+  background-repeat: no-repeat;
+  background-size: 108px 36px;
+  background-position: 0 0;
+}
+
+.inventory__control_down {
+  transform: scale(1, -1);
+}
+
+.inventory__control:hover {
+  background-position: -36px 0;
+}
+
+.inventory__control:active {
+  background-position: -72px 0;
+}
+
+.inventory__control + .inventory__control {
+  margin-top: 6px;
 }
 
 .inventory__list {
+  height: 126px;
+
   list-style: none;
   margin: 0;
-  padding: 16px;
+  padding: 66px 231px 33px 18px;
 
   display: flex;
   align-items: center;
-  gap: 16px;
 
   overflow: hidden;
 }
 
 .inventory__item {
-  width: 84px;
-  height: 84px;
-  background-color: #7defd4;
+  width: 126px;
+  height: 126px;
+
+  padding: 0 13px 13px 13px;
+  box-sizing: border-box;
 
   flex-shrink: 0;
 }
@@ -40,9 +68,10 @@
   border: none;
   background-color: transparent;
 
-  width: 100%;
-  height: 100%;
-  padding: 16px;
+  width: 100px;
+  height: 100px;
+
+  padding: 13px;
 }
 
 .item_selected {
@@ -52,34 +81,4 @@
 .item-image {
   width: 100%;
   image-rendering: pixelated;
-}
-
-@media (min-width: 1921px) {
-  .inventory {
-    width: calc(42px + 10*84px + 12*16px);
-  }
-}
-
-@media (min-width: 1367px) and (max-width: 1920px) {
-  .inventory {
-    width: calc(42px + 9*84px + 11*16px);
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1366px) {
-  .inventory {
-    width: calc(42px + 6*84px + 8*16px);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .inventory {
-    width: calc(42px + 4*84px + 6*16px);
-  }
-}
-
-@media (max-width: 767px) {
-  .inventory {
-    width: calc(42px + 3*84px + 5*16px);
-  }
 }
