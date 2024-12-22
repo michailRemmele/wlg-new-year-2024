@@ -13,6 +13,10 @@ import {
   ArcadeCabinetCursorScript,
   ArcadeCabinetScript,
   SwitcherScript,
+  LockerScript,
+  PackageScript,
+  WallLampScript,
+  GarlandScript,
 } from '../../../src/game/scripts';
 
 import {
@@ -28,6 +32,10 @@ import {
   arcadeCabinetCursorScript,
   arcadeCabinetScript,
   switcherScript,
+  lockerScript,
+  packageScript,
+  wallLampScript,
+  garlandScript,
 } from './script-system';
 
 export const resourcesSchema = {
@@ -44,5 +52,9 @@ export const resourcesSchema = {
     [ArcadeCabinetCursorScript.scriptName]: arcadeCabinetCursorScript,
     [ArcadeCabinetScript.scriptName]: arcadeCabinetScript,
     [SwitcherScript.scriptName]: switcherScript,
+    [LockerScript.scriptName]: lockerScript,
+    [PackageScript.scriptName]: packageScript,
+    [WallLampScript.scriptName]: wallLampScript,
+    [GarlandScript.scriptName]: garlandScript,
   },
 };

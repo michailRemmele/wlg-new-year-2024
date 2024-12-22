@@ -17,7 +17,9 @@ import {
   ELECTRICAL_PANEL_ID,
   ARCADE_CABINET_ID,
   SWITCHER_ID,
-} from '../../../consts/actors';
+  PACKAGE_1_ID,
+  PACKAGE_2_ID,
+} from '../../../consts/templates';
 import * as EventType from '../../events';
 
 const OFFSET_Y = 14;
@@ -26,6 +28,7 @@ const DIALOG_TIMEOUT = 5000;
 const DIALOGS: Record<string, string | Record<string, string | undefined> | undefined> = {
   [CHRISTMAS_TREE_ID]: 'На елке не хватает украшений',
   [ELECTRICAL_PANEL_ID]: {
+    disabled: 'Сейчас мне это не нужно',
     done: 'Это мне больше не нужно',
   },
   [ARCADE_CABINET_ID]: {
@@ -35,6 +38,12 @@ const DIALOGS: Record<string, string | Record<string, string | undefined> | unde
     uselessFail: 'Мне нечего включать',
     uselessSuccess: 'Это бессмысленно. Похоже выбило пробки',
     activeSuccess: 'Это мне больше не нужно',
+  },
+  [PACKAGE_1_ID]: {
+    closed: 'Чем бы его открыть...',
+  },
+  [PACKAGE_2_ID]: {
+    closed: 'Чем бы его открыть...',
   },
 };
 
@@ -76,7 +85,11 @@ export class DialogScript extends Script {
   }
 
   private handleStudyItem = (event: ActorEvent): void => {
-    const message = DIALOGS[event.target.id];
+    if (!event.target.templateId) {
+      return;
+    }
+
+    const message = DIALOGS[event.target.templateId];
     const state = window.saveState?.questItems[event.target.id]?.state;
 
     if (!message) {

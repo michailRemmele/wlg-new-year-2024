@@ -19,6 +19,8 @@ import {
   DECORATION_PLACE_5_ID,
   GARLAND_ID,
   GARLAND_PLACE_ID,
+  STAR_ID,
+  STAR_PLACE_ID,
   PLAYER_NAME,
 } from '../../../consts/actors';
 import { ITEM } from '../../../consts/items';
@@ -33,6 +35,7 @@ const DECORATIONS_MAP: Record<string, string> = {
   [BAUBLE_4_ID]: DECORATION_PLACE_4_ID,
   [BAUBLE_5_ID]: DECORATION_PLACE_5_ID,
   [GARLAND_ID]: GARLAND_PLACE_ID,
+  [STAR_ID]: STAR_PLACE_ID,
 };
 
 export class ChristmasTreeScript extends Script {

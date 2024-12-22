@@ -10,3 +10,7 @@ export { arcadeCabinetCameraScript } from './arcade-cabinet-camera-script';
 export { arcadeCabinetCursorScript } from './arcade-cabinet-cursor-script';
 export { arcadeCabinetScript } from './arcade-cabinet-script';
 export { switcherScript } from './switcher-script';
+export { lockerScript } from './locker-script';
+export { packageScript } from './package-script';
+export { wallLampScript } from './wall-lamp-script';
+export { garlandScript } from './garland-script';

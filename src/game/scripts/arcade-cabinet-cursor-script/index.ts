@@ -76,7 +76,7 @@ export class ArcadeCabinetCursorScript extends Script {
     const { actor } = event;
 
     const interactable = actor.getComponent(Interactable);
-    if (!interactable) {
+    if (!interactable || interactable.disabled) {
       return;
     }
 
@@ -96,7 +96,7 @@ export class ArcadeCabinetCursorScript extends Script {
     const { actor } = event;
 
     const interactable = actor.getComponent(Interactable);
-    if (!interactable) {
+    if (!interactable || interactable.disabled) {
       return;
     }
 

@@ -300,16 +300,6 @@
               }
             },
             {
-              "name": "Light",
-              "config": {
-                "type": "ambient",
-                "options": {
-                  "color": "#fff",
-                  "intensity": 1
-                }
-              }
-            },
-            {
               "name": "ScriptBundle",
               "config": {
                 "scripts": [
@@ -385,26 +375,6 @@
           "children": []
         },
         {
-          "id": "315b401a-79d5-4633-96e5-07d2e01395ed",
-          "templateId": "b56463b6-1b80-4ccc-b288-401291555a93",
-          "fromTemplate": true,
-          "name": "Table",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 30,
-                "offsetY": 24,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
           "id": "c0309b51-1d81-44e3-9ac2-5eb831e37773",
           "templateId": "c9491264-a219-480b-b5f3-baf9434a04ba",
           "fromTemplate": true,
@@ -413,8 +383,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 37,
-                "offsetY": 13.5,
+                "offsetX": 110,
+                "offsetY": 19.5,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -453,7 +423,7 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -89.5,
+                "offsetX": -90,
                 "offsetY": 30.5,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -474,7 +444,7 @@
               "name": "Transform",
               "config": {
                 "offsetX": -36,
-                "offsetY": 0,
+                "offsetY": -1,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -528,6 +498,14 @@
               "templateId": "247efb44-ad45-4697-ba2a-fc4a538e2031",
               "fromTemplate": true,
               "name": "Garland Place",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "ca3fa14c-5f72-4407-9b05-6bc9aa8b3e7d",
+              "templateId": "fe2326a9-7ef8-477d-ac67-489b84f45eda",
+              "fromTemplate": true,
+              "name": "Star Place",
               "components": [],
               "children": []
             }
@@ -829,8 +807,129 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 1,
+                "offsetX": -11,
                 "offsetY": 5,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "950187c1-840b-48a9-bd40-7630ec47bdd4",
+          "templateId": "ac5f839f-7459-4c9d-a6f6-5788e28a2223",
+          "fromTemplate": true,
+          "name": "Wall Lamp",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 24,
+                "offsetY": -12,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "2f13f1b9-0a59-40f3-8bd4-eff2711d9525",
+              "templateId": "b0d3ab76-29ff-4fec-949f-56ce79fabe64",
+              "fromTemplate": true,
+              "name": "Ambient",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "8db9acec-9e6d-473a-9e9b-5b38d99c81d6",
+          "templateId": "f775baaf-009c-4a1a-af8e-99fe5d75646f",
+          "fromTemplate": true,
+          "name": "Locker Vertical",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 109,
+                "offsetY": 7,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "b50a9eda-b061-4d93-b462-3da4cb8f63ad",
+                    "name": "LockerScript",
+                    "options": {
+                      "items": [
+                        "c0309b51-1d81-44e3-9ac2-5eb831e37773"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "f938c21b-d63e-4a57-bb55-f5bbb2cd5f7d",
+          "templateId": "10abbb80-0a4d-4671-859d-dd009c3980cf",
+          "fromTemplate": true,
+          "name": "Locker Vertical 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 91,
+                "offsetY": 7,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "9398d8e0-cb4b-424d-90fd-6cd5b618654f",
+                    "name": "LockerScript",
+                    "options": {
+                      "items": [
+                        "cd1ba2b8-1127-4fd0-a42e-74e4053955f6"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "cd1ba2b8-1127-4fd0-a42e-74e4053955f6",
+          "templateId": "9c82a532-b1ab-41b0-8894-f3cece67ed40",
+          "fromTemplate": true,
+          "name": "Crowbar",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 89,
+                "offsetY": 18,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -865,16 +964,6 @@
               "name": "Camera",
               "config": {
                 "zoom": 1
-              }
-            },
-            {
-              "name": "Light",
-              "config": {
-                "type": "ambient",
-                "options": {
-                  "color": "#fff",
-                  "intensity": 1
-                }
               }
             },
             {
@@ -1048,8 +1137,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 43,
-                "offsetY": 19.5,
+                "offsetX": 42,
+                "offsetY": 18.5,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1068,8 +1157,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -17,
-                "offsetY": 19.5,
+                "offsetX": -18,
+                "offsetY": 18.5,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1088,8 +1177,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -42,
-                "offsetY": 1,
+                "offsetX": -43,
+                "offsetY": 0,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1392,6 +1481,35 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "2152dec4-35b9-4305-b329-0eced45e419a",
+          "templateId": "ac5f839f-7459-4c9d-a6f6-5788e28a2223",
+          "fromTemplate": true,
+          "name": "Wall Lamp 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": -24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "b1a9659d-e78c-4ac2-991a-42b2f20f897e",
+              "templateId": "b0d3ab76-29ff-4fec-949f-56ce79fabe64",
+              "fromTemplate": true,
+              "name": "Ambient",
+              "components": [],
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -1418,16 +1536,6 @@
               "name": "Camera",
               "config": {
                 "zoom": 1
-              }
-            },
-            {
-              "name": "Light",
-              "config": {
-                "type": "ambient",
-                "options": {
-                  "color": "#fff",
-                  "intensity": 1
-                }
               }
             },
             {
@@ -1554,8 +1662,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -59,
-                "offsetY": 19.5,
+                "offsetX": -60,
+                "offsetY": 18.5,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1574,8 +1682,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -27,
-                "offsetY": -9,
+                "offsetX": -28,
+                "offsetY": -10,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -1871,6 +1979,35 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "970b8c66-245a-49bf-8128-5c03a72862cc",
+          "templateId": "ac5f839f-7459-4c9d-a6f6-5788e28a2223",
+          "fromTemplate": true,
+          "name": "Wall Lamp",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 24,
+                "offsetY": -24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "d9f9e6aa-7fd7-4c6c-b8e0-272137bcd189",
+              "templateId": "b0d3ab76-29ff-4fec-949f-56ce79fabe64",
+              "fromTemplate": true,
+              "name": "Ambient",
+              "components": [],
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -5691,16 +5828,6 @@
               }
             },
             {
-              "name": "Light",
-              "config": {
-                "type": "ambient",
-                "options": {
-                  "color": "#fff",
-                  "intensity": 1
-                }
-              }
-            },
-            {
               "name": "ScriptBundle",
               "config": {
                 "scripts": [
@@ -6195,6 +6322,35 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "a67637e5-f389-45f1-ac56-c2ba391e0a75",
+          "templateId": "ac5f839f-7459-4c9d-a6f6-5788e28a2223",
+          "fromTemplate": true,
+          "name": "Wall Lamp",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 54,
+                "offsetY": -24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "345f46b3-6fc8-4efe-960f-d1fb3c1dcfc3",
+              "templateId": "b0d3ab76-29ff-4fec-949f-56ce79fabe64",
+              "fromTemplate": true,
+              "name": "Ambient",
+              "components": [],
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -6221,16 +6377,6 @@
               "name": "Camera",
               "config": {
                 "zoom": 1
-              }
-            },
-            {
-              "name": "Light",
-              "config": {
-                "type": "ambient",
-                "options": {
-                  "color": "#fff",
-                  "intensity": 1
-                }
               }
             },
             {
@@ -6634,6 +6780,35 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "2bdb6ece-9071-4633-bb00-7b9175379ac1",
+          "templateId": "ac5f839f-7459-4c9d-a6f6-5788e28a2223",
+          "fromTemplate": true,
+          "name": "Wall Lamp",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": -24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "e4faa9bd-e8d3-42f1-a491-cde39e3f139e",
+              "templateId": "b0d3ab76-29ff-4fec-949f-56ce79fabe64",
+              "fromTemplate": true,
+              "name": "Ambient",
+              "components": [],
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -6660,16 +6835,6 @@
               "name": "Camera",
               "config": {
                 "zoom": 1
-              }
-            },
-            {
-              "name": "Light",
-              "config": {
-                "type": "ambient",
-                "options": {
-                  "color": "#fff",
-                  "intensity": 1
-                }
               }
             },
             {
@@ -6778,26 +6943,6 @@
               "config": {
                 "offsetX": 0,
                 "offsetY": 24,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "49136508-0bda-4edf-9411-47dee3c53e4b",
-          "templateId": "21adf2e6-815b-4ed9-a210-7288ef5cd5ea",
-          "fromTemplate": true,
-          "name": "SideWallRight",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 132,
-                "offsetY": 0,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -6917,26 +7062,6 @@
               "name": "Transform",
               "config": {
                 "offsetX": -36,
-                "offsetY": -12,
-                "offsetZ": 0,
-                "rotation": 0,
-                "scaleX": 1,
-                "scaleY": 1
-              }
-            }
-          ],
-          "children": []
-        },
-        {
-          "id": "706dbe2c-87c4-4431-9e1e-9b4556acece7",
-          "templateId": "4050aa10-c9fe-4318-b94a-2139a764f788",
-          "fromTemplate": true,
-          "name": "Wall-Last",
-          "components": [
-            {
-              "name": "Transform",
-              "config": {
-                "offsetX": 108,
                 "offsetY": -12,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -7083,8 +7208,183 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 66,
-                "offsetY": 12,
+                "offsetX": 44,
+                "offsetY": 10,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "dc7b2c6f-fe24-4005-9706-1ef82f6019cf",
+          "templateId": "ac5f839f-7459-4c9d-a6f6-5788e28a2223",
+          "fromTemplate": true,
+          "name": "Wall Lamp",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": -24,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "b00d8796-1293-4ac0-8999-1b19e23657f2",
+              "templateId": "b0d3ab76-29ff-4fec-949f-56ce79fabe64",
+              "fromTemplate": true,
+              "name": "Ambient",
+              "components": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2febfccb-fd40-4fc5-815a-c5e1f607b9d6",
+          "templateId": "3e1f819a-df98-44ae-bcf0-2692e0a946ea",
+          "fromTemplate": true,
+          "name": "Package 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 40,
+                "offsetY": 5,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "5158448d-d376-4b4c-b271-f0f5d09cbf1c",
+                    "name": "PackageScript",
+                    "options": {
+                      "items": [
+                        "a0d63fda-4ea1-4940-ad4c-ab537d0bd0ba"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "e22ad920-fb13-40df-955d-3e56deb1dcee",
+          "templateId": "a004e35b-848d-4f12-afa2-c8c584583fa1",
+          "fromTemplate": true,
+          "name": "Package 2",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 63,
+                "offsetY": 5,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "629f4ecc-d167-49b1-8be4-9cadc613e0f8",
+                    "name": "PackageScript",
+                    "options": {
+                      "items": [
+                        "0cfe0f4a-aca2-4309-b216-a11f52f9ed0c"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "6e06549c-c8f2-4766-a3e3-fb5d0f6c50dd",
+          "templateId": "3e1f819a-df98-44ae-bcf0-2692e0a946ea",
+          "fromTemplate": true,
+          "name": "Package 1 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 63,
+                "offsetY": -18,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "7c4d8c26-c39f-4dc8-8336-db61b151b77b",
+                    "name": "PackageScript",
+                    "options": {
+                      "items": []
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ef68641f-bee9-4808-9aa2-4e9a994ee04b",
+          "templateId": "23c7b3b8-69df-41c9-8ab3-1525eecf9b88",
+          "fromTemplate": true,
+          "name": "Vault Gate",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 120,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "0cfe0f4a-aca2-4309-b216-a11f52f9ed0c",
+          "templateId": "967d3b87-82e0-4265-a7ca-ab9a8b13a5c0",
+          "fromTemplate": true,
+          "name": "Star",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 67,
+                "offsetY": 10,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -7956,9 +8256,9 @@
           "name": "Sprite",
           "config": {
             "src": "bauble-1.png",
-            "width": 14,
-            "height": 15,
-            "slice": 2,
+            "width": 12,
+            "height": 13,
+            "slice": 1,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -7979,112 +8279,12 @@
           }
         },
         {
-          "name": "Animatable",
-          "config": {
-            "initialState": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-            "states": [
-              {
-                "id": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                "name": "Idle",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "64097c9b-d020-4aa6-96e3-0d2b071d4a59",
-                    "state": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "d7f2d6e3-8764-4f0a-93e4-406260e3ce63",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": true
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                "name": "Hover",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "6d4aa96d-5214-4fd4-8380-cc832612efef",
-                    "state": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "8ee3908c-46cb-4104-99ba-bb8cd51d858f",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": false
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
           "name": "ColliderContainer",
           "config": {
             "type": "boxCollider",
             "collider": {
               "sizeX": 12,
-              "sizeY": 12,
+              "sizeY": 13,
               "centerX": 0,
               "centerY": 0
             }
@@ -8195,7 +8395,7 @@
             "sortingLayer": "background-2",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#ffffff",
@@ -8250,9 +8450,9 @@
           "name": "Sprite",
           "config": {
             "src": "bauble-2.png",
-            "width": 14,
-            "height": 15,
-            "slice": 2,
+            "width": 12,
+            "height": 13,
+            "slice": 1,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -8273,112 +8473,12 @@
           }
         },
         {
-          "name": "Animatable",
-          "config": {
-            "initialState": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-            "states": [
-              {
-                "id": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                "name": "Idle",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "64097c9b-d020-4aa6-96e3-0d2b071d4a59",
-                    "state": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "d7f2d6e3-8764-4f0a-93e4-406260e3ce63",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": true
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                "name": "Hover",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "6d4aa96d-5214-4fd4-8380-cc832612efef",
-                    "state": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "8ee3908c-46cb-4104-99ba-bb8cd51d858f",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": false
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
           "name": "ColliderContainer",
           "config": {
             "type": "boxCollider",
             "collider": {
               "sizeX": 12,
-              "sizeY": 12,
+              "sizeY": 13,
               "centerX": 0,
               "centerY": 0
             }
@@ -8406,8 +8506,8 @@
           "name": "Sprite",
           "config": {
             "src": "christmas-tree.png",
-            "width": 48,
-            "height": 72,
+            "width": 36,
+            "height": 70,
             "slice": 1,
             "rotation": 0,
             "sortCenter": [
@@ -8416,7 +8516,7 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "decorations",
+            "sortingLayer": "decorations-2",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
@@ -8439,8 +8539,8 @@
           "config": {
             "type": "boxCollider",
             "collider": {
-              "sizeX": 48,
-              "sizeY": 72,
+              "sizeX": 24,
+              "sizeY": 70,
               "centerX": 0,
               "centerY": 0
             }
@@ -8467,8 +8567,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -9,
-                "offsetY": -6,
+                "offsetX": -6,
+                "offsetY": -5,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -8479,8 +8579,8 @@
               "name": "Sprite",
               "config": {
                 "src": "",
-                "width": 10,
-                "height": 10,
+                "width": 6,
+                "height": 6,
                 "slice": 1,
                 "rotation": 0,
                 "sortCenter": [
@@ -8512,7 +8612,7 @@
               "name": "Transform",
               "config": {
                 "offsetX": 12,
-                "offsetY": 12,
+                "offsetY": 11,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -8523,8 +8623,8 @@
               "name": "Sprite",
               "config": {
                 "src": "",
-                "width": 10,
-                "height": 10,
+                "width": 6,
+                "height": 6,
                 "slice": 1,
                 "rotation": 0,
                 "sortCenter": [
@@ -8555,8 +8655,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -12,
-                "offsetY": 12,
+                "offsetX": -9,
+                "offsetY": 19,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -8567,8 +8667,8 @@
               "name": "Sprite",
               "config": {
                 "src": "",
-                "width": 10,
-                "height": 10,
+                "width": 6,
+                "height": 6,
                 "slice": 1,
                 "rotation": 0,
                 "sortCenter": [
@@ -8599,8 +8699,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 6,
-                "offsetY": -14,
+                "offsetX": 8,
+                "offsetY": -7,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -8611,8 +8711,8 @@
               "name": "Sprite",
               "config": {
                 "src": "",
-                "width": 10,
-                "height": 10,
+                "width": 6,
+                "height": 6,
                 "slice": 1,
                 "rotation": 0,
                 "sortCenter": [
@@ -8643,8 +8743,8 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": 3,
-                "offsetY": 3,
+                "offsetX": 4,
+                "offsetY": 5,
                 "offsetZ": 0,
                 "rotation": 0,
                 "scaleX": 1,
@@ -8655,8 +8755,8 @@
               "name": "Sprite",
               "config": {
                 "src": "",
-                "width": 10,
-                "height": 10,
+                "width": 6,
+                "height": 6,
                 "slice": 1,
                 "rotation": 0,
                 "sortCenter": [
@@ -8716,6 +8816,50 @@
                   "options": {
                     "blending": "normal",
                     "color": "#ffffff",
+                    "opacity": 0
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "fe2326a9-7ef8-477d-ac67-489b84f45eda",
+          "name": "Star Place",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0.5,
+                "offsetY": -27,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 13,
+                "height": 16,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "default",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#003aff",
                     "opacity": 0
                   }
                 }
@@ -8795,9 +8939,9 @@
           "name": "Sprite",
           "config": {
             "src": "bauble-3.png",
-            "width": 14,
-            "height": 15,
-            "slice": 2,
+            "width": 12,
+            "height": 13,
+            "slice": 1,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -8818,112 +8962,12 @@
           }
         },
         {
-          "name": "Animatable",
-          "config": {
-            "initialState": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-            "states": [
-              {
-                "id": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                "name": "Idle",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "64097c9b-d020-4aa6-96e3-0d2b071d4a59",
-                    "state": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "d7f2d6e3-8764-4f0a-93e4-406260e3ce63",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": true
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                "name": "Hover",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "6d4aa96d-5214-4fd4-8380-cc832612efef",
-                    "state": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "8ee3908c-46cb-4104-99ba-bb8cd51d858f",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": false
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
           "name": "ColliderContainer",
           "config": {
             "type": "boxCollider",
             "collider": {
               "sizeX": 12,
-              "sizeY": 12,
+              "sizeY": 13,
               "centerX": 0,
               "centerY": 0
             }
@@ -8957,9 +9001,9 @@
           "name": "Sprite",
           "config": {
             "src": "bauble-4.png",
-            "width": 14,
-            "height": 15,
-            "slice": 2,
+            "width": 12,
+            "height": 13,
+            "slice": 1,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -8980,112 +9024,12 @@
           }
         },
         {
-          "name": "Animatable",
-          "config": {
-            "initialState": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-            "states": [
-              {
-                "id": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                "name": "Idle",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "64097c9b-d020-4aa6-96e3-0d2b071d4a59",
-                    "state": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "d7f2d6e3-8764-4f0a-93e4-406260e3ce63",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": true
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                "name": "Hover",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "6d4aa96d-5214-4fd4-8380-cc832612efef",
-                    "state": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "8ee3908c-46cb-4104-99ba-bb8cd51d858f",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": false
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
           "name": "ColliderContainer",
           "config": {
             "type": "boxCollider",
             "collider": {
               "sizeX": 12,
-              "sizeY": 12,
+              "sizeY": 13,
               "centerX": 0,
               "centerY": 0
             }
@@ -9119,9 +9063,9 @@
           "name": "Sprite",
           "config": {
             "src": "bauble-5.png",
-            "width": 14,
-            "height": 15,
-            "slice": 2,
+            "width": 12,
+            "height": 13,
+            "slice": 1,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -9142,112 +9086,12 @@
           }
         },
         {
-          "name": "Animatable",
-          "config": {
-            "initialState": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-            "states": [
-              {
-                "id": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                "name": "Idle",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "64097c9b-d020-4aa6-96e3-0d2b071d4a59",
-                    "state": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "d7f2d6e3-8764-4f0a-93e4-406260e3ce63",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": true
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                "name": "Hover",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "6d4aa96d-5214-4fd4-8380-cc832612efef",
-                    "state": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "8ee3908c-46cb-4104-99ba-bb8cd51d858f",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": false
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
           "name": "ColliderContainer",
           "config": {
             "type": "boxCollider",
             "collider": {
               "sizeX": 12,
-              "sizeY": 12,
+              "sizeY": 13,
               "centerX": 0,
               "centerY": 0
             }
@@ -9281,9 +9125,9 @@
           "name": "Sprite",
           "config": {
             "src": "electrical-panel.png",
-            "width": 30,
-            "height": 30,
-            "slice": 2,
+            "width": 28,
+            "height": 28,
+            "slice": 1,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -9294,7 +9138,7 @@
             "sortingLayer": "decorations",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#ffffff",
@@ -9308,8 +9152,8 @@
           "config": {
             "type": "boxCollider",
             "collider": {
-              "sizeX": 24,
-              "sizeY": 24,
+              "sizeX": 28,
+              "sizeY": 28,
               "centerX": 0,
               "centerY": 0
             }
@@ -9323,106 +9167,6 @@
                 "id": "86c349bb-762d-452c-bae7-da8c3f7f28f5",
                 "name": "ElectricalPanelScript",
                 "options": {}
-              }
-            ]
-          }
-        },
-        {
-          "name": "Animatable",
-          "config": {
-            "initialState": "b31298c1-267b-4190-8948-0d52639439b2",
-            "states": [
-              {
-                "id": "b31298c1-267b-4190-8948-0d52639439b2",
-                "name": "Idle",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "5150fc80-269e-4965-8e84-2e7148263e42",
-                      "fields": [
-                        {
-                          "id": "ef5343f3-30a9-411f-bf31-1a7bff9f1a25",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "11a47a39-ba9e-4830-9414-d842e0dd25d2",
-                    "state": "dbb1558c-385d-41f9-b59c-be8e1d662c82",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "582df387-0c75-47b9-844a-034832a5e845",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": true
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "dbb1558c-385d-41f9-b59c-be8e1d662c82",
-                "name": "Hover",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "5150fc80-269e-4965-8e84-2e7148263e42",
-                      "fields": [
-                        {
-                          "id": "ef5343f3-30a9-411f-bf31-1a7bff9f1a25",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "11a47a39-ba9e-4830-9414-d842e0dd25d2",
-                    "state": "b31298c1-267b-4190-8948-0d52639439b2",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "582df387-0c75-47b9-844a-034832a5e845",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": false
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
               }
             ]
           }
@@ -9936,9 +9680,9 @@
           "name": "Sprite",
           "config": {
             "src": "arcade-cabinet.png",
-            "width": 36,
-            "height": 50,
-            "slice": 2,
+            "width": 34,
+            "height": 48,
+            "slice": 1,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -9949,7 +9693,7 @@
             "sortingLayer": "decorations-2",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#ffffff",
@@ -9978,106 +9722,6 @@
                 "id": "4038a9f2-56ca-4264-b73c-eb25d7a39193",
                 "name": "ArcadeCabinetScript",
                 "options": {}
-              }
-            ]
-          }
-        },
-        {
-          "name": "Animatable",
-          "config": {
-            "initialState": "b31298c1-267b-4190-8948-0d52639439b2",
-            "states": [
-              {
-                "id": "b31298c1-267b-4190-8948-0d52639439b2",
-                "name": "Idle",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "5150fc80-269e-4965-8e84-2e7148263e42",
-                      "fields": [
-                        {
-                          "id": "ef5343f3-30a9-411f-bf31-1a7bff9f1a25",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "11a47a39-ba9e-4830-9414-d842e0dd25d2",
-                    "state": "dbb1558c-385d-41f9-b59c-be8e1d662c82",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "582df387-0c75-47b9-844a-034832a5e845",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": true
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "dbb1558c-385d-41f9-b59c-be8e1d662c82",
-                "name": "Hover",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "5150fc80-269e-4965-8e84-2e7148263e42",
-                      "fields": [
-                        {
-                          "id": "ef5343f3-30a9-411f-bf31-1a7bff9f1a25",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "11a47a39-ba9e-4830-9414-d842e0dd25d2",
-                    "state": "b31298c1-267b-4190-8948-0d52639439b2",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "582df387-0c75-47b9-844a-034832a5e845",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": false
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
               }
             ]
           }
@@ -10766,9 +10410,9 @@
           "name": "Sprite",
           "config": {
             "src": "example-item 5.png",
-            "width": 13,
-            "height": 13,
-            "slice": 2,
+            "width": 11,
+            "height": 11,
+            "slice": 1,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -10789,112 +10433,12 @@
           }
         },
         {
-          "name": "Animatable",
-          "config": {
-            "initialState": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-            "states": [
-              {
-                "id": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                "name": "Idle",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "64097c9b-d020-4aa6-96e3-0d2b071d4a59",
-                    "state": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "d7f2d6e3-8764-4f0a-93e4-406260e3ce63",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": true
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                "name": "Hover",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "6d4aa96d-5214-4fd4-8380-cc832612efef",
-                    "state": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "8ee3908c-46cb-4104-99ba-bb8cd51d858f",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": false
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
           "name": "ColliderContainer",
           "config": {
             "type": "boxCollider",
             "collider": {
-              "sizeX": 12,
-              "sizeY": 12,
+              "sizeX": 11,
+              "sizeY": 11,
               "centerX": 0,
               "centerY": 0
             }
@@ -11023,7 +10567,7 @@
             "sortingLayer": "background",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#fff",
@@ -11067,7 +10611,7 @@
             "sortingLayer": "background",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#fff",
@@ -11111,7 +10655,7 @@
             "sortingLayer": "background",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#fff",
@@ -11155,7 +10699,7 @@
             "sortingLayer": "background-2",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#ffffff",
@@ -11217,7 +10761,7 @@
             "sortingLayer": "background-2",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#fff",
@@ -11261,7 +10805,7 @@
             "sortingLayer": "background",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#fff",
@@ -11292,8 +10836,8 @@
           "name": "Sprite",
           "config": {
             "src": "bauble-mini-1.png",
-            "width": 10,
-            "height": 10,
+            "width": 6,
+            "height": 6,
             "slice": 1,
             "rotation": 0,
             "sortCenter": [
@@ -11302,7 +10846,7 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "decorations-2",
+            "sortingLayer": "decorations-4",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
@@ -11336,8 +10880,8 @@
           "name": "Sprite",
           "config": {
             "src": "bauble-mini-2.png",
-            "width": 10,
-            "height": 10,
+            "width": 6,
+            "height": 6,
             "slice": 1,
             "rotation": 0,
             "sortCenter": [
@@ -11346,7 +10890,7 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "decorations-2",
+            "sortingLayer": "decorations-4",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
@@ -11380,8 +10924,8 @@
           "name": "Sprite",
           "config": {
             "src": "bauble-mini-3.png",
-            "width": 10,
-            "height": 10,
+            "width": 6,
+            "height": 6,
             "slice": 1,
             "rotation": 0,
             "sortCenter": [
@@ -11390,7 +10934,7 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "decorations-2",
+            "sortingLayer": "decorations-4",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
@@ -11424,8 +10968,8 @@
           "name": "Sprite",
           "config": {
             "src": "bauble-mini-4.png",
-            "width": 10,
-            "height": 10,
+            "width": 6,
+            "height": 6,
             "slice": 1,
             "rotation": 0,
             "sortCenter": [
@@ -11434,7 +10978,7 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "decorations-2",
+            "sortingLayer": "decorations-4",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
@@ -11468,8 +11012,8 @@
           "name": "Sprite",
           "config": {
             "src": "bauble-mini-5.png",
-            "width": 10,
-            "height": 10,
+            "width": 6,
+            "height": 6,
             "slice": 1,
             "rotation": 0,
             "sortCenter": [
@@ -11478,7 +11022,7 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "decorations-2",
+            "sortingLayer": "decorations-4",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
@@ -11525,7 +11069,7 @@
             "sortingLayer": "background-2",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#fff",
@@ -11569,7 +11113,7 @@
             "sortingLayer": "background-2",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#ffffff",
@@ -11631,7 +11175,7 @@
             "sortingLayer": "background-2",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#ffffff",
@@ -11693,7 +11237,7 @@
             "sortingLayer": "background-2",
             "fit": "stretch",
             "material": {
-              "type": "basic",
+              "type": "lightsensitive",
               "options": {
                 "blending": "normal",
                 "color": "#ffffff",
@@ -11747,10 +11291,10 @@
         {
           "name": "Sprite",
           "config": {
-            "src": "",
+            "src": "garland.png",
             "width": 24,
             "height": 24,
-            "slice": 2,
+            "slice": 1,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -11758,116 +11302,16 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "decorations-2",
+            "sortingLayer": "decorations-4",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
               "options": {
                 "blending": "normal",
-                "color": "#7200fa",
+                "color": "#ffffff",
                 "opacity": 1
               }
             }
-          }
-        },
-        {
-          "name": "Animatable",
-          "config": {
-            "initialState": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-            "states": [
-              {
-                "id": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                "name": "Idle",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "64097c9b-d020-4aa6-96e3-0d2b071d4a59",
-                    "state": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "d7f2d6e3-8764-4f0a-93e4-406260e3ce63",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": true
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "a60c9ec6-8b67-439e-8bb8-f7b53494f4c3",
-                "name": "Hover",
-                "type": "individual",
-                "speed": 1,
-                "timeline": {
-                  "frames": [
-                    {
-                      "id": "affc3188-ed7c-4182-a4a4-2a848e3caa41",
-                      "fields": [
-                        {
-                          "id": "21de4697-7afc-4f4d-a0b9-6a1f08f6ad00",
-                          "name": "components.Sprite.currentFrame",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "looped": false
-                },
-                "transitions": [
-                  {
-                    "id": "6d4aa96d-5214-4fd4-8380-cc832612efef",
-                    "state": "d9bcec32-beb5-4982-b146-b43cc2e3a92c",
-                    "time": 0,
-                    "conditions": [
-                      {
-                        "id": "8ee3908c-46cb-4104-99ba-bb8cd51d858f",
-                        "type": "comparator",
-                        "props": {
-                          "arg1": {
-                            "type": "componentValue",
-                            "value": "components.Interactable.hover"
-                          },
-                          "arg2": {
-                            "type": "boolean",
-                            "value": false
-                          },
-                          "operation": "equals"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
           }
         },
         {
@@ -11887,7 +11331,7 @@
     },
     {
       "id": "e44bfbb8-72c9-42ec-a08b-4cfb936828b3",
-      "name": "Garland Used",
+      "name": "Garland Placed",
       "components": [
         {
           "name": "Transform",
@@ -11903,10 +11347,10 @@
         {
           "name": "Sprite",
           "config": {
-            "src": "",
-            "width": 48,
-            "height": 72,
-            "slice": 1,
+            "src": "garland-placed.png",
+            "width": 36,
+            "height": 70,
+            "slice": 4,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -11914,20 +11358,325 @@
             ],
             "flipX": false,
             "flipY": false,
-            "sortingLayer": "decorations-2",
+            "sortingLayer": "decorations-3",
             "fit": "stretch",
             "material": {
               "type": "lightsensitive",
               "options": {
                 "blending": "normal",
-                "color": "#7200fa",
-                "opacity": 0.5
+                "color": "#ffffff",
+                "opacity": 1
               }
             }
           }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "c3f39da3-7c90-4f82-86b7-7a6de6c69cc9",
+            "states": [
+              {
+                "id": "c3f39da3-7c90-4f82-86b7-7a6de6c69cc9",
+                "name": "Offline",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "1a311e15-eb62-4bc4-b5fa-4b42a7d915f4",
+                      "fields": [
+                        {
+                          "id": "3b1765f2-3e2e-4efb-b93f-a732f13f7759",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        },
+                        {
+                          "id": "87d4601e-3542-4174-8942-cd07db62d542",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "8ce7b193-439f-4cac-8ded-afe859d2d0b6",
+                    "state": "d40a60a0-7ba5-4962-8312-322055275f43",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "3b872189-7149-416e-8286-b121ba3fc927",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "activeFail"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "37a5e029-f97e-426e-b07b-6dc1ccf8e918",
+                    "state": "9cb73dce-994e-431c-b311-674b43b54034",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "3b872189-7149-416e-8286-b121ba3fc927",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "activeSuccess"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "d40a60a0-7ba5-4962-8312-322055275f43",
+                "name": "ActiveFail",
+                "type": "individual",
+                "speed": 0.25,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "1a311e15-eb62-4bc4-b5fa-4b42a7d915f4",
+                      "fields": [
+                        {
+                          "id": "3b1765f2-3e2e-4efb-b93f-a732f13f7759",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 2
+                        },
+                        {
+                          "id": "87d4601e-3542-4174-8942-cd07db62d542",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0.2
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2b9852f9-e638-44ae-8055-4ee8e54347f0",
+                      "fields": [
+                        {
+                          "id": "3b1765f2-3e2e-4efb-b93f-a732f13f7759",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 3
+                        },
+                        {
+                          "id": "87d4601e-3542-4174-8942-cd07db62d542",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0.4
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "72077b99-0259-491a-aebf-84ef6313a779",
+                    "state": "c3f39da3-7c90-4f82-86b7-7a6de6c69cc9",
+                    "time": 1,
+                    "conditions": [
+                      {
+                        "id": "4e05bdc1-6922-468b-b980-fc7163f81073",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "offline"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "9cb73dce-994e-431c-b311-674b43b54034",
+                "name": "ActiveSuccess",
+                "type": "individual",
+                "speed": 0.25,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "1a311e15-eb62-4bc4-b5fa-4b42a7d915f4",
+                      "fields": [
+                        {
+                          "id": "3b1765f2-3e2e-4efb-b93f-a732f13f7759",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 2
+                        },
+                        {
+                          "id": "87d4601e-3542-4174-8942-cd07db62d542",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0.2
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2b9852f9-e638-44ae-8055-4ee8e54347f0",
+                      "fields": [
+                        {
+                          "id": "3b1765f2-3e2e-4efb-b93f-a732f13f7759",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 3
+                        },
+                        {
+                          "id": "87d4601e-3542-4174-8942-cd07db62d542",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0.4
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "72077b99-0259-491a-aebf-84ef6313a779",
+                    "state": "4bbb8a02-ec7e-4956-a3cc-b7ddb9831da4",
+                    "time": 1,
+                    "conditions": []
+                  }
+                ]
+              },
+              {
+                "id": "4bbb8a02-ec7e-4956-a3cc-b7ddb9831da4",
+                "name": "Online",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "1a311e15-eb62-4bc4-b5fa-4b42a7d915f4",
+                      "fields": [
+                        {
+                          "id": "3b1765f2-3e2e-4efb-b93f-a732f13f7759",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "id": "87d4601e-3542-4174-8942-cd07db62d542",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "Light",
+          "config": {
+            "type": "point",
+            "options": {
+              "color": "#ff8800",
+              "intensity": 0,
+              "distance": 120
+            }
+          }
+        },
+        {
+          "name": "State",
+          "config": {}
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "8aa8540a-5571-4574-b9c6-cd103868a315",
+                "name": "GarlandScript",
+                "options": {}
+              }
+            ]
+          }
         }
       ],
-      "children": []
+      "children": [
+        {
+          "id": "dd24a665-75b9-48cd-a69a-8689d342494d",
+          "name": "Wire",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 13,
+                "offsetY": 23,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "garland-wire.png",
+                "width": 26,
+                "height": 12,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "decorations",
+                "fit": "stretch",
+                "material": {
+                  "type": "lightsensitive",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#fff",
+                    "opacity": 1
+                  }
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
     },
     {
       "id": "85354b42-38c7-469d-932a-378a912a6abe",
@@ -12405,6 +12154,1140 @@
         }
       ],
       "children": []
+    },
+    {
+      "id": "ac5f839f-7459-4c9d-a6f6-5788e28a2223",
+      "name": "Wall Lamp",
+      "components": [
+        {
+          "name": "Light",
+          "config": {
+            "type": "point",
+            "options": {
+              "color": "#ffb600",
+              "intensity": 1,
+              "distance": 120
+            }
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "wall-lamp.png",
+            "width": 24,
+            "height": 24,
+            "slice": 3,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "State",
+          "config": {}
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "56589d6e-8be6-4f49-9191-57c0ca63a1a4",
+            "states": [
+              {
+                "id": "56589d6e-8be6-4f49-9191-57c0ca63a1a4",
+                "name": "Online",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "a2a8e754-49dc-4ecc-a1dc-f6475f94f8eb",
+                      "fields": [
+                        {
+                          "id": "6db80b4a-78e9-406a-897e-a412cfed5380",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "id": "058820b9-f8aa-4489-b2d1-609582b22ca6",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 1
+                        },
+                        {
+                          "id": "dd8543e2-361c-4736-b5e8-eea1ea21fae5",
+                          "name": "children.Ambient.components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0.75
+                        },
+                        {
+                          "id": "b394ad5e-7cda-4869-b1f0-4676783e4b99",
+                          "name": "components.Light.options.color",
+                          "type": "string",
+                          "value": "#FFB600"
+                        },
+                        {
+                          "id": "099711bc-c2b6-4e45-91f3-252a506eb8b4",
+                          "name": "children.Ambient.components.Light.options.color",
+                          "type": "string",
+                          "value": "#FFFFFF"
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "00f3f8da-8639-45c2-aa8d-fe2c8ddd5b75",
+                    "state": "7b55c774-35df-484d-8cdf-471d01f85b21",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "f5c6c450-e03c-47c4-9985-f8b070ea771b",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "emergency"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "decee142-129a-4a35-b6c4-88f6cca6306c",
+                    "state": "59051aed-bcc8-47e8-b3c5-73e4552ec2cf",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "f5c6c450-e03c-47c4-9985-f8b070ea771b",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "offline"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "7b55c774-35df-484d-8cdf-471d01f85b21",
+                "name": "Emergency",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "a2a8e754-49dc-4ecc-a1dc-f6475f94f8eb",
+                      "fields": [
+                        {
+                          "id": "6db80b4a-78e9-406a-897e-a412cfed5380",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        },
+                        {
+                          "id": "058820b9-f8aa-4489-b2d1-609582b22ca6",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 2
+                        },
+                        {
+                          "id": "0b4515e0-a089-45e4-9e7d-fecc615c9db9",
+                          "name": "children.Ambient.components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0.6
+                        },
+                        {
+                          "id": "2f76c261-b5fe-4774-b93f-f4b65894587d",
+                          "name": "components.Light.options.color",
+                          "type": "string",
+                          "value": "#c42430"
+                        },
+                        {
+                          "id": "ca0fe304-721b-4dfb-8997-a140ef972cc5",
+                          "name": "children.Ambient.components.Light.options.color",
+                          "type": "string",
+                          "value": "#f68187"
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "00f3f8da-8639-45c2-aa8d-fe2c8ddd5b75",
+                    "state": "56589d6e-8be6-4f49-9191-57c0ca63a1a4",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "f5c6c450-e03c-47c4-9985-f8b070ea771b",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "online"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "59051aed-bcc8-47e8-b3c5-73e4552ec2cf",
+                "name": "Offline",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "a2a8e754-49dc-4ecc-a1dc-f6475f94f8eb",
+                      "fields": [
+                        {
+                          "id": "6db80b4a-78e9-406a-897e-a412cfed5380",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 2
+                        },
+                        {
+                          "id": "058820b9-f8aa-4489-b2d1-609582b22ca6",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "id": "d3005bde-8382-4013-805d-997abbd665da",
+                          "name": "children.Ambient.components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0.25
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "00f3f8da-8639-45c2-aa8d-fe2c8ddd5b75",
+                    "state": "56589d6e-8be6-4f49-9191-57c0ca63a1a4",
+                    "time": 1,
+                    "conditions": [
+                      {
+                        "id": "f5c6c450-e03c-47c4-9985-f8b070ea771b",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "online"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "b85bd34c-baba-4a59-a27c-d8ea8a9de7bf",
+                    "state": "7b55c774-35df-484d-8cdf-471d01f85b21",
+                    "time": 1,
+                    "conditions": [
+                      {
+                        "id": "f5c6c450-e03c-47c4-9985-f8b070ea771b",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "emergency"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "10b7fe07-4a75-43d7-bf52-01010c996525",
+                "name": "WallLampScript",
+                "options": {}
+              }
+            ]
+          }
+        }
+      ],
+      "children": [
+        {
+          "id": "b0d3ab76-29ff-4fec-949f-56ce79fabe64",
+          "name": "Ambient",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 0,
+                "offsetY": 0,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Light",
+              "config": {
+                "type": "ambient",
+                "options": {
+                  "color": "#fff",
+                  "intensity": 0.75
+                }
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "f775baaf-009c-4a1a-af8e-99fe5d75646f",
+      "name": "Locker Vertical 2",
+      "components": [
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "locker-vertical.png",
+            "width": 26,
+            "height": 50,
+            "slice": 2,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 20,
+              "sizeY": 44,
+              "centerX": 6,
+              "centerY": 6
+            }
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "inspect"
+          }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "f125ed25-174f-47cf-a764-119ae43d3e12",
+            "states": [
+              {
+                "id": "f125ed25-174f-47cf-a764-119ae43d3e12",
+                "name": "Closed",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "62bb049f-8f96-46dc-87f7-5ade57b5b81a",
+                      "fields": [
+                        {
+                          "id": "69b82f5d-6bf4-4cf4-aaac-f94d21467817",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "8d2edfc4-c91e-4742-96bb-34cf48e92cbe",
+                    "state": "1ace9b5f-5554-4a43-b682-8eb46883624b",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "c0b1da14-5e2b-497c-9581-42c2079053e1",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "open"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "1ace9b5f-5554-4a43-b682-8eb46883624b",
+                "name": "Open",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "62bb049f-8f96-46dc-87f7-5ade57b5b81a",
+                      "fields": [
+                        {
+                          "id": "69b82f5d-6bf4-4cf4-aaac-f94d21467817",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "State",
+          "config": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "10abbb80-0a4d-4671-859d-dd009c3980cf",
+      "name": "Locker Vertical 1",
+      "components": [
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "locker-vertical.png",
+            "width": 26,
+            "height": 50,
+            "slice": 2,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "inspect"
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 20,
+              "sizeY": 44,
+              "centerX": 6,
+              "centerY": 6
+            }
+          }
+        },
+        {
+          "name": "State",
+          "config": {}
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "1260a445-180f-4135-80f5-cb80d4c35971",
+            "states": [
+              {
+                "id": "1260a445-180f-4135-80f5-cb80d4c35971",
+                "name": "Closed",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "741e17e1-5b07-4b07-b69f-ff543b6e5730",
+                      "fields": [
+                        {
+                          "id": "cc3ce146-a131-42b0-a426-3236a9ce8d8c",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "f8d25a06-1989-4853-803d-ff91dabb9cd0",
+                    "state": "b8dc9c0e-9efa-4854-96f7-cfb4254a460e",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "081d993b-82b3-4537-ac38-61616cd65e0a",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "open"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "b8dc9c0e-9efa-4854-96f7-cfb4254a460e",
+                "name": "Open",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "741e17e1-5b07-4b07-b69f-ff543b6e5730",
+                      "fields": [
+                        {
+                          "id": "cc3ce146-a131-42b0-a426-3236a9ce8d8c",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": []
+              }
+            ]
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9c82a532-b1ab-41b0-8894-f3cece67ed40",
+      "name": "Crowbar",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "take"
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "crowbar.png",
+            "width": 24,
+            "height": 24,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-4",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 12,
+              "sizeY": 12,
+              "centerX": 6,
+              "centerY": 4
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3e1f819a-df98-44ae-bcf0-2692e0a946ea",
+      "name": "Package 1",
+      "components": [
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "package.png",
+            "width": 32,
+            "height": 34,
+            "slice": 2,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-3",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "inspect"
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 22,
+              "sizeY": 22,
+              "centerX": 9,
+              "centerY": 11
+            }
+          }
+        },
+        {
+          "name": "State",
+          "config": {}
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "1260a445-180f-4135-80f5-cb80d4c35971",
+            "states": [
+              {
+                "id": "1260a445-180f-4135-80f5-cb80d4c35971",
+                "name": "Closed",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "741e17e1-5b07-4b07-b69f-ff543b6e5730",
+                      "fields": [
+                        {
+                          "id": "cc3ce146-a131-42b0-a426-3236a9ce8d8c",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "f8d25a06-1989-4853-803d-ff91dabb9cd0",
+                    "state": "b8dc9c0e-9efa-4854-96f7-cfb4254a460e",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "081d993b-82b3-4537-ac38-61616cd65e0a",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "open"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "b8dc9c0e-9efa-4854-96f7-cfb4254a460e",
+                "name": "Open",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "741e17e1-5b07-4b07-b69f-ff543b6e5730",
+                      "fields": [
+                        {
+                          "id": "cc3ce146-a131-42b0-a426-3236a9ce8d8c",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": []
+              }
+            ]
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a004e35b-848d-4f12-afa2-c8c584583fa1",
+      "name": "Package 2",
+      "components": [
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "package.png",
+            "width": 32,
+            "height": 34,
+            "slice": 2,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-2",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#ffffff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "inspect"
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 24,
+              "sizeY": 24,
+              "centerX": 8,
+              "centerY": 10
+            }
+          }
+        },
+        {
+          "name": "State",
+          "config": {}
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "1260a445-180f-4135-80f5-cb80d4c35971",
+            "states": [
+              {
+                "id": "1260a445-180f-4135-80f5-cb80d4c35971",
+                "name": "Closed",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "741e17e1-5b07-4b07-b69f-ff543b6e5730",
+                      "fields": [
+                        {
+                          "id": "cc3ce146-a131-42b0-a426-3236a9ce8d8c",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "f8d25a06-1989-4853-803d-ff91dabb9cd0",
+                    "state": "b8dc9c0e-9efa-4854-96f7-cfb4254a460e",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "081d993b-82b3-4537-ac38-61616cd65e0a",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "open"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "b8dc9c0e-9efa-4854-96f7-cfb4254a460e",
+                "name": "Open",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "741e17e1-5b07-4b07-b69f-ff543b6e5730",
+                      "fields": [
+                        {
+                          "id": "cc3ce146-a131-42b0-a426-3236a9ce8d8c",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": []
+              }
+            ]
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "23c7b3b8-69df-41c9-8ab3-1525eecf9b88",
+      "name": "Vault Gate",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "vault-gate.png",
+            "width": 48,
+            "height": 72,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-2",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "967d3b87-82e0-4265-a7ca-ab9a8b13a5c0",
+      "name": "Star",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "take"
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "star.png",
+            "width": 24,
+            "height": 24,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-3",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 10,
+              "sizeY": 15,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "779e43ad-9ba0-41dd-948e-b910db0bc9df",
+      "name": "Star Placed",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "star-placed.png",
+            "width": 13,
+            "height": 16,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations-4",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        }
+      ],
+      "children": []
     }
   ],
   "loaders": [],
@@ -12419,6 +13302,8 @@
         "background-2",
         "decorations",
         "decorations-2",
+        "decorations-3",
+        "decorations-4",
         "units",
         "scene-frame",
         "default"

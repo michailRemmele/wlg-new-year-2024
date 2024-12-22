@@ -15,8 +15,17 @@ import {
   CHRISTMAS_TREE_ID,
   GARLAND_ID,
 } from '../../../consts/actors';
+import { STATE as ELECTRICAL_PANEL_STATE } from '../electrical-panel-script';
 
-const SHORT_CIRCUIT_TIMEOUT = 2000;
+const SHORT_CIRCUIT_TIMEOUT = 1000;
+export const STATE = {
+  USELESS_FAIL: 'uselessFail',
+  INACTIVE_FAIL: 'inactiveFail',
+  ACTIVE_FAIL: 'activeFail',
+  USELESS_SUCCESS: 'uselessSuccess',
+  INACTIVE_SUCCESS: 'inactiveSuccess',
+  ACTIVE_SUCCESS: 'activeSuccess',
+};
 
 export class SwitcherScript extends Script {
   private actor: Actor;
@@ -36,15 +45,15 @@ export class SwitcherScript extends Script {
     if (!state) {
       this.scene.dispatchEvent(EventType.ChangeItemState, {
         item: this.actor.id,
-        state: 'uselessFail',
+        state: STATE.USELESS_FAIL,
       });
     }
 
     const eletricalPanelState = window.saveState?.questItems[ELECTRICAL_PANEL_ID]?.state;
-    if (eletricalPanelState === 'done') {
+    if (eletricalPanelState === 'done' && state !== STATE.ACTIVE_SUCCESS) {
       this.scene.dispatchEvent(EventType.ChangeItemState, {
         item: this.actor.id,
-        state: 'inactiveSuccess',
+        state: STATE.INACTIVE_SUCCESS,
       });
     }
 
@@ -60,16 +69,16 @@ export class SwitcherScript extends Script {
   private handleStudyItem = (): void => {
     const state = window.saveState?.questItems[this.actor.id]?.state;
 
-    if (state === 'inactiveFail') {
+    if (state === STATE.INACTIVE_FAIL) {
       this.scene.dispatchEvent(EventType.ChangeItemState, {
         item: this.actor.id,
-        state: 'activeFail',
+        state: STATE.ACTIVE_FAIL,
       });
     }
-    if (state === 'inactiveSuccess') {
+    if (state === STATE.INACTIVE_SUCCESS) {
       this.scene.dispatchEvent(EventType.ChangeItemState, {
         item: this.actor.id,
-        state: 'activeSuccess',
+        state: STATE.ACTIVE_SUCCESS,
       });
     }
   };
@@ -78,7 +87,7 @@ export class SwitcherScript extends Script {
     if (event.target.id === CHRISTMAS_TREE_ID && event.item === GARLAND_ID) {
       this.scene.dispatchEvent(EventType.ChangeItemState, {
         item: this.actor.id,
-        state: 'inactiveFail',
+        state: STATE.INACTIVE_FAIL,
       });
     }
   };
@@ -86,7 +95,7 @@ export class SwitcherScript extends Script {
   update(options: UpdateOptions): void {
     const state = window.saveState?.questItems[this.actor.id]?.state;
 
-    if (state !== 'activeFail') {
+    if (state !== STATE.ACTIVE_FAIL) {
       return;
     }
 
@@ -99,7 +108,11 @@ export class SwitcherScript extends Script {
 
     this.scene.dispatchEvent(EventType.ChangeItemState, {
       item: this.actor.id,
-      state: 'uselessSuccess',
+      state: STATE.USELESS_SUCCESS,
+    });
+    this.scene.dispatchEvent(EventType.ChangeItemState, {
+      item: ELECTRICAL_PANEL_ID,
+      state: ELECTRICAL_PANEL_STATE.ENABLED,
     });
   }
 }

@@ -43,5 +43,8 @@
   "systems.electricalPanelGame.exitLevelId.title": "Exit Level Id",
 
   "systems.arcadeCabinetGame.title": "Arcade Cabinet Game",
-  "systems.arcadeCabinetGame.exitLevelId.title": "Exit Level Id"
+  "systems.arcadeCabinetGame.exitLevelId.title": "Exit Level Id",
+
+  "resources.scriptSystem.lockerScript.items.title": "Items",
+  "resources.scriptSystem.packageScript.items.title": "Items"
 }

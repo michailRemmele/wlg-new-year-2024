@@ -13,6 +13,13 @@ import { ELECTRICAL_PANEL_GAME_ID } from '../../../consts/scenes';
 import * as EventType from '../../events';
 
 const TIMEOUT = 1000;
+export const STATE = {
+  DISABLED: 'disabled',
+  ENABLED: 'enabled',
+  SUCCESS: 'success',
+  DONE: 'done',
+  FAIL: 'fail',
+};
 
 export class ElectricalPanelScript extends Script {
   private actor: Actor;
@@ -28,6 +35,14 @@ export class ElectricalPanelScript extends Script {
 
     this.timeout = TIMEOUT;
 
+    const state = window.saveState?.questItems[this.actor.id]?.state;
+    if (state === undefined) {
+      this.scene.dispatchEvent(EventType.ChangeItemState, {
+        item: this.actor.id,
+        state: STATE.DISABLED,
+      });
+    }
+
     this.actor.addEventListener(EventType.StudyItem, this.handleStudyItem);
   }
 
@@ -37,7 +52,7 @@ export class ElectricalPanelScript extends Script {
 
   private handleStudyItem = (): void => {
     const state = window.saveState?.questItems[this.actor.id]?.state;
-    if (state) {
+    if (state !== STATE.ENABLED) {
       return;
     }
 
@@ -49,7 +64,7 @@ export class ElectricalPanelScript extends Script {
 
   update(options: UpdateOptions): void {
     const state = window.saveState?.questItems[this.actor.id]?.state;
-    if (!state || state === 'done') {
+    if (!state || state === STATE.DONE) {
       return;
     }
 
@@ -60,18 +75,18 @@ export class ElectricalPanelScript extends Script {
       return;
     }
 
-    if (state === 'success') {
+    if (state === STATE.SUCCESS) {
       this.scene.dispatchEvent(EventType.RepairSuccess);
       this.scene.dispatchEvent(EventType.ChangeItemState, {
         item: this.actor.id,
-        state: 'done',
+        state: STATE.DONE,
       });
     }
-    if (state === 'fail') {
+    if (state === STATE.FAIL) {
       this.scene.dispatchEvent(EventType.RepairFail);
       this.scene.dispatchEvent(EventType.ChangeItemState, {
         item: this.actor.id,
-        state: undefined,
+        state: STATE.ENABLED,
       });
     }
   }

@@ -75,6 +75,8 @@ export class PointAndClickScript extends Script {
 
   private handleClickAction = (event: ClickActionEvent): void => {
     this.destination = event.x;
+    this.destinationTarget = undefined;
+    this.selectedItem = undefined;
   };
 
   private handleWallCollision = (event: CollisionEnterEvent): void => {

@@ -10,9 +10,12 @@ export const DECORATION_PLACE_3_ID = '81df8877-643c-4c83-923c-c6287d302434';
 export const DECORATION_PLACE_4_ID = '59b69b0a-dd50-4705-8ae3-7981e98b2680';
 export const DECORATION_PLACE_5_ID = '1c2c15c7-d947-4006-aeee-3c6b08b26d7a';
 export const GARLAND_PLACE_ID = 'cac62a44-9418-4c20-baf0-04fb86f7cf52';
+export const STAR_PLACE_ID = 'ca3fa14c-5f72-4407-9b05-6bc9aa8b3e7d';
 
 export const GARLAND_ID = 'a0d63fda-4ea1-4940-ad4c-ab537d0bd0ba';
+export const STAR_ID = '0cfe0f4a-aca2-4309-b216-a11f52f9ed0c';
 export const SWITCHER_ID = '3c0a01c1-33bc-4105-91e0-d531fba264e6';
+export const CROWBAR_ID = 'cd1ba2b8-1127-4fd0-a42e-74e4053955f6';
 
 export const INITIAL_SPAWNER_ID = '03737978-674b-4774-a967-14695239ad6f';
 

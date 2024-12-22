@@ -5,6 +5,8 @@ import {
   BAUBLE_4_ID,
   BAUBLE_5_ID,
   GARLAND_ID,
+  STAR_ID,
+  CROWBAR_ID,
 } from './actors';
 import {
   PIZZA_ID,
@@ -54,6 +56,18 @@ export const ITEM: Record<string, Item> = {
     title: 'Гирлянда',
     imageUrl: './images/garland.png',
     templateId: 'e44bfbb8-72c9-42ec-a08b-4cfb936828b3',
+  },
+  [STAR_ID]: {
+    name: 'star',
+    title: 'Звезда',
+    imageUrl: './images/star.png',
+    templateId: '779e43ad-9ba0-41dd-948e-b910db0bc9df',
+  },
+  [CROWBAR_ID]: {
+    name: 'crowbar',
+    title: 'Монтировка',
+    imageUrl: './images/crowbar.png',
+    templateId: '9c82a532-b1ab-41b0-8894-f3cece67ed40',
   },
 
   [PIZZA_ID]: {

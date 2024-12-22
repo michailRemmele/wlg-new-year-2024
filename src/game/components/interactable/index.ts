@@ -9,6 +9,7 @@ interface InteractableConfig {
 export class Interactable extends Component {
   action: Action;
   hover: boolean;
+  disabled: boolean;
 
   constructor(config: InteractableConfig) {
     super();
@@ -17,6 +18,7 @@ export class Interactable extends Component {
 
     this.action = action;
     this.hover = false;
+    this.disabled = false;
   }
 
   clone(): Interactable {
