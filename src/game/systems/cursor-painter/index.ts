@@ -93,8 +93,8 @@ export class CursorPainter extends System {
   private handleWindowResize = (): void => {
     const ratio = window.devicePixelRatio ?? 1;
 
-    this.canvasWidth = Math.floor(this.windowNode.clientWidth * ratio);
-    this.canvasHeight = Math.floor(this.windowNode.clientHeight * ratio);
+    this.canvasWidth = Math.floor(window.innerWidth * ratio);
+    this.canvasHeight = Math.floor(window.innerHeight * ratio);
 
     this.windowNode.width = this.canvasWidth;
     this.windowNode.height = this.canvasHeight;
