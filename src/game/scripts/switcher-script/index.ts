@@ -106,6 +106,7 @@ export class SwitcherScript extends Script {
       return;
     }
 
+    this.scene.dispatchEvent(EventType.ShortCircuit);
     this.scene.dispatchEvent(EventType.ChangeItemState, {
       item: this.actor.id,
       state: STATE.USELESS_SUCCESS,

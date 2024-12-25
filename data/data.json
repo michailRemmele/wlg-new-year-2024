@@ -1679,7 +1679,7 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -144,
+                "offsetX": -72,
                 "offsetY": 12,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -1759,7 +1759,7 @@
             {
               "name": "Transform",
               "config": {
-                "offsetX": -60,
+                "offsetX": -48,
                 "offsetY": 18.5,
                 "offsetZ": 0,
                 "rotation": 0,
@@ -2105,6 +2105,46 @@
               "children": []
             }
           ]
+        },
+        {
+          "id": "05ae7151-ca64-4a7e-9b0b-bb171a1c18c5",
+          "templateId": "4648c156-a353-4f7b-8e99-78f9c0fd3c1e",
+          "fromTemplate": true,
+          "name": "Generator",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -90,
+                "offsetY": 1.5,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "7d44e34e-a8ff-4d18-b389-e3ad4ae4f8d4",
+          "templateId": "b84c6527-df3c-4d9e-9985-43b60e91b099",
+          "fromTemplate": true,
+          "name": "Wires",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -41,
+                "offsetY": -14,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
         }
       ]
     },
@@ -2180,7 +2220,7 @@
                 "sortingLayer": "background",
                 "fit": "repeat",
                 "material": {
-                  "type": "basic",
+                  "type": "lightsensitive",
                   "options": {
                     "blending": "normal",
                     "color": "#ffffff",
@@ -2224,7 +2264,7 @@
                 "sortingLayer": "decorations",
                 "fit": "stretch",
                 "material": {
-                  "type": "basic",
+                  "type": "lightsensitive",
                   "options": {
                     "blending": "normal",
                     "color": "#ffffff",
@@ -4049,6 +4089,90 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "fd9ee971-0ceb-436c-b736-4507335f3d45",
+          "name": "Light Source",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 131,
+                "offsetY": -85,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            },
+            {
+              "name": "Light",
+              "config": {
+                "type": "point",
+                "options": {
+                  "color": "#c42430",
+                  "intensity": 2,
+                  "distance": 400
+                }
+              }
+            },
+            {
+              "name": "Sprite",
+              "config": {
+                "src": "",
+                "width": 10,
+                "height": 10,
+                "slice": 1,
+                "rotation": 0,
+                "sortCenter": [
+                  0,
+                  0
+                ],
+                "flipX": false,
+                "flipY": false,
+                "sortingLayer": "default",
+                "fit": "stretch",
+                "material": {
+                  "type": "basic",
+                  "options": {
+                    "blending": "normal",
+                    "color": "#fff",
+                    "opacity": 0
+                  }
+                }
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "027de3d6-8d39-43bf-99bf-422e421ba10d",
+              "name": "Ambient",
+              "components": [
+                {
+                  "name": "Transform",
+                  "config": {
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 0,
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                  }
+                },
+                {
+                  "name": "Light",
+                  "config": {
+                    "type": "ambient",
+                    "options": {
+                      "color": "#f68187",
+                      "intensity": 0.6
+                    }
+                  }
+                }
+              ],
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -6906,6 +7030,66 @@
               "children": []
             }
           ]
+        },
+        {
+          "id": "8f6f3cf6-894b-4cc0-a4e0-e29fd74b3fb3",
+          "templateId": "699247bf-3826-4c78-9bfe-8ccad5f9ef24",
+          "fromTemplate": true,
+          "name": "Bed",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 1,
+                "offsetY": 14,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "d313706d-a845-4576-a217-4c49043f8867",
+          "templateId": "695ffd8f-cbd3-4e0f-833e-11e570a40d46",
+          "fromTemplate": true,
+          "name": "Bedside Table",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": 38,
+                "offsetY": 7.5,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "64791313-484e-4f0a-87cb-9bf679ff1adf",
+          "templateId": "695ffd8f-cbd3-4e0f-833e-11e570a40d46",
+          "fromTemplate": true,
+          "name": "Bedside Table 1",
+          "components": [
+            {
+              "name": "Transform",
+              "config": {
+                "offsetX": -36,
+                "offsetY": 7.5,
+                "offsetZ": 0,
+                "rotation": 0,
+                "scaleX": 1,
+                "scaleY": 1
+              }
+            }
+          ],
+          "children": []
         }
       ]
     },
@@ -10506,7 +10690,7 @@
         {
           "name": "Sprite",
           "config": {
-            "src": "example-item 5.png",
+            "src": "pizza.png",
             "width": 11,
             "height": 11,
             "slice": 1,
@@ -13814,7 +13998,7 @@
             "src": "computer.png",
             "width": 51,
             "height": 48,
-            "slice": 1,
+            "slice": 2,
             "rotation": 0,
             "sortCenter": [
               0,
@@ -13842,6 +14026,317 @@
               "color": "#00e420",
               "intensity": 0.5,
               "distance": 48
+            }
+          }
+        },
+        {
+          "name": "Interactable",
+          "config": {
+            "action": "inspect"
+          }
+        },
+        {
+          "name": "ColliderContainer",
+          "config": {
+            "type": "boxCollider",
+            "collider": {
+              "sizeX": 40,
+              "sizeY": 40,
+              "centerX": 0,
+              "centerY": 0
+            }
+          }
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "3ca770bd-8efe-4e5b-aa4d-12dd03550abb",
+                "name": "ComputerScript",
+                "options": {}
+              }
+            ]
+          }
+        },
+        {
+          "name": "Animatable",
+          "config": {
+            "initialState": "818bd591-9354-47d1-91d9-f6c70f0bbb88",
+            "states": [
+              {
+                "id": "818bd591-9354-47d1-91d9-f6c70f0bbb88",
+                "name": "Idle",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "7cb21062-20cb-407c-9057-c42a1737ffef",
+                      "fields": [
+                        {
+                          "id": "5e9be82e-4de3-4d84-beb1-c26d56bad0a6",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "id": "f6407028-a2a3-4022-b0e5-32516fdc6862",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0.5
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": [
+                  {
+                    "id": "afb204ad-95f5-4452-a48a-5ff2bab54911",
+                    "state": "36239f4d-6e28-410f-8bcc-9a2982f23ffd",
+                    "time": 0,
+                    "conditions": [
+                      {
+                        "id": "4afb6360-077c-4687-ba46-2ef0247945e8",
+                        "type": "comparator",
+                        "props": {
+                          "arg1": {
+                            "type": "componentValue",
+                            "value": "components.State.value"
+                          },
+                          "arg2": {
+                            "type": "string",
+                            "value": "run"
+                          },
+                          "operation": "equals"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "36239f4d-6e28-410f-8bcc-9a2982f23ffd",
+                "name": "Run",
+                "type": "individual",
+                "speed": 1,
+                "timeline": {
+                  "frames": [
+                    {
+                      "id": "7cb21062-20cb-407c-9057-c42a1737ffef",
+                      "fields": [
+                        {
+                          "id": "5e9be82e-4de3-4d84-beb1-c26d56bad0a6",
+                          "name": "components.Sprite.currentFrame",
+                          "type": "number",
+                          "value": 1
+                        },
+                        {
+                          "id": "f6407028-a2a3-4022-b0e5-32516fdc6862",
+                          "name": "components.Light.options.intensity",
+                          "type": "number",
+                          "value": 0.75
+                        }
+                      ]
+                    }
+                  ],
+                  "looped": false
+                },
+                "transitions": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "State",
+          "config": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "699247bf-3826-4c78-9bfe-8ccad5f9ef24",
+      "name": "Bed",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "bed.png",
+            "width": 50,
+            "height": 28,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-2",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        },
+        {
+          "name": "ScriptBundle",
+          "config": {
+            "scripts": [
+              {
+                "id": "6f8764ad-e817-44f6-b2c3-658caaa23d6a",
+                "name": "BedScript",
+                "options": {}
+              }
+            ]
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "695ffd8f-cbd3-4e0f-833e-11e570a40d46",
+      "name": "Bedside Table",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "bedside-table.png",
+            "width": 24,
+            "height": 21,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "background-2",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4648c156-a353-4f7b-8e99-78f9c0fd3c1e",
+      "name": "Generator",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "generator.png",
+            "width": 72,
+            "height": 63,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
+            }
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b84c6527-df3c-4d9e-9985-43b60e91b099",
+      "name": "Wires",
+      "components": [
+        {
+          "name": "Transform",
+          "config": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "offsetZ": 0,
+            "rotation": 0,
+            "scaleX": 1,
+            "scaleY": 1
+          }
+        },
+        {
+          "name": "Sprite",
+          "config": {
+            "src": "wires.png",
+            "width": 36,
+            "height": 48,
+            "slice": 1,
+            "rotation": 0,
+            "sortCenter": [
+              0,
+              0
+            ],
+            "flipX": false,
+            "flipY": false,
+            "sortingLayer": "decorations",
+            "fit": "stretch",
+            "material": {
+              "type": "lightsensitive",
+              "options": {
+                "blending": "normal",
+                "color": "#fff",
+                "opacity": 1
+              }
             }
           }
         }

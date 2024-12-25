@@ -28,6 +28,10 @@ import * as EventType from '../../events';
 import type { ApplyItemEvent } from '../../events';
 import { Interactable, Inventory } from '../../components';
 
+export const STATE = {
+  IN_PROGRESS: 'inProgress',
+  DONE: 'done',
+};
 const DECORATIONS_MAP: Record<string, string> = {
   [BAUBLE_1_ID]: DECORATION_PLACE_1_ID,
   [BAUBLE_2_ID]: DECORATION_PLACE_2_ID,
@@ -49,6 +53,14 @@ export class ChristmasTreeScript extends Script {
     this.actor = options.actor;
     this.scene = options.scene;
     this.actorSpawner = options.actorSpawner;
+
+    const state = window.saveState?.questItems[this.actor.id]?.state;
+    if (!state) {
+      this.scene.dispatchEvent(EventType.ChangeItemState, {
+        item: this.actor.id,
+        state: STATE.IN_PROGRESS,
+      });
+    }
 
     if (window.saveState?.questItems[this.actor.id]) {
       window.saveState.questItems[this.actor.id].appliedItems.forEach((itemId) => {
@@ -102,6 +114,26 @@ export class ChristmasTreeScript extends Script {
     this.actor.appendChild(decoration);
 
     place.remove();
+  }
+
+  update(): void {
+    if (!window.saveState?.questItems[this.actor.id]) {
+      return;
+    }
+
+    const state = window.saveState?.questItems[this.actor.id]?.state;
+    if (state === STATE.DONE) {
+      return;
+    }
+
+    const { appliedItems } = window.saveState.questItems[this.actor.id];
+
+    if (appliedItems.length === Object.keys(DECORATIONS_MAP).length) {
+      this.scene.dispatchEvent(EventType.ChangeItemState, {
+        item: this.actor.id,
+        state: STATE.DONE,
+      });
+    }
   }
 }
 

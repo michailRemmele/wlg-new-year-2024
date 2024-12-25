@@ -15,6 +15,12 @@ import { PIZZA_ID } from '../../../consts/templates';
 import { Inventory } from '../../components';
 import * as EventType from '../../events';
 
+export const STATE = {
+  INITIAL: 'initial',
+  DONE: 'done',
+  SUCCESS: 'success',
+  FAIL: 'fail',
+};
 const TIMEOUT = 1000;
 
 export class ArcadeCabinetScript extends Script {
@@ -31,6 +37,14 @@ export class ArcadeCabinetScript extends Script {
 
     this.timeout = TIMEOUT;
 
+    const state = window.saveState?.questItems[this.actor.id]?.state;
+    if (!state) {
+      this.scene.dispatchEvent(EventType.ChangeItemState, {
+        item: this.actor.id,
+        state: STATE.INITIAL,
+      });
+    }
+
     this.actor.addEventListener(EventType.StudyItem, this.handleStudyItem);
   }
 
@@ -40,7 +54,7 @@ export class ArcadeCabinetScript extends Script {
 
   private handleStudyItem = (): void => {
     const state = window.saveState?.questItems[this.actor.id]?.state;
-    if (state) {
+    if (state !== STATE.INITIAL) {
       return;
     }
 
@@ -52,7 +66,7 @@ export class ArcadeCabinetScript extends Script {
 
   update(options: UpdateOptions): void {
     const state = window.saveState?.questItems[this.actor.id]?.state;
-    if (!state || state === 'done') {
+    if (state === STATE.INITIAL || state === STATE.DONE) {
       return;
     }
 
@@ -63,11 +77,11 @@ export class ArcadeCabinetScript extends Script {
       return;
     }
 
-    if (state === 'success') {
+    if (state === STATE.SUCCESS) {
       this.scene.dispatchEvent(EventType.CourierSuccess);
       this.scene.dispatchEvent(EventType.ChangeItemState, {
         item: this.actor.id,
-        state: 'done',
+        state: STATE.DONE,
       });
 
       const player = this.scene.getEntityByName(PLAYER_NAME);
@@ -76,11 +90,11 @@ export class ArcadeCabinetScript extends Script {
 
       this.scene.dispatchEvent(EventType.GiveItem, { item: PIZZA_ID });
     }
-    if (state === 'fail') {
+    if (state === STATE.FAIL) {
       this.scene.dispatchEvent(EventType.CourierFail);
       this.scene.dispatchEvent(EventType.ChangeItemState, {
         item: this.actor.id,
-        state: undefined,
+        state: STATE.INITIAL,
       });
     }
   }

@@ -17,6 +17,8 @@ import {
   PackageScript,
   WallLampScript,
   GarlandScript,
+  BedScript,
+  ComputerScript,
 } from '../../../src/game/scripts';
 
 import {
@@ -36,6 +38,8 @@ import {
   packageScript,
   wallLampScript,
   garlandScript,
+  bedScript,
+  computerScript,
 } from './script-system';
 
 export const resourcesSchema = {
@@ -56,5 +60,7 @@ export const resourcesSchema = {
     [PackageScript.scriptName]: packageScript,
     [WallLampScript.scriptName]: wallLampScript,
     [GarlandScript.scriptName]: garlandScript,
+    [BedScript.scriptName]: bedScript,
+    [ComputerScript.scriptName]: computerScript,
   },
 };

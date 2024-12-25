@@ -14,3 +14,5 @@ export { LockerScript } from './locker-script';
 export { PackageScript } from './package-script';
 export { WallLampScript } from './wall-lamp-script';
 export { GarlandScript } from './garland-script';
+export { BedScript } from './bed-script';
+export { ComputerScript } from './computer-script';

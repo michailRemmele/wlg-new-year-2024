@@ -23,6 +23,7 @@ export const EnterRoom = 'EnterRoom';
 export const EnterScene = 'EnterScene';
 export const LoadRoom = 'LoadRoom';
 export const ResetSaveState = 'ResetSaveState';
+export const ShortCircuit = 'ShortCircuit';
 export const RepairStart = 'RepairStart';
 export const RepairEnd = 'RepairEnd';
 export const RepairTimerUpdate = 'RepairTimerUpdate';
@@ -37,6 +38,11 @@ export const CourierDamage = 'CourierDamage';
 export const CourierDeath = 'CourierDeath';
 export const CourierSuccess = 'CourierSuccess';
 export const CourierFail = 'CourierFail';
+export const StartGame = 'StartGame';
+export const NeedChristmasTree = 'NeedChristmasTree';
+export const NeedGarland = 'NeedGarland';
+export const NeedFood = 'NeedFood';
+export const GameOver = 'GameOver';
 
 export type MoveEvent = ActorEvent<{ direction: number; point?: boolean }>;
 
@@ -75,7 +81,11 @@ export type GiveItemEvent = SceneEvent<{ item: string }>;
 export type SelectItemEvent = SceneEvent<{ item: string }>;
 export type RemoveItemEvent = SceneEvent<{ item: string; applicationTarget: string }>;
 export type RejectItemEvent = SceneEvent<{ item: string; applicationTarget: string }>;
-export type ChangeItemStateEvent = SceneEvent<{ item: string; state: string | undefined }>;
+export type ChangeItemStateEvent = SceneEvent<{
+  item: string;
+  itemTemplate?: string;
+  state: string | undefined;
+}>;
 
 export type InteractEvent = SceneEvent<{ actionTarget: string; selectedItem?: string }>;
 
@@ -121,6 +131,7 @@ declare module 'remiz' {
     [EnterScene]: EnterSceneEvent
     [LoadRoom]: LoadRoomEvent
     [ResetSaveState]: SceneEvent
+    [ShortCircuit]: SceneEvent
     [RepairStart]: RepairStartEvent
     [RepairEnd]: RepairEndEvent
     [RepairTimerUpdate]: RepairTimerUpdateEvent
@@ -132,5 +143,10 @@ declare module 'remiz' {
     [CourierJump]: SceneEvent
     [CourierSuccess]: SceneEvent
     [CourierFail]: SceneEvent
+    [StartGame]: SceneEvent
+    [NeedChristmasTree]: SceneEvent
+    [NeedGarland]: SceneEvent
+    [NeedFood]: SceneEvent
+    [GameOver]: SceneEvent
   }
 }

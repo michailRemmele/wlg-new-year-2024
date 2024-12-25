@@ -69,6 +69,8 @@ body.cursor-hidden button {
   text-align: center;
 
   text-shadow: 0 2px 0 black;
+
+  pointer-events: none;
 }
 
 #drawing-area, #cursor-area {

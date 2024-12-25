@@ -18,6 +18,7 @@ import { PLAYER_ID } from '../../../consts/templates';
 import { ITEM } from '../../../consts/items';
 import * as EventType from '../../events';
 import type { EnterRoomEvent, EnterSceneEvent } from '../../events';
+import { showOverlay, hideOverlay } from '../../../utils/overlay';
 
 const CHANGE_LEVEL_TIMEOUT = 250;
 
@@ -39,7 +40,7 @@ export class LevelManager extends System {
   }
 
   mount(): void {
-    this.hideOverlay();
+    hideOverlay();
 
     if (this.scene.id === GAME_ID) {
       const player = this.actorSpawner.spawn(PLAYER_ID);
@@ -70,7 +71,7 @@ export class LevelManager extends System {
   }
 
   private handleEnterRoom = (event: EnterRoomEvent): void => {
-    this.showOverlay();
+    showOverlay();
 
     this.nextLevelId = event.levelId;
     this.timeout = CHANGE_LEVEL_TIMEOUT;
@@ -80,7 +81,7 @@ export class LevelManager extends System {
   };
 
   private handleEnterScene = (event: EnterSceneEvent): void => {
-    this.showOverlay();
+    showOverlay();
 
     this.nextLevelId = event.levelId;
     this.nextSceneId = event.sceneId;
@@ -117,20 +118,6 @@ export class LevelManager extends System {
         item?.remove();
       }
     });
-  }
-
-  private showOverlay(): void {
-    const overlay = document.getElementById('overlay');
-    if (overlay && !overlay.classList.contains('overlay_black')) {
-      overlay.classList.add('overlay_black');
-    }
-  }
-
-  private hideOverlay(): void {
-    const overlay = document.getElementById('overlay');
-    if (overlay && overlay.classList.contains('overlay_black')) {
-      overlay.classList.remove('overlay_black');
-    }
   }
 
   update(options: UpdateOptions): void {

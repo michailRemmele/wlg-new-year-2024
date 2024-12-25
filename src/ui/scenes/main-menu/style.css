@@ -18,3 +18,33 @@
   flex-direction: column;
   gap: 8px;
 }
+
+.main-menu__title {
+  text-align: center;
+}
+
+.main-menu__warning {
+  text-align: center;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.main-menu__logo {
+  position: relative;
+  animation: slide 2s linear infinite alternate;
+
+  image-rendering: pixelated;
+
+  width: 320px;
+
+  @media screen and (max-height: 481px), screen and (max-width: 768px) {
+    width: 200px;
+  }
+}

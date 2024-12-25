@@ -53,7 +53,6 @@ export class GarlandScript extends Script {
   private updateState(
     switcherState?: string | undefined,
   ): void {
-    const state = window.saveState?.questItems[this.actor.id]?.state;
     let nextState = STATE.OFFLINE;
 
     if (switcherState === SWITCHER_STATE.ACTIVE_FAIL) {
@@ -63,12 +62,11 @@ export class GarlandScript extends Script {
       nextState = STATE.ACTIVE_SUCCESS;
     }
 
-    if (state !== nextState) {
-      this.scene.dispatchEvent(EventType.ChangeItemState, {
-        item: this.actor.id,
-        state: nextState,
-      });
-    }
+    this.scene.dispatchEvent(EventType.ChangeItemState, {
+      item: this.actor.id,
+      itemTemplate: this.actor.templateId,
+      state: nextState,
+    });
   }
 }
 

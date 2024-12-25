@@ -17,7 +17,7 @@ import type {
   ChangeItemStateEvent,
 } from '../../events';
 import { PLAYER_NAME } from '../../../consts/actors';
-import { ROOM_1_ID } from '../../../consts/levels';
+import { BEDROOM_ID } from '../../../consts/levels';
 import { MAX_JOURNAL_SIZE } from '../../../consts/journal';
 import { State } from '../../components';
 
@@ -25,7 +25,7 @@ const SAVE_STATE_LS_KEY = 'saveState';
 
 const INITIAL_SAVE_STATE: SaveState = {
   playerPosition: null,
-  currentLevelId: ROOM_1_ID,
+  currentLevelId: BEDROOM_ID,
   collectableItems: {},
   questItems: {},
   journal: [],
@@ -137,8 +137,10 @@ export class Saver extends System {
   };
 
   private handleChangeItemState = (event: ChangeItemStateEvent): void => {
-    window.saveState!.questItems[event.item] ??= { appliedItems: [] };
-    window.saveState!.questItems[event.item].state = event.state;
+    const id = event.itemTemplate ?? event.item;
+
+    window.saveState!.questItems[id] ??= { appliedItems: [] };
+    window.saveState!.questItems[id].state = event.state;
 
     const actor = this.scene.getEntityById(event.item);
     if (actor && actor.getComponent(State)) {
