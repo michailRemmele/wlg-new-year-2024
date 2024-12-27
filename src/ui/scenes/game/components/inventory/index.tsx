@@ -36,6 +36,8 @@ export const Inventory: FC = () => {
 
   const mediaChecks = useMedia();
 
+  const inventorySize = getInventorySize(mediaChecks);
+
   useEffect(() => {
     const player = scene.getEntityByName(PLAYER_NAME);
 
@@ -48,6 +50,9 @@ export const Inventory: FC = () => {
 
     const handleUpdateItems = (): void => {
       setItems([...inventory.items]);
+      if (inventory.items.length <= inventorySize) {
+        setItemsStartIndex(0);
+      }
     };
 
     const handleCancelItemSelection = (): void => {
@@ -78,7 +83,6 @@ export const Inventory: FC = () => {
   };
 
   const inventoryItems: JSX.Element[] = [];
-  const inventorySize = getInventorySize(mediaChecks);
   for (let i = 0; i < inventorySize; i += 1) {
     const itemId = items.at((i + itemsStartIndex) % Math.max(items.length, inventorySize));
     inventoryItems.push(
