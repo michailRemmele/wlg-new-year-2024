@@ -45,9 +45,7 @@
         {
           "name": "CameraSystem",
           "options": {
-            "windowNodeId": "root",
-            "initialCamera": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
-            "scaleSensitivity": 0
+            "windowNodeId": "root"
           }
         },
         {
@@ -134,9 +132,7 @@
         {
           "name": "CameraSystem",
           "options": {
-            "windowNodeId": "root",
-            "initialCamera": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
-            "scaleSensitivity": 0
+            "windowNodeId": "root"
           }
         },
         {
@@ -210,9 +206,7 @@
         {
           "name": "CameraSystem",
           "options": {
-            "windowNodeId": "root",
-            "initialCamera": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
-            "scaleSensitivity": 0
+            "windowNodeId": "root"
           }
         },
         {
@@ -279,7 +273,7 @@
       "name": "Workplace",
       "actors": [
         {
-          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "id": "ec24a9a4-79c0-43d8-8c86-5b964ec0b1db",
           "name": "Camera",
           "components": [
             {
@@ -296,7 +290,8 @@
             {
               "name": "Camera",
               "config": {
-                "zoom": 1
+                "zoom": 1,
+                "current": true
               }
             },
             {
@@ -986,7 +981,7 @@
       "name": "Dining Room",
       "actors": [
         {
-          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "id": "00a8e750-936e-4a16-9567-1f0e64c4ef8c",
           "name": "Camera",
           "components": [
             {
@@ -1003,7 +998,8 @@
             {
               "name": "Camera",
               "config": {
-                "zoom": 1
+                "zoom": 1,
+                "current": true
               }
             },
             {
@@ -1615,7 +1611,7 @@
       "name": "Generator Room",
       "actors": [
         {
-          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "id": "d119c20a-fc4e-4dba-9de6-777b069937a2",
           "name": "Camera",
           "components": [
             {
@@ -1632,7 +1628,8 @@
             {
               "name": "Camera",
               "config": {
-                "zoom": 1
+                "zoom": 1,
+                "current": true
               }
             },
             {
@@ -2153,7 +2150,7 @@
       "name": "Electrical Panel",
       "actors": [
         {
-          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "id": "f4dd8e92-907c-41cc-840b-4f86dffa6539",
           "name": "Camera",
           "components": [
             {
@@ -2170,7 +2167,8 @@
             {
               "name": "Camera",
               "config": {
-                "zoom": 1
+                "zoom": 1,
+                "current": true
               }
             },
             {
@@ -4181,7 +4179,7 @@
       "name": "Arcade Cabinet",
       "actors": [
         {
-          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "id": "7785a9d2-0cde-474f-a3cd-29cc68895320",
           "name": "Camera",
           "components": [
             {
@@ -4198,7 +4196,8 @@
             {
               "name": "Camera",
               "config": {
-                "zoom": 1
+                "zoom": 1,
+                "current": true
               }
             },
             {
@@ -6028,7 +6027,7 @@
       "name": "Corridor",
       "actors": [
         {
-          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "id": "313ccc1f-26fc-400a-b992-377928beb6be",
           "name": "Camera",
           "components": [
             {
@@ -6045,7 +6044,8 @@
             {
               "name": "Camera",
               "config": {
-                "zoom": 1
+                "zoom": 1,
+                "current": true
               }
             },
             {
@@ -6580,7 +6580,7 @@
       "name": "Bedroom",
       "actors": [
         {
-          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "id": "5197634f-2c64-4881-93be-72bedfc0338c",
           "name": "Camera",
           "components": [
             {
@@ -6597,7 +6597,8 @@
             {
               "name": "Camera",
               "config": {
-                "zoom": 1
+                "zoom": 1,
+                "current": true
               }
             },
             {
@@ -7098,7 +7099,7 @@
       "name": "Vault Exit",
       "actors": [
         {
-          "id": "c2853c3d-cb0c-4a89-b67a-94be3ba3a36a",
+          "id": "90b1bb3f-f348-4658-87d5-f810d85ea043",
           "name": "Camera",
           "components": [
             {
@@ -7115,7 +7116,8 @@
             {
               "name": "Camera",
               "config": {
-                "zoom": 1
+                "zoom": 1,
+                "current": true
               }
             },
             {
