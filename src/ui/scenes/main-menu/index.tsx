@@ -6,7 +6,7 @@ import * as EventType from '../../../game/events';
 import { Button } from '../../components';
 import { EngineContext } from '../../providers';
 import { GAME_ID } from '../../../consts/scenes';
-import { isTouchDevice } from '../../../utils/is-touch-device';
+import { isMobileDevice } from '../../../utils/is-mobile-device';
 import { showOverlay } from '../../../utils/overlay';
 
 import './style.css';
@@ -48,7 +48,7 @@ export const MainMenu: FC = () => {
         className="main-menu__logo"
       />
       <h1 className="main-menu__title">WLG Новый Год 2025</h1>
-      {!isTouchDevice() ? (
+      {!isMobileDevice() ? (
         <div className="main-menu__buttons">
           {window.saveState!.touched && <Button onClick={handleContinue}>Продолжить</Button>}
           <Button onClick={handleNewGame}>Новая игра</Button>

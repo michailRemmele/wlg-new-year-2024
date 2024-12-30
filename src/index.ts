@@ -32,13 +32,13 @@ import {
 import * as GameSystems from './game/systems';
 import * as GameComponents from './game/components';
 import * as GameScripts from './game/scripts';
-import { isTouchDevice } from './utils/is-touch-device';
+import { isMobileDevice } from './utils/is-mobile-device';
 import { applyIosSafariScreenFix } from './utils/ios-screen-fix';
 import { isIos } from './utils/is-ios';
 
 import config from '../data/data.json';
 
-const touchDevice = isTouchDevice();
+const mobileDevice = isMobileDevice();
 
 const engine = new Engine({
   config,
@@ -52,7 +52,7 @@ const engine = new Engine({
     GameStatsMeter,
     MouseInputSystem,
     MouseControlSystem,
-    ...(!touchDevice
+    ...(!mobileDevice
       ? [
         KeyboardInputSystem,
         KeyboardControlSystem,
