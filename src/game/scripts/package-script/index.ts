@@ -2,11 +2,11 @@ import type {
   Actor,
   Scene,
   ScriptOptions,
-} from 'remiz';
+} from 'dacha';
 import {
   Script,
   Sprite,
-} from 'remiz';
+} from 'dacha';
 
 import { CROWBAR_ID } from '../../../consts/actors';
 import { Interactable } from '../../components';

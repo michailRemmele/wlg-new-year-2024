@@ -1,6 +1,6 @@
 import { useCallback, useContext } from 'react';
 import type { FC } from 'react';
-import { LoadScene } from 'remiz/events';
+import { LoadScene } from 'dacha/events';
 
 import * as EventType from '../../../game/events';
 import { Button } from '../../components';

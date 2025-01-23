@@ -3,10 +3,10 @@ import type {
   Scene,
   ScriptOptions,
   UpdateOptions,
-} from 'remiz';
+} from 'dacha';
 import {
   Script,
-} from 'remiz';
+} from 'dacha';
 
 import { ELECTRICAL_PANEL_LEVEL_ID } from '../../../consts/levels';
 import { ELECTRICAL_PANEL_GAME_ID } from '../../../consts/scenes';

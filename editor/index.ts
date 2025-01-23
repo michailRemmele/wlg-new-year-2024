@@ -1,12 +1,12 @@
 import {
   ParallaxSystem,
   Parallax,
-} from 'remiz-game-systems';
+} from 'dacha-game-systems';
 import {
   parallaxSystem,
   parallax,
   locales as gameSystemsLocales,
-} from 'remiz-game-systems/schema';
+} from 'dacha-game-systems/schema';
 
 import {
   componentsSchema as gameComponentsSchema,

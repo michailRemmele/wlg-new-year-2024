@@ -2,11 +2,11 @@ import type {
   Actor,
   Scene,
   ScriptOptions,
-} from 'remiz';
+} from 'dacha';
 import {
   Script,
   Sprite,
-} from 'remiz';
+} from 'dacha';
 
 import { Interactable } from '../../components';
 import * as EventType from '../../events';

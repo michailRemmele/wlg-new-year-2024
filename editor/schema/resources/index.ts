@@ -1,4 +1,4 @@
-import { ScriptSystem } from 'remiz';
+import { ScriptSystem } from 'dacha';
 
 import {
   CameraScript,

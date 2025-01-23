@@ -1,4 +1,4 @@
-import { Component } from 'remiz';
+import { Component } from 'dacha';
 
 export class PathMark extends Component {
   passed: boolean;

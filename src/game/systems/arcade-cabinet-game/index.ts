@@ -5,17 +5,17 @@ import {
   RigidBody,
   Transform,
   Sprite,
-} from 'remiz';
+} from 'dacha';
 import type {
   Actor,
   ActorSpawner,
   SystemOptions,
   UpdateOptions,
-} from 'remiz';
-import { CollisionEnter, AddImpulse } from 'remiz/events';
+} from 'dacha';
+import { CollisionEnter, AddImpulse } from 'dacha/events';
 import type {
   CollisionEnterEvent,
-} from 'remiz/events';
+} from 'dacha/events';
 
 import * as EventType from '../../events';
 import {

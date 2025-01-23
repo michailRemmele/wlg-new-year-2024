@@ -4,13 +4,13 @@ import type {
   ScriptOptions,
   UpdateOptions,
   ActorEvent,
-} from 'remiz';
+} from 'dacha';
 import {
   Transform,
   Script,
   Camera,
   CameraService,
-} from 'remiz';
+} from 'dacha';
 
 import {
   CHRISTMAS_TREE_ID,

@@ -3,9 +3,9 @@ import type { FC } from 'react';
 import {
   Widget,
   useConfig,
-} from 'remiz-editor';
-import type { WidgetProps } from 'remiz-editor';
-import type { LevelConfig } from 'remiz';
+} from 'dacha-workbench';
+import type { WidgetProps } from 'dacha-workbench';
+import type { LevelConfig } from 'dacha';
 
 export const ArcadeCabinetGameWidget: FC<WidgetProps> = ({
   fields,

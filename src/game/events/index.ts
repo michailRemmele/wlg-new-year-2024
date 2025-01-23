@@ -1,4 +1,4 @@
-import type { ActorEvent, SceneEvent } from 'remiz';
+import type { ActorEvent, SceneEvent } from 'dacha';
 
 export const Move = 'Move';
 export const PlayerAction = 'PlayerAction';
@@ -100,7 +100,7 @@ export type RepairEndEvent = SceneEvent<{ screenX: number; screenY: number }>;
 export type RepairTimerUpdateEvent = SceneEvent<{ timer: number }>;
 export type RepairScoreUpdateEvent = SceneEvent<{ score: number }>;
 
-declare module 'remiz' {
+declare module 'dacha' {
   export interface ActorEventMap {
     [Move]: MoveEvent
     [PlayerAction]: ActorEvent

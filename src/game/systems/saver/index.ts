@@ -1,11 +1,11 @@
 import {
   System,
   Transform,
-} from 'remiz';
+} from 'dacha';
 import type {
   Scene,
   SystemOptions,
-} from 'remiz';
+} from 'dacha';
 
 import * as EventType from '../../events';
 import type {

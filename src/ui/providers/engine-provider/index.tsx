@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import type { UiInitFnOptions } from 'remiz';
+import type { UiInitFnOptions } from 'dacha';
 
 interface EngineProviderProps {
   context: UiInitFnOptions

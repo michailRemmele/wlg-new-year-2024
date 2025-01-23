@@ -5,7 +5,7 @@ import {
   useState,
   useCallback,
 } from 'react';
-import { LoadScene } from 'remiz/events';
+import { LoadScene } from 'dacha/events';
 
 import { MAIN_MENU_ID } from '../../../consts/scenes';
 import { Button } from '../../components';

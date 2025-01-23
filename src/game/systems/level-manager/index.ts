@@ -1,15 +1,15 @@
 import {
   System,
   Transform,
-} from 'remiz';
+} from 'dacha';
 import type {
   Actor,
   Scene,
   ActorSpawner,
   SystemOptions,
   UpdateOptions,
-} from 'remiz';
-import { LoadScene } from 'remiz/events';
+} from 'dacha';
+import { LoadScene } from 'dacha/events';
 
 import { Inventory } from '../../components';
 import { INITIAL_SPAWNER_ID, PLAYER_NAME } from '../../../consts/actors';

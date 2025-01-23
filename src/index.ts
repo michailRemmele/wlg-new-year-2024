@@ -23,11 +23,11 @@ import {
   Sprite,
   Transform,
   ScriptBundle,
-} from 'remiz';
+} from 'dacha';
 import {
   ParallaxSystem,
   Parallax,
-} from 'remiz-game-systems';
+} from 'dacha-game-systems';
 
 import * as GameSystems from './game/systems';
 import * as GameComponents from './game/components';

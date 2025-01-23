@@ -3,10 +3,10 @@ import type {
   Scene,
   ScriptOptions,
   UpdateOptions,
-} from 'remiz';
+} from 'dacha';
 import {
   Script,
-} from 'remiz';
+} from 'dacha';
 
 import * as EventType from '../../events';
 import type { ApplyItemEvent } from '../../events';

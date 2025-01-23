@@ -2,18 +2,18 @@ import {
   Scene,
   System,
   ActorCollection,
-} from 'remiz';
+} from 'dacha';
 import type {
   Actor,
   SystemOptions,
   UpdateOptions,
-} from 'remiz';
+} from 'dacha';
 import {
   CollisionEnter,
-} from 'remiz/events';
+} from 'dacha/events';
 import type {
   CollisionEnterEvent,
-} from 'remiz/events';
+} from 'dacha/events';
 
 import * as EventType from '../../events';
 import type {
