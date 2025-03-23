@@ -20,7 +20,7 @@ import * as EventType from '../../events';
 import type { EnterRoomEvent, EnterSceneEvent } from '../../events';
 import { showOverlay, hideOverlay } from '../../../utils/overlay';
 
-const CHANGE_LEVEL_TIMEOUT = 250;
+const CHANGE_LEVEL_TIMEOUT = 1250;
 
 export class LevelManager extends System {
   private scene: Scene;

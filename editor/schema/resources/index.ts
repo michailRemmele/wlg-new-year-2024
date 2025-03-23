@@ -19,6 +19,7 @@ import {
   GarlandScript,
   BedScript,
   ComputerScript,
+  AudioManagerScript,
 } from '../../../src/game/scripts';
 
 import {
@@ -40,6 +41,7 @@ import {
   garlandScript,
   bedScript,
   computerScript,
+  audioManagerScript,
 } from './script-system';
 
 export const resourcesSchema = {
@@ -62,5 +64,6 @@ export const resourcesSchema = {
     [GarlandScript.scriptName]: garlandScript,
     [BedScript.scriptName]: bedScript,
     [ComputerScript.scriptName]: computerScript,
+    [AudioManagerScript.scriptName]: audioManagerScript,
   },
 };

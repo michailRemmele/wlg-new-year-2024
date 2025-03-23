@@ -12,6 +12,7 @@ import {
   ScriptSystem,
   UiBridge,
   GameStatsMeter,
+  AudioSystem,
 
   Animatable,
   Camera,
@@ -23,6 +24,7 @@ import {
   Sprite,
   Transform,
   ScriptBundle,
+  AudioSource,
 } from 'dacha';
 import {
   ParallaxSystem,
@@ -43,6 +45,7 @@ const touchDevice = isTouchDevice();
 const engine = new Engine({
   config,
   systems: [
+    AudioSystem,
     Animator,
     CameraSystem,
     PhysicsSystem,
@@ -63,6 +66,7 @@ const engine = new Engine({
     ...Object.values(GameSystems),
   ],
   components: [
+    AudioSource,
     Animatable,
     Camera,
     MouseControl,

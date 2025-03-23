@@ -43,6 +43,10 @@ export const NeedChristmasTree = 'NeedChristmasTree';
 export const NeedGarland = 'NeedGarland';
 export const NeedFood = 'NeedFood';
 export const GameOver = 'GameOver';
+export const ButtonPress = 'ButtonPress';
+export const ButtonRelease = 'ButtonRelease';
+export const SwitchOn = 'SwitchOn';
+export const LockerOpen = 'LockerOpen';
 
 export type MoveEvent = ActorEvent<{ direction: number; point?: boolean }>;
 
@@ -148,5 +152,8 @@ declare module 'dacha' {
     [NeedGarland]: SceneEvent
     [NeedFood]: SceneEvent
     [GameOver]: SceneEvent
+    [ButtonPress]: SceneEvent
+    [SwitchOn]: SceneEvent
+    [LockerOpen]: SceneEvent
   }
 }

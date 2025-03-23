@@ -14,6 +14,7 @@ import * as EventType from '../../../game/events';
 
 import {
   MenuPanel,
+  SoundPanel,
 } from './components';
 import './style.css';
 
@@ -47,7 +48,10 @@ export const Game: FC = () => {
   return (
     <div className="game">
       {!isGameOver ? (
-        <MenuPanel />
+        <>
+          <SoundPanel />
+          <MenuPanel />
+        </>
       ) : (
         <div className="game__game-over-overlay">
           <img

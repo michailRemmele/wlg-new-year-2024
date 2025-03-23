@@ -61,6 +61,7 @@ export class LockerScript extends Script {
       return;
     }
 
+    this.scene.dispatchEvent(EventType.LockerOpen);
     this.scene.dispatchEvent(EventType.ChangeItemState, {
       item: this.actor.id,
       state: STATE.OPEN,

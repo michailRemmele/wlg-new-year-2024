@@ -16,3 +16,4 @@ export { WallLampScript } from './wall-lamp-script';
 export { GarlandScript } from './garland-script';
 export { BedScript } from './bed-script';
 export { ComputerScript } from './computer-script';
+export { AudioManagerScript } from './audio-manager-script';

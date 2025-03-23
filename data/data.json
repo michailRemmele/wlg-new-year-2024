@@ -111,6 +111,10 @@
             "windowNodeId": "cursor-area",
             "src": "cursor.png"
           }
+        },
+        {
+          "name": "AudioSystem",
+          "options": {}
         }
       ],
       "levelId": "b541efa6-215b-487b-9134-b669ba9a072b"
@@ -973,6 +977,93 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "7d7666b4-103c-4f0a-8f43-bad8a7a0cdc3",
+          "templateId": "256c0bf7-d0cc-4c9c-8536-3a70069683ee",
+          "name": "AudioManager",
+          "components": [
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "b3b55785-0ffd-4229-b37c-189dcf004272",
+                    "name": "AudioManagerScript",
+                    "options": {
+                      "buttonPress": "ce26c4ab-7576-44e8-876e-32bdc7a7c62a",
+                      "buttonRelease": "7b626230-80fc-46e2-96e4-d5b7bfae5169",
+                      "cursorClick": "8a67a1ef-d4ae-4d57-9054-8e6ff3efa827",
+                      "enterRoom": "9575f2df-a917-438e-8885-8652d0efcded",
+                      "takeItem": "b9c44b9b-a980-428f-b96d-ef7e77355af8",
+                      "selectItem": "7c18a6c4-4b62-4af4-8e11-710f38dd3228",
+                      "switchOn": "5f22b60f-b514-4fa3-bddf-43fb760422b3",
+                      "lockerOpen": "8eab6599-5c83-48b1-8725-bb52e2de6170",
+                      "shortCircuit": "850fd403-7af9-43d4-b883-76ee6a169f94"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "0aebb72d-6e76-44da-adcc-dcd9b61c998f",
+              "templateId": "9a7878a3-7553-4ecb-b640-58398f072efb",
+              "name": "Background Music",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "ce26c4ab-7576-44e8-876e-32bdc7a7c62a",
+              "templateId": "14d4e67e-abe6-4ad8-8e13-0b9833461d64",
+              "name": "Button Press",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "9575f2df-a917-438e-8885-8652d0efcded",
+              "templateId": "8a9c4b70-a89f-4e5a-94e4-eb4252a779b8",
+              "name": "Enter Room",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "b9c44b9b-a980-428f-b96d-ef7e77355af8",
+              "templateId": "8cd4b06f-7c44-44e0-bd9e-ca269fdcbc46",
+              "name": "Take Item",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "7c18a6c4-4b62-4af4-8e11-710f38dd3228",
+              "templateId": "9433f3be-8336-4472-9999-1804be307ffb",
+              "name": "Select Item",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "5f22b60f-b514-4fa3-bddf-43fb760422b3",
+              "templateId": "97fb13e9-ac59-41c3-96a2-893d58586ac8",
+              "name": "Switch On",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "8eab6599-5c83-48b1-8725-bb52e2de6170",
+              "templateId": "ba47ebaa-472c-4dfe-9cde-385c694a09dd",
+              "name": "Locker Open",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "850fd403-7af9-43d4-b883-76ee6a169f94",
+              "templateId": "a23ee33e-9a51-44f5-874b-158455ec36e1",
+              "name": "Short Circuit",
+              "components": [],
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -1603,6 +1694,93 @@
             }
           ],
           "children": []
+        },
+        {
+          "id": "7f95da74-24b0-4158-a84a-4e81f6fb47ce",
+          "templateId": "256c0bf7-d0cc-4c9c-8536-3a70069683ee",
+          "name": "AudioManager",
+          "components": [
+            {
+              "name": "ScriptBundle",
+              "config": {
+                "scripts": [
+                  {
+                    "id": "400e4677-eed0-424f-9b9c-2a244314db74",
+                    "name": "AudioManagerScript",
+                    "options": {
+                      "buttonPress": "dbe7a164-3c2c-4252-a657-ae8f2930bc0b",
+                      "buttonRelease": "ac7e2d8b-3698-48ee-b466-50d5f8212804",
+                      "cursorClick": "0c3bc483-64c1-408d-ac96-17e2471d068d",
+                      "enterRoom": "be7bb978-7b64-471f-9a2c-cc7b7abcf627",
+                      "takeItem": "f011c014-d489-4c88-97c8-8d15d848533c",
+                      "selectItem": "068da2de-7ad0-45b1-958f-765a24aca402",
+                      "switchOn": "775c3aac-06e2-4280-bfaf-f8cd68084199",
+                      "lockerOpen": "c6181c99-b75d-40ef-86b2-77daeba8b715",
+                      "shortCircuit": "a6c248a0-003a-456c-9f2f-da5d7341a2b3"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": "be6aa0ee-03f9-433c-a020-8e774f3be6ab",
+              "templateId": "9a7878a3-7553-4ecb-b640-58398f072efb",
+              "name": "Background Music",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "dbe7a164-3c2c-4252-a657-ae8f2930bc0b",
+              "templateId": "14d4e67e-abe6-4ad8-8e13-0b9833461d64",
+              "name": "Button Press",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "be7bb978-7b64-471f-9a2c-cc7b7abcf627",
+              "templateId": "8a9c4b70-a89f-4e5a-94e4-eb4252a779b8",
+              "name": "Enter Room",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "f011c014-d489-4c88-97c8-8d15d848533c",
+              "templateId": "8cd4b06f-7c44-44e0-bd9e-ca269fdcbc46",
+              "name": "Take Item",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "068da2de-7ad0-45b1-958f-765a24aca402",
+              "templateId": "9433f3be-8336-4472-9999-1804be307ffb",
+              "name": "Select Item",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "775c3aac-06e2-4280-bfaf-f8cd68084199",
+              "templateId": "97fb13e9-ac59-41c3-96a2-893d58586ac8",
+              "name": "Switch On",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "c6181c99-b75d-40ef-86b2-77daeba8b715",
+              "templateId": "ba47ebaa-472c-4dfe-9cde-385c694a09dd",
+              "name": "Locker Open",
+              "components": [],
+              "children": []
+            },
+            {
+              "id": "a6c248a0-003a-456c-9f2f-da5d7341a2b3",
+              "templateId": "a23ee33e-9a51-44f5-874b-158455ec36e1",
+              "name": "Short Circuit",
+              "components": [],
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -14344,26 +14522,212 @@
         }
       ],
       "children": []
+    },
+    {
+      "id": "256c0bf7-d0cc-4c9c-8536-3a70069683ee",
+      "name": "AudioManager",
+      "components": [],
+      "children": [
+        {
+          "id": "9a7878a3-7553-4ecb-b640-58398f072efb",
+          "name": "Background Music",
+          "components": [
+            {
+              "name": "AudioSource",
+              "config": {
+                "src": "audio/background-music.mp3",
+                "volume": 0.5,
+                "looped": true,
+                "autoplay": true,
+                "group": "music"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "14d4e67e-abe6-4ad8-8e13-0b9833461d64",
+          "name": "Button Press",
+          "components": [
+            {
+              "name": "AudioSource",
+              "config": {
+                "src": "audio/button-press.mp3",
+                "volume": 1,
+                "looped": false,
+                "autoplay": false,
+                "group": "effects"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8a9c4b70-a89f-4e5a-94e4-eb4252a779b8",
+          "name": "Enter Room",
+          "components": [
+            {
+              "name": "AudioSource",
+              "config": {
+                "src": "audio/enter-room.mp3",
+                "volume": 1,
+                "looped": false,
+                "autoplay": false,
+                "group": "effects"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "8cd4b06f-7c44-44e0-bd9e-ca269fdcbc46",
+          "name": "Take Item",
+          "components": [
+            {
+              "name": "AudioSource",
+              "config": {
+                "src": "audio/take-item.mp3",
+                "volume": 1,
+                "looped": false,
+                "autoplay": false,
+                "group": "effects"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "9433f3be-8336-4472-9999-1804be307ffb",
+          "name": "Select Item",
+          "components": [
+            {
+              "name": "AudioSource",
+              "config": {
+                "src": "audio/select-item.mp3",
+                "volume": 1,
+                "looped": false,
+                "autoplay": false,
+                "group": "effects"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "97fb13e9-ac59-41c3-96a2-893d58586ac8",
+          "name": "Switch On",
+          "components": [
+            {
+              "name": "AudioSource",
+              "config": {
+                "src": "audio/switch-on.mp3",
+                "volume": 1,
+                "looped": false,
+                "autoplay": false,
+                "group": "effects"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "ba47ebaa-472c-4dfe-9cde-385c694a09dd",
+          "name": "Locker Open",
+          "components": [
+            {
+              "name": "AudioSource",
+              "config": {
+                "src": "audio/locker-open.mp3",
+                "volume": 1,
+                "looped": false,
+                "autoplay": false,
+                "group": "effects"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "a23ee33e-9a51-44f5-874b-158455ec36e1",
+          "name": "Short Circuit",
+          "components": [
+            {
+              "name": "AudioSource",
+              "config": {
+                "src": "audio/short-circuit.mp3",
+                "volume": 1,
+                "looped": false,
+                "autoplay": false,
+                "group": "effects"
+              }
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ],
   "loaders": [],
   "globalOptions": [
     {
-      "id": "ce9be6d1-0c77-4d9a-9962-228b9dc701af",
       "name": "sortingLayers",
-      "type": "array",
-      "value": [
-        "pathBlock",
-        "background",
-        "background-2",
-        "decorations",
-        "decorations-2",
-        "decorations-3",
-        "decorations-4",
-        "units",
-        "scene-frame",
-        "default"
-      ]
+      "options": {
+        "layers": [
+          {
+            "id": "388f43fb-4ab3-4973-8dc3-0332ca893ff1",
+            "name": "background"
+          },
+          {
+            "id": "ddab3636-1184-4c46-ab33-2792b755b5dc",
+            "name": "background-2"
+          },
+          {
+            "id": "204715e5-c855-4bc3-b459-06023519ce36",
+            "name": "decorations"
+          },
+          {
+            "id": "bb65312e-5873-4b63-99d6-eda457e94b06",
+            "name": "decorations-2"
+          },
+          {
+            "id": "339f9277-8eb5-4e73-9088-b1215878d520",
+            "name": "decorations-3"
+          },
+          {
+            "id": "28241ec9-f85b-4bfb-bfc1-8905f8615402",
+            "name": "decorations-4"
+          },
+          {
+            "id": "e9b83c6a-0246-4af9-99b6-297ddee1ec01",
+            "name": "units"
+          },
+          {
+            "id": "d6b2ca7c-d4db-4eee-8d4b-f52072d6f7c7",
+            "name": "scene-frame"
+          },
+          {
+            "id": "788274bd-86d8-43e5-b4ec-481b3a2a0e83",
+            "name": "default"
+          }
+        ]
+      }
+    },
+    {
+      "name": "audioGroups",
+      "options": {
+        "groups": [
+          {
+            "id": "11ce33d7-7f1a-4142-ad77-2b6c061c91a4",
+            "name": "music",
+            "volume": 1
+          },
+          {
+            "id": "70a6ec03-1a13-4ca2-9a4d-ef2bbe39cf82",
+            "name": "effects",
+            "volume": 1
+          }
+        ]
+      }
     }
   ],
   "startSceneId": "8aa8d080-b995-4892-b718-829dd717612c",
