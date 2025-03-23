@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "dacha": "0.14.0",
+    "dacha": "0.14.1",
     "dacha-workbench": "0.0.23",
     "dacha-game-systems": "0.0.2",
     "uuid": "11.0.3"
