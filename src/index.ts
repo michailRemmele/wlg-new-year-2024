@@ -12,6 +12,7 @@ import {
   ScriptSystem,
   UiBridge,
   GameStatsMeter,
+  AudioSystem,
 
   Animatable,
   Camera,
@@ -23,11 +24,12 @@ import {
   Sprite,
   Transform,
   ScriptBundle,
-} from 'remiz';
+  AudioSource,
+} from 'dacha';
 import {
   ParallaxSystem,
   Parallax,
-} from 'remiz-game-systems';
+} from 'dacha-game-systems';
 
 import * as GameSystems from './game/systems';
 import * as GameComponents from './game/components';
@@ -43,6 +45,7 @@ const mobileDevice = isMobileDevice();
 const engine = new Engine({
   config,
   systems: [
+    AudioSystem,
     Animator,
     CameraSystem,
     PhysicsSystem,
@@ -63,6 +66,7 @@ const engine = new Engine({
     ...Object.values(GameSystems),
   ],
   components: [
+    AudioSource,
     Animatable,
     Camera,
     MouseControl,

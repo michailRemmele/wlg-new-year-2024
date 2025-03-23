@@ -4,13 +4,13 @@ import type {
   ScriptOptions,
   UpdateOptions,
   ActorEvent,
-} from 'remiz';
+} from 'dacha';
 import {
   Transform,
   Script,
   Camera,
   CameraService,
-} from 'remiz';
+} from 'dacha';
 
 import {
   CHRISTMAS_TREE_ID,
@@ -79,14 +79,11 @@ export class DialogScript extends Script {
     this.scene.addEventListener(EventType.NeedChristmasTree, this.handleNeedChristmasTree);
     this.scene.addEventListener(EventType.NeedGarland, this.handleNeedGarland);
     this.scene.addEventListener(EventType.NeedFood, this.handleNeedFood);
-
-    this.scene.addEventListener(EventType.EnterRoom, this.handleEnterScene);
-    this.scene.addEventListener(EventType.EnterScene, this.handleEnterScene);
-
-    this.hideDialog();
   }
 
   destroy(): void {
+    this.hideDialog();
+
     this.scene.removeEventListener(EventType.StudyItem, this.handleStudyItem);
     this.scene.removeEventListener(EventType.RejectItem, this.handleRejectItem);
     this.scene.removeEventListener(EventType.RepairFail, this.handleFail);
@@ -96,9 +93,6 @@ export class DialogScript extends Script {
     this.scene.removeEventListener(EventType.NeedChristmasTree, this.handleNeedChristmasTree);
     this.scene.removeEventListener(EventType.NeedGarland, this.handleNeedGarland);
     this.scene.removeEventListener(EventType.NeedFood, this.handleNeedFood);
-
-    this.scene.removeEventListener(EventType.EnterRoom, this.handleEnterScene);
-    this.scene.removeEventListener(EventType.EnterScene, this.handleEnterScene);
   }
 
   private handleStudyItem = (event: ActorEvent): void => {
@@ -154,10 +148,6 @@ export class DialogScript extends Script {
     this.showDialog('Не хочу запускать стрим голодным');
   };
 
-  private handleEnterScene = (): void => {
-    this.hideDialog();
-  };
-
   private showDialogWithDelay(value: string): void {
     this.delayDialog = value;
     this.delay = DIALOG_DELAY;
@@ -190,11 +180,17 @@ export class DialogScript extends Script {
     const transform = this.actor.getComponent(Transform);
 
     const cameraActor = this.cameraService.getCurrentCamera();
-    const cameraTransform = cameraActor.getComponent(Transform);
-    const { windowSizeX, windowSizeY, zoom } = cameraActor.getComponent(Camera);
+    const cameraTransform = cameraActor?.getComponent(Transform);
+    const cameraComponent = cameraActor?.getComponent(Camera);
 
-    const x = (transform.offsetX - cameraTransform.offsetX) * zoom + (windowSizeX / 2);
-    const y = (transform.offsetY - OFFSET_Y - cameraTransform.offsetY) * zoom + (windowSizeY / 2);
+    const cameraOffsetX = cameraTransform?.offsetX ?? 0;
+    const cameraOffsetY = cameraTransform?.offsetY ?? 0;
+    const windowSizeX = cameraComponent?.windowSizeX ?? 0;
+    const windowSizeY = cameraComponent?.windowSizeY ?? 0;
+    const zoom = cameraComponent?.zoom ?? 1;
+
+    const x = (transform.offsetX - cameraOffsetX) * zoom + (windowSizeX / 2);
+    const y = (transform.offsetY - OFFSET_Y - cameraOffsetY) * zoom + (windowSizeY / 2);
 
     const dialog = document.getElementById('dialog');
     if (!dialog) {

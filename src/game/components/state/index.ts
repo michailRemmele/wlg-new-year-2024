@@ -1,4 +1,4 @@
-import { Component } from 'remiz';
+import { Component } from 'dacha';
 
 export class State extends Component {
   private _value: string | undefined;

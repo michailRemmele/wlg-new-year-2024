@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import type { Root } from 'react-dom/client';
-import type { UiInitFnOptions } from 'remiz';
+import type { UiInitFnOptions } from 'dacha';
 
 import { EngineProvider } from './providers';
 import { App } from './app';

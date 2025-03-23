@@ -1,4 +1,4 @@
-import type { WidgetSchema } from 'remiz-editor';
+import type { WidgetSchema } from 'dacha-workbench';
 
 export const trap: WidgetSchema = {
   title: 'components.trap.title',

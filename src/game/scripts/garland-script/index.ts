@@ -2,10 +2,10 @@ import type {
   Actor,
   Scene,
   ScriptOptions,
-} from 'remiz';
+} from 'dacha';
 import {
   Script,
-} from 'remiz';
+} from 'dacha';
 
 import * as EventType from '../../events';
 import type { ChangeItemStateEvent } from '../../events';

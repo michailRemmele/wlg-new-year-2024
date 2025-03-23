@@ -3,11 +3,11 @@ import {
   ActorCollection,
   Transform,
   System,
-} from 'remiz';
+} from 'dacha';
 import type {
   SystemOptions,
   UpdateOptions,
-} from 'remiz';
+} from 'dacha';
 
 import {
   Movement,

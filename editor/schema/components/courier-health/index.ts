@@ -1,4 +1,4 @@
-import type { WidgetSchema } from 'remiz-editor';
+import type { WidgetSchema } from 'dacha-workbench';
 
 export const courierHealth: WidgetSchema = {
   title: 'components.courierHealth.title',

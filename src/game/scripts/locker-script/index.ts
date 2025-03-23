@@ -2,11 +2,11 @@ import type {
   Actor,
   Scene,
   ScriptOptions,
-} from 'remiz';
+} from 'dacha';
 import {
   Script,
   Sprite,
-} from 'remiz';
+} from 'dacha';
 
 import { Interactable } from '../../components';
 import * as EventType from '../../events';
@@ -61,6 +61,7 @@ export class LockerScript extends Script {
       return;
     }
 
+    this.scene.dispatchEvent(EventType.LockerOpen);
     this.scene.dispatchEvent(EventType.ChangeItemState, {
       item: this.actor.id,
       state: STATE.OPEN,

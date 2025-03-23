@@ -3,10 +3,10 @@ import type {
   Scene,
   ScriptOptions,
   UpdateOptions,
-} from 'remiz';
+} from 'dacha';
 import {
   Script,
-} from 'remiz';
+} from 'dacha';
 
 import { PLAYER_NAME } from '../../../consts/actors';
 import { ARCADE_CABINET_LEVEL_ID } from '../../../consts/levels';

@@ -1,4 +1,4 @@
-import type { WidgetPartSchema } from 'remiz-editor';
+import type { WidgetPartSchema } from 'dacha-workbench';
 
 export const electricalPanelCursorScript: WidgetPartSchema = {
   fields: [],

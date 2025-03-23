@@ -1,4 +1,4 @@
-import { Component } from 'remiz';
+import { Component } from 'dacha';
 
 import type { Action } from '../interactable';
 

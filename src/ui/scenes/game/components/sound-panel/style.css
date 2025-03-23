@@ -1,0 +1,22 @@
+.sound-panel {
+  margin: 0 0 auto auto;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  pointer-events: initial;
+}
+
+.sound-panel label {
+  display: flex;
+  justify-content: space-between;
+
+  cursor: none;
+}
+
+.sound-panel input {
+  margin-left: 10px;
+
+  cursor: none;
+}

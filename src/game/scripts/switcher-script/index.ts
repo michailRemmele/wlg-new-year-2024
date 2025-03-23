@@ -3,10 +3,10 @@ import type {
   Scene,
   ScriptOptions,
   UpdateOptions,
-} from 'remiz';
+} from 'dacha';
 import {
   Script,
-} from 'remiz';
+} from 'dacha';
 
 import * as EventType from '../../events';
 import type { ApplyItemEvent } from '../../events';
@@ -70,6 +70,7 @@ export class SwitcherScript extends Script {
     const state = window.saveState?.questItems[this.actor.id]?.state;
 
     if (state === STATE.INACTIVE_FAIL) {
+      this.scene.dispatchEvent(EventType.SwitchOn);
       this.scene.dispatchEvent(EventType.ChangeItemState, {
         item: this.actor.id,
         state: STATE.ACTIVE_FAIL,

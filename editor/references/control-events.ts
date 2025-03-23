@@ -1,4 +1,4 @@
-import type { Reference } from 'remiz-editor';
+import type { Reference } from 'dacha-workbench';
 
 import {
   Move,

@@ -1,10 +1,10 @@
 import {
   Scene,
   System,
-} from 'remiz';
+} from 'dacha';
 import type {
   SystemOptions,
-} from 'remiz';
+} from 'dacha';
 import { v4 as uuidv4 } from 'uuid';
 
 import * as EventType from '../../events';

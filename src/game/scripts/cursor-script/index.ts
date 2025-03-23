@@ -2,17 +2,17 @@ import type {
   Actor,
   Scene,
   ScriptOptions,
-} from 'remiz';
-import { Script, Transform } from 'remiz';
+} from 'dacha';
+import { Script, Transform } from 'dacha';
 import {
   CollisionEnter,
   CollisionStay,
   CollisionLeave,
-} from 'remiz/events';
+} from 'dacha/events';
 import type {
   CollisionEnterEvent,
   CollisionLeaveEvent,
-} from 'remiz/events';
+} from 'dacha/events';
 
 import { Interactable, Cursor } from '../../components';
 import * as EventType from '../../events';

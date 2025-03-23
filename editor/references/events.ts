@@ -1,5 +1,5 @@
-import * as EventType from 'remiz/events';
-import type { Reference } from 'remiz-editor';
+import * as EventType from 'dacha/events';
+import type { Reference } from 'dacha-workbench';
 
 import * as GameEventType from '../../src/game/events';
 

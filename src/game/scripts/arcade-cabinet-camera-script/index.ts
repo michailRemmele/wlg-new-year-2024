@@ -2,8 +2,8 @@ import type {
   Actor,
   Scene,
   ScriptOptions,
-} from 'remiz';
-import { Script, Camera, Transform } from 'remiz';
+} from 'dacha';
+import { Script, Camera, Transform } from 'dacha';
 
 import { COURIER_NAME } from '../../../consts/actors';
 

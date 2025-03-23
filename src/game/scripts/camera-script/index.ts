@@ -1,8 +1,8 @@
 import type {
   Actor,
   ScriptOptions,
-} from 'remiz';
-import { Script, Camera } from 'remiz';
+} from 'dacha';
+import { Script, Camera } from 'dacha';
 
 const VIEWPORT_SIZE_X = 288;
 const VIEWPORT_SIZE_Y = 120;

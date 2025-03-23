@@ -5,15 +5,15 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "env NODE_ENV=development webpack-dev-server",
-    "start:editor": "npx remiz-editor",
+    "start:workbench": "npx dacha-workbench",
     "build": "env NODE_ENV=production webpack"
   },
   "dependencies": {
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "remiz": "0.12.8",
-    "remiz-editor": "0.0.20",
-    "remiz-game-systems": "0.0.1",
+    "dacha": "0.14.1",
+    "dacha-workbench": "0.0.23",
+    "dacha-game-systems": "0.0.2",
     "uuid": "11.0.3"
   },
   "devDependencies": {

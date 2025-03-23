@@ -1,8 +1,8 @@
 import {
   Scene,
   System,
-} from 'remiz';
-import type { SystemOptions } from 'remiz';
+} from 'dacha';
+import type { SystemOptions } from 'dacha';
 
 import { Cursor } from '../../components';
 import { CURSOR_NAME } from '../../../consts/actors';

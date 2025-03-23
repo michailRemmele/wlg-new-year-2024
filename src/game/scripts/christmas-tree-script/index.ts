@@ -3,8 +3,8 @@ import type {
   ActorSpawner,
   Scene,
   ScriptOptions,
-} from 'remiz';
-import { Script, Transform } from 'remiz';
+} from 'dacha';
+import { Script, Transform } from 'dacha';
 
 import {
   BAUBLE_1_ID,

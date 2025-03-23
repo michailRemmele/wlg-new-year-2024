@@ -1,4 +1,4 @@
-import type { WidgetSchema } from 'remiz-editor';
+import type { WidgetSchema } from 'dacha-workbench';
 
 export const interactable: WidgetSchema = {
   title: 'components.interactable.title',

@@ -114,6 +114,7 @@ export const Inventory: FC = () => {
           className="inventory__control"
           type="button"
           onClick={() => setItemsStartIndex((prev) => prev + 1)}
+          onMouseDown={() => scene.dispatchEvent(EventType.ButtonPress)}
           disabled={items.length <= inventorySize}
         >
           ⬆
@@ -122,6 +123,7 @@ export const Inventory: FC = () => {
           className="inventory__control inventory__control_down"
           type="button"
           onClick={() => setItemsStartIndex((prev) => prev - 1)}
+          onMouseDown={() => scene.dispatchEvent(EventType.ButtonPress)}
           disabled={items.length <= inventorySize}
         >
           ⬇

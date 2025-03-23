@@ -6,8 +6,8 @@ import {
   useContext,
 } from 'react';
 import type { FC } from 'react';
-import { GameStatsUpdate } from 'remiz/events';
-import type { GameStatsUpdateEvent } from 'remiz/events';
+import { GameStatsUpdate } from 'dacha/events';
+import type { GameStatsUpdateEvent } from 'dacha/events';
 
 import { EngineContext } from '../../providers';
 

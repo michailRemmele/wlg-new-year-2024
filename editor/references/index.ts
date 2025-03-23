@@ -1,4 +1,4 @@
-import type { References } from 'remiz-editor';
+import type { References } from 'dacha-workbench';
 
 import { eventsReference } from './events';
 import { controlEventsReference } from './control-events';

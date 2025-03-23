@@ -1,4 +1,4 @@
-import type { ActorEvent, SceneEvent } from 'remiz';
+import type { ActorEvent, SceneEvent } from 'dacha';
 
 export const Move = 'Move';
 export const PlayerAction = 'PlayerAction';
@@ -43,6 +43,10 @@ export const NeedChristmasTree = 'NeedChristmasTree';
 export const NeedGarland = 'NeedGarland';
 export const NeedFood = 'NeedFood';
 export const GameOver = 'GameOver';
+export const ButtonPress = 'ButtonPress';
+export const ButtonRelease = 'ButtonRelease';
+export const SwitchOn = 'SwitchOn';
+export const LockerOpen = 'LockerOpen';
 
 export type MoveEvent = ActorEvent<{ direction: number; point?: boolean }>;
 
@@ -100,7 +104,7 @@ export type RepairEndEvent = SceneEvent<{ screenX: number; screenY: number }>;
 export type RepairTimerUpdateEvent = SceneEvent<{ timer: number }>;
 export type RepairScoreUpdateEvent = SceneEvent<{ score: number }>;
 
-declare module 'remiz' {
+declare module 'dacha' {
   export interface ActorEventMap {
     [Move]: MoveEvent
     [PlayerAction]: ActorEvent
@@ -148,5 +152,8 @@ declare module 'remiz' {
     [NeedGarland]: SceneEvent
     [NeedFood]: SceneEvent
     [GameOver]: SceneEvent
+    [ButtonPress]: SceneEvent
+    [SwitchOn]: SceneEvent
+    [LockerOpen]: SceneEvent
   }
 }
